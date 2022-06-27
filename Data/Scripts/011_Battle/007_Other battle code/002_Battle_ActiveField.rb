@@ -64,6 +64,8 @@ class Battle::ActiveSide
     @effects[PBEffects::Tailwind]           = 0
     @effects[PBEffects::ToxicSpikes]        = 0
     @effects[PBEffects::WideGuard]          = false
+
+    @effects[PBEffects::StrangeSlime]       = false
   end
 end
 
