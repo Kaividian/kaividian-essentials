@@ -6960,6 +6960,16 @@ FunctionCode = CureTargetStatusHealUserHalfOfTotalHP
 Flags = CanProtect,CanMirrorMove
 Description = The user heals the target's status condition. If so, it also restores the user's own HP.
 #-------------------------------
+[STRANGESLIME]
+Name = Strange Slime
+Type = POISON
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = FoeSide
+FunctionCode = AddStrangeSlimeToFoeSide
+Description = The user lays a trap of strange slime at the foe's feet. It confuses foes that switch into battle.
+#-------------------------------
 [TOXIC]
 Name = Toxic
 Type = POISON

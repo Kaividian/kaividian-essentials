@@ -1204,6 +1204,7 @@ class Battle::AI
         score += 50 if target.pbOwnSide.effects[PBEffects::Spikes] > 0
         score += 50 if target.pbOwnSide.effects[PBEffects::ToxicSpikes] > 0
         score += 50 if target.pbOwnSide.effects[PBEffects::StealthRock]
+        score += 50 if target.pbOwnSide.effects[PBEffects::StrangeSlime]
       end
     #---------------------------------------------------------------------------
     when "SwitchOutTargetDamagingMove"
@@ -1212,6 +1213,7 @@ class Battle::AI
         score += 40 if target.pbOwnSide.effects[PBEffects::Spikes] > 0
         score += 40 if target.pbOwnSide.effects[PBEffects::ToxicSpikes] > 0
         score += 40 if target.pbOwnSide.effects[PBEffects::StealthRock]
+        score += 40 if target.pbOwnSide.effects[PBEffects::StrangeSlime]
       end
     #---------------------------------------------------------------------------
     when "BindTarget"

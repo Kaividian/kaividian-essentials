@@ -125,6 +125,16 @@ class Battle::AI
         score += [26, 13][user.pbOpposingSide.effects[PBEffects::ToxicSpikes]]
       end
     #---------------------------------------------------------------------------
+    when "AddStrangeSlimeToFoeSide"
+      if user.pbOpposingSide.effects[PBEffects::StrangeSlime]
+        score -= 90
+      elsif user.allOpposing.none? { |b| @battle.pbCanChooseNonActive?(b.index) }
+        score -= 90  # Opponent can't switch in any Pokemon
+      else
+        score += 8 * @battle.pbAbleNonActiveCount(user.idxOpposingSide)
+        score += [26, 13][user.pbOpposingSide.effects[PBEffects::StrangeSlime]]
+      end
+    #---------------------------------------------------------------------------
     when "AddStealthRocksToFoeSide"
       if user.pbOpposingSide.effects[PBEffects::StealthRock]
         score -= 90
@@ -142,7 +152,7 @@ class Battle::AI
         good_effects = [:Reflect, :LightScreen, :AuroraVeil, :SeaOfFire,
                         :Swamp, :Rainbow, :Mist, :Safeguard,
                         :Tailwind].map! { |e| PBEffects.const_get(e) }
-        bad_effects = [:Spikes, :StickyWeb, :ToxicSpikes, :StealthRock].map! { |e| PBEffects.const_get(e) }
+        bad_effects = [:Spikes, :StickyWeb, :ToxicSpikes, :StealthRock, :StrangeSlime].map! { |e| PBEffects.const_get(e) }
         bad_effects.each do |e|
           score += 10 if ![0, false, nil].include?(user.pbOwnSide.effects[e])
           score -= 10 if ![0, 1, false, nil].include?(user.pbOpposingSide.effects[e])
@@ -169,6 +179,7 @@ class Battle::AI
         score += 80 if user.pbOwnSide.effects[PBEffects::Spikes] > 0
         score += 80 if user.pbOwnSide.effects[PBEffects::ToxicSpikes] > 0
         score += 80 if user.pbOwnSide.effects[PBEffects::StealthRock]
+        score += 80 if user.pbOwnSide.effects[PBEffects::StrangeSlime]
       end
     #---------------------------------------------------------------------------
     when "AttackTwoTurnsLater"
@@ -1219,7 +1230,8 @@ class Battle::AI
                      target.pbOwnSide.effects[PBEffects::Safeguard] > 0
       score -= 30 if target.pbOwnSide.effects[PBEffects::Spikes] > 0 ||
                      target.pbOwnSide.effects[PBEffects::ToxicSpikes] > 0 ||
-                     target.pbOwnSide.effects[PBEffects::StealthRock]
+                     target.pbOwnSide.effects[PBEffects::StealthRock] ||
+                     target.pbOwnSide.effects[PBEffects::StrangeSlime]
     #---------------------------------------------------------------------------
     when "LowerTargetEvasion2", "LowerTargetEvasion3"
       if move.statusMove?

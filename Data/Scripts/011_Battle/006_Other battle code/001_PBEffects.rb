@@ -159,6 +159,8 @@ module PBEffects
   ToxicSpikes        = 20
   WideGuard          = 21
 
+  StrangeSlime       = 22
+
   #=============================================================================
   # These effects apply to the battle (i.e. both sides)
   #=============================================================================
