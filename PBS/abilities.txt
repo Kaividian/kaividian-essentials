@@ -1078,3 +1078,7 @@ Description = Grants the Pokémon the Ice type.
 [INTANGIBLE]
 Name = Intangible
 Description = Gains the immunities of a Ghost type.
+#-------------------------------
+[RESILIENCE]
+Name = Resilience
+Description = Boosts Defenses when hit by a super-effective attack.
