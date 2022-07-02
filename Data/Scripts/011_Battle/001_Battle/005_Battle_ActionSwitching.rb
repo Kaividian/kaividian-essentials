@@ -62,7 +62,7 @@ class Battle
       return true
     end
     # Other certain switching effects
-    return true if Settings::MORE_TYPE_EFFECTS && battler.pbHasType?(:GHOST)
+    return true if Settings::MORE_TYPE_EFFECTS && (battler.pbHasType?(:GHOST) || battler.hasActiveAbility?(:INTANGIBLE))
     # Other certain trapping effects
     if battler.trappedInBattle?
       partyScene&.pbDisplay(_INTL("{1} can't be switched out!", battler.pbThis))

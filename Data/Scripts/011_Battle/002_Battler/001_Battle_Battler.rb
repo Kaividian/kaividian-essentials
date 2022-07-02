@@ -376,6 +376,7 @@ class Battle::Battler
       :COMATOSE,
       :RKSSYSTEM,
       :FROSTED
+      :INTANGIBLE
     ]
     return ability_blacklist.include?(abil.id)
   end
