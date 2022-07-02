@@ -1083,3 +1083,7 @@ Description = Gains the immunities of a Ghost type.
 [RESILIENCE]
 Name = Resilience
 Description = Boosts Defenses when hit by a super-effective attack.
+#-------------------------------
+[VAMPIRISM]
+Name = Vampirism
+Description = Drains HP after knocking out any Pokémon.
