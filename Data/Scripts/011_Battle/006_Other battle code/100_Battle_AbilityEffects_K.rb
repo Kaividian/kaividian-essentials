@@ -33,3 +33,30 @@ Battle::AbilityEffects::OnBeingHit.add(:RESILIENCE,
       battle.pbHideAbilitySplash(target)
     }
 )
+
+Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
+  proc { |ability, user, targets, move, battle|
+    numFainted = 0
+    targets.each { |b| numFainted += 1 if b.damageState.fainted }
+    next if numFainted == 0
+    @battle.pbShowAbilitySplash(user)
+    targets.each do |b| 
+      amt = b.damageState.hpLost
+      if b.hasActiveAbility?(:LIQUIDOOZE)
+        @battle.pbShowAbilitySplash(b)
+        pbReduceHP(amt)
+        @battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", pbThis))
+        @battle.pbHideAbilitySplash(b)
+      else
+        msg = _INTL("{1} had its energy drained!", b.pbThis) if nil_or_empty?(msg)
+        @battle.pbDisplay(msg)
+        if canHeal?
+          amt = (amt * 1.3).floor if hasActiveItem?(:BIGROOT)
+          user.pbRecoverHP(amt)
+        end
+      end
+    end
+    @battle.pbHideAbilitySplash(user)
+  }
+)
+

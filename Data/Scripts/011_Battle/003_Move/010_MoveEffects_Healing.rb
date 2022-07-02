@@ -141,6 +141,10 @@ class Battle::Move::HealUserByTargetAttackLowerTargetAttack1 < Battle::Move
       target.pbLowerStatStage(:ATTACK, 1, user)
     end
     # Heal user
+    if user.hasActiveAbility?(:VAMPIRISM)
+      return if target.fainted?
+      healAmt = (healAmt * 1.5).round
+    end
     if target.hasActiveAbility?(:LIQUIDOOZE)
       @battle.pbShowAbilitySplash(target)
       user.pbReduceHP(healAmt)
@@ -164,6 +168,10 @@ class Battle::Move::HealUserByHalfOfDamageDone < Battle::Move
   def pbEffectAgainstTarget(user, target)
     return if target.damageState.hpLost <= 0
     hpGain = (target.damageState.hpLost / 2.0).round
+    if user.hasActiveAbility?(:VAMPIRISM)
+      return if target.fainted?
+      hpGain = (hpGain * 1.5).round
+    end
     user.pbRecoverHPFromDrain(hpGain, target)
   end
 end
@@ -186,6 +194,10 @@ class Battle::Move::HealUserByHalfOfDamageDoneIfTargetAsleep < Battle::Move
   def pbEffectAgainstTarget(user, target)
     return if target.damageState.hpLost <= 0
     hpGain = (target.damageState.hpLost / 2.0).round
+    if user.hasActiveAbility?(:VAMPIRISM)
+      return if target.fainted?
+      hpGain = (hpGain * 1.5).round
+    end
     user.pbRecoverHPFromDrain(hpGain, target)
   end
 end
@@ -199,6 +211,10 @@ class Battle::Move::HealUserByThreeQuartersOfDamageDone < Battle::Move
   def pbEffectAgainstTarget(user, target)
     return if target.damageState.hpLost <= 0
     hpGain = (target.damageState.hpLost * 0.75).round
+    if user.hasActiveAbility?(:VAMPIRISM)
+      return if target.fainted?
+      hpGain = (hpGain * 1.5).round
+    end
     user.pbRecoverHPFromDrain(hpGain, target)
   end
 end
