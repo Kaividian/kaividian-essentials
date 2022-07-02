@@ -1074,4 +1074,8 @@ Description = Combines Unnerve and Grim Neigh Abilities.
 #-------------------------------
 [FROSTED]
 Name = Frosted
-Description = Becomes an Ice type.
+Description = Grants the Pokémon the Ice type.
+#-------------------------------
+[INTANGIBLE]
+Name = Intangible
+Description = Gains the immunities of a Ghost type.
