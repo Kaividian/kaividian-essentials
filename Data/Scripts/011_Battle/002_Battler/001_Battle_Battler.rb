@@ -374,7 +374,8 @@ class Battle::Battler
       :ASONECHILLINGNEIGH,
       :ASONEGRIMNEIGH,
       :COMATOSE,
-      :RKSSYSTEM
+      :RKSSYSTEM,
+      :FROSTED
     ]
     return ability_blacklist.include?(abil.id)
   end
