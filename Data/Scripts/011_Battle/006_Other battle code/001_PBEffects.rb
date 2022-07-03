@@ -132,6 +132,7 @@ module PBEffects
   Wish                      = 6
   WishAmount                = 7
   WishMaker                 = 8
+  WindRider                 = 9
 
   #=============================================================================
   # These effects apply to a side
