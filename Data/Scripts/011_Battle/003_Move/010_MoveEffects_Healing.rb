@@ -154,7 +154,7 @@ class Battle::Move::HealUserByTargetAttackLowerTargetAttack1 < Battle::Move
       return if target.fainted?
       healAmt = (healAmt * 1.5).round
     end
-    if target.hasActiveAbility?(:LIQUIDOOZE, true)
+    if target.hasActiveAbility?(:LIQUIDOOZE)
       @battle.pbShowAbilitySplash(target)
       user.pbReduceHP(healAmt)
       @battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", user.pbThis))
