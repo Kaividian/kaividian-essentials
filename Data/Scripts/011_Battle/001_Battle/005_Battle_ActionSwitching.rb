@@ -475,13 +475,11 @@ class Battle
     #Strange Slime
     if battler_side.effects[PBEffects::StrangeSlime] && !battler.fainted? && !battler.airborne?
       if battler.pbHasType?(:POISON)
-        !battler_side.effects[PBEffects::StrangeSlime
+        !battler_side.effects[PBEffects::StrangeSlime]
         pbDisplay(_INTL("{1} absorbed the strange slime!", battler.pbThis))
       elsif battler.pbCanConfuse?(nil, false) && !battler.hasActiveItem?(:HEAVYDUTYBOOTS)
-          battler.pbConfuse(_INTL("{1} was confused by the strange slime!", battler.pbThis))
-        end
+          battler.pbConfuse(_INTL("{1} was confused by the strange slime!", battler.pbThis)) 
       end
     end
-
   end
 end

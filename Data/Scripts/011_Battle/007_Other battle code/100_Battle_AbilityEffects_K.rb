@@ -72,6 +72,7 @@ Battle::AbilityEffects::OnBeingHit.add(:WINDRIDER,
       battle.pbDisplay(_INTL("{1} is surrounded by strong winds!", target))
       battle.position[target.index].effects[PBEffects::WindRider] = target.stages[:SPEED]
       battle.pbHideAbilitySplash(target)
+    end
   }
 )
 
