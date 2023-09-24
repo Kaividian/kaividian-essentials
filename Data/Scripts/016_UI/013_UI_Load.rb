@@ -218,7 +218,7 @@ class PokemonLoadScreen
     #Nah, not this one. let's use our swanky new one!
    # return PokemonLoadSelectScreen.new(scene)
     @scene = scene
-    if SaveData.exists?
+    if SaveData.exists?(0)
       @save_data = load_save_file(SaveData::FILE_PATH)
     else
       @save_data = {}
@@ -347,4 +347,7 @@ class PokemonLoadScreen
       end
     end
   end
+
+    
+
 end
