@@ -3,24 +3,28 @@
 # between Essentials and game versions.
 # @see SaveData.register
 # @see SaveData.register_conversion
+
 module SaveData
 
-  # Contains the file paths of the save files.
-  FILE_PATHS = []
+  SAVE_INDEX = 0
 
-  def create_file_paths
+  # Contains the file paths of the save files.
+  FILE_PATHS = lambda do
+    retVal = []
     for i in 0..Settings::ALLOWED_SAVE_FILES do
       if File.directory?(System.data_directory)
-        FILE_PATHS.append(System.data_directory + i.to_s +"/Game.rxdata")
+        retVal.append(System.data_directory + "/Game" + i.to_s + ".rxdata")
       else
-        FILE_PATHS.append(i.to_s + "./Game.rxdata")
+        retVal.append("./Game" + i.to_s + ".rxdata")
       end
     end
-  end
+    retVal
+  end.call
 
   # @return [Boolean] whether the save file exists
   def self.exists?(file_index)
-    return File.file?(FILE_PATHs[file_index])
+    Console.echo_h1(Settings::ALLOWED_SAVE_FILES)
+    return File.file?(FILE_PATHS[file_index])
   end
 
   # Fetches the save data from the given file.
