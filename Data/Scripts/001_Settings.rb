@@ -453,6 +453,11 @@ module Settings
       "Pizza"
     ]
   end
+
+ #=============================================================================
+
+  ALLOWED_SAVE_FILES = 3
+
 end
 
 # DO NOT EDIT THESE!
