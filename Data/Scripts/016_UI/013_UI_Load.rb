@@ -218,8 +218,8 @@ class PokemonLoadScreen
     #Nah, not this one. let's use our swanky new one!
    # return PokemonLoadSelectScreen.new(scene)
     @scene = scene
-    if SaveData.exists?(SaveData::SAVE_INDEX)
-      @save_data = load_save_file(SaveData::FILE_PATHS[SaveData::SAVE_INDEX])
+    if SaveData.exists?(SaveData.getSaveIndex)
+      @save_data = load_save_file(SaveData::FILE_PATHS[SaveData.getSaveIndex])
     else
       @save_data = {}
     end
@@ -289,6 +289,8 @@ class PokemonLoadScreen
     cmd_mystery_gift = -1
     cmd_debug        = -1
     cmd_quit         = -1
+    cmd_next_save    = -1
+    cmd_prev_save    = -1
     show_continue = !@save_data.empty?
     if show_continue
       commands[cmd_continue = commands.length] = _INTL("Continue")
@@ -296,6 +298,11 @@ class PokemonLoadScreen
         commands[cmd_mystery_gift = commands.length] = _INTL("Mystery Gift")
       end
     end
+    show_save_select_buttons = Settings::ALLOWED_SAVE_FILES > 1
+    if show_save_select_buttons
+      commands[cmd_next_save = commands.length] = _INTL("Next Save File")
+      commands[cmd_prev_save = commands.length] = _INTL("Previous Save File")
+    end 
     commands[cmd_new_game = commands.length]  = _INTL("New Game")
     commands[cmd_options = commands.length]   = _INTL("Options")
     commands[cmd_language = commands.length]  = _INTL("Language") if Settings::LANGUAGES.length >= 2
@@ -341,6 +348,20 @@ class PokemonLoadScreen
         pbPlayCloseMenuSE
         @scene.pbEndScene
         $scene = nil
+        return
+      when cmd_next_save
+        SaveData.setSaveIndex(SaveData.getSaveIndex < Settings::ALLOWED_SAVE_FILES - 1 ? SaveData.getSaveIndex + 1 : 0)
+        @scene.pbEndScene
+        $scene = PokemonLoad_Scene.new
+        $screen = PokemonLoadScreen.new($scene)
+        $screen.pbStartLoadScreen
+        return
+      when cmd_prev_save
+        SaveData.setSaveIndex(SaveData.getSaveIndex > 0 ? SaveData.getSaveIndex - 1 : Settings::ALLOWED_SAVE_FILES - 1)
+        @scene.pbEndScene
+        $scene = PokemonLoad_Scene.new
+        $screen = PokemonLoadScreen.new($scene)
+        $screen.pbStartLoadScreen
         return
       else
         pbPlayBuzzerSE

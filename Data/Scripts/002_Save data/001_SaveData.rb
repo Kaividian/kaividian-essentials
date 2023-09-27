@@ -6,7 +6,15 @@
 
 module SaveData
 
-  SAVE_INDEX = 0
+  @@save_index = 0
+
+  def self.getSaveIndex
+    return @@save_index
+  end
+
+  def self.setSaveIndex(i)
+    @@save_index = i
+  end
 
   # Contains the file paths of the save files.
   FILE_PATHS = lambda do
