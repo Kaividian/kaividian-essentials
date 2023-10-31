@@ -1,0 +1,27 @@
+# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[MARSHQUITO]
+Name = Marshquito
+Types = BUG
+BaseStats = 60,65,72,36,28,40
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 39
+EVs = DEFENSE,1
+CatchRate = 180
+Happiness = 70
+Abilities = SHEDSKIN
+HiddenAbilities = SWARM
+Moves = 1,TAILWHIP,1,BITE,4,FOCUSENERGY,7,BUGBITE,10,LEECHLIFE,13,HORNATTACK,16,TWINEEDLE,19,SUBSTITUTE,22,PINMISSILE,25,RAGEPOWDER,28,PROTECT
+TutorMoves =
+EggMoves =
+EggGroups = Bug
+HatchSteps = 4080
+Height = 0.2
+Weight = 0.9
+Color = Brown
+Shape = Insectoid
+Habitat = Forest
+Category = Pupa
+Pokedex = Millions of eggs are laid every week. They stay close to damp areas and grow quickly.
+Evolutions = JUNQUITO,LevelMale,21,DRAQUITO,LevelFemale,21
