@@ -420,6 +420,7 @@ class Battle
         position.effects[PBEffects::LunarDance] = false
       end
     end
+    # Wind Rider
     if position.effects[PBEffects::WindRider] > 0
       battler.stages[:ATTACK] = position.effects[PBEffects::WindRider]
       battler.statsRaisedThisRound = true
