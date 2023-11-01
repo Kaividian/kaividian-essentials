@@ -1,0 +1,12 @@
+#-------------------------------
+[FROSTED]
+Name = Frosted
+Description = Grants the Pokémon the Ice type.
+#-------------------------------
+[RESILIENCE]
+Name = Resilience
+Description = Boosts Defenses when hit by a super-effective attack.
+#-------------------------------
+[VAMPIRISM]
+Name = Vampirism
+Description = Drains HP after knocking out any Pokémon.
