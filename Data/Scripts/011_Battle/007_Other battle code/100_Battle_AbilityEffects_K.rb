@@ -23,8 +23,7 @@ Battle::AbilityEffects::MoveImmunity.add(:INTANGIBLE,
 
 Battle::AbilityEffects::OnBeingHit.add(:RESILIENCE,
   proc { |ability, user, target, move, battle|
-    typeMod = pbCalcTypeMod(move.type, target, battler)
-    next if !Effectiveness.super_effective?(typeMod)
+    next if !Effectiveness.super_effective?(target.damageState.typeMod)
     next if !target.pbCanRaiseStatStage?(:DEFENSE, target) &&
             !target.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, target)
       battle.pbShowAbilitySplash(target)
