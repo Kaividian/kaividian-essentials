@@ -89,6 +89,6 @@ class Battle::ActivePosition
     @effects[PBEffects::WishMaker]                 = -1
 
     #Custom Effects
-    @effects[PBEffects::WindRider]                 = 0
+    @effects[PBEffects::WindSurfer]                 = 0
   end
 end

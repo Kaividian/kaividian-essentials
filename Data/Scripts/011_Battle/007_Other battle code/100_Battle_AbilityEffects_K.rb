@@ -59,7 +59,7 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
   }
 )
 
-Battle::AbilityEffects::OnBeingHit.add(:WINDRIDER,
+Battle::AbilityEffects::OnBeingHit.add(:WINDSURFER,
   proc { |ability, user, target, move, battle|
     if move.calcType == :FLYING
       battle.pbShowAbilitySplash(target)
@@ -69,17 +69,18 @@ Battle::AbilityEffects::OnBeingHit.add(:WINDRIDER,
     if target.fainted? && target.stages[:SPEED] > 0
       battle.pbShowAbilitySplash(target)
       battle.pbDisplay(_INTL("{1} is surrounded by strong winds!", target))
-      battle.position[target.index].effects[PBEffects::WindRider] = target.stages[:SPEED]
+      battle.positions[target.index].effects[PBEffects::WindSurfer] = target.stages[:SPEED]
       battle.pbHideAbilitySplash(target)
     end
   }
 )
 
-Battle::AbilityEffects::OnSwitchOut.add(:WINDRIDER,
+Battle::AbilityEffects::OnSwitchOut.add(:WINDSURFER,
   proc { |ability, battler, endOfBattle|
-    next if battler.stages[:SPEED] > 0
+    next if endOfBattle
+    next if battler.stages[:SPEED] <= 0
     @battle.pbShowAbilitySplash(battler)
     @battle.pbDisplay(_INTL("{1} is surrounded by strong winds!", battler))
-    @battle.position[target.index].effects[PBEffects::WindRider] = battler.stages[:SPEED]
+    @battle.positions[target.index].effects[PBEffects::WindSurfer] = battler.stages[:SPEED]
     @battle.pbHideAbilitySplash(battler)  }
 )
