@@ -1,0 +1,28 @@
+#-------------------------------
+[FROSTED]
+Name = Frosted
+Description = Grants the Pokémon the Ice type.
+#-------------------------------
+[RESILIENCE]
+Name = Resilience
+Description = Boosts Defenses when hit by a super-effective attack.
+#-------------------------------
+[VAMPIRISM]
+Name = Vampirism
+Description = Drains HP after knocking out any Pokémon.
+#-------------------------------
+[SECONDWIND]
+Name = Second Wind
+Description = Passes on accumulated Speed upon fainting.
+#-------------------------------
+[ACCLIMATIZE]
+Name = Acclimatize
+Description = Boosts Defenses when weather changes, granting a new Type.
+#-------------------------------
+[GLOVESOFF]
+Name = Gloves Off
+Description = Switches stances when HP is halved.
+#-------------------------------
+[IONSHIELD]
+Name = Ion Shield
+Description = Redirects Electric-type moves into an ion shield, causing paralysis upon contact.
