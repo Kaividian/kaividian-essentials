@@ -338,32 +338,6 @@ Category = Forest Fire
 Pokedex = Using the wood's natural flexibility, it can coil itself to launch powerful attacks like a spring. A special gas released by the bark enables it to keep burning.
 Evolutions =
 #-------------------------------
-[ELKREMATA]
-Name = Elkremata
-Types = FIRE,GRASS
-BaseStats = 80,135,75,105,60,85
-GenderRatio = Female50Percent
-GrowthRate = Parabolic
-BaseExp = 228
-EVs = ATTACK,3
-CatchRate = 15
-Happiness = 100
-Abilities = FLASHFIRE
-HiddenAbilities =
-Moves = 1,TACKLE,1,TAILWHIP,1,MUDSLAP,1,LEECHSEED,8,STOMP,12,BULLDOZE,14,BODYSLAM,17,RAZORLEAF,28,FLAMECHARGE,32,BULKUP,34,ICESHARD,36,HEADCHARGE,40,SYNTHESIS,44,HORNLEECH,48,SEEDBOMB,52,EARTHQUAKE,56,POWERWHIP,60,BLAZEKICK,64,SOLARBEAM,68,HEATWAVE,72,FLAREBLITZ,76,GIGAIMPACT
-TutorMoves =
-EggMoves = AMNESIA,CURSE,ENDURE,GIGADRAIN,GRASSWHISTLE,INGRAIN,LEAFSTORM,NATUREPOWER,SKULLBASH,WILLOWISP,MAGNITUDE,SANDATTACK
-EggGroups = Monster
-HatchSteps =
-Height = 2.4
-Weight = 112.6
-Color = Red
-Shape = Quadruped
-Habitat = Forest
-Category = Forest Fire
-Pokedex = Using the wood's natural flexibility, it can coil itself to launch powerful attacks like a spring. A special gas released by the bark enables it to keep burning.
-Evolutions =
-#-------------------------------
 [INDIGENAPU]
 Name = Indigenapu
 Types = ELECTRIC,FIGHTING
