@@ -10,3 +10,7 @@ Description = Boosts Defenses when hit by a super-effective attack.
 [VAMPIRISM]
 Name = Vampirism
 Description = Drains HP after knocking out any Pokémon.
+#-------------------------------
+[WINDSURFER]
+Name = Wind Surfer
+Description = Speed increases from Flying Attacks. Speed boosts transfer to the next Pokemon.
