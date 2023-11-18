@@ -278,7 +278,7 @@ class Battle::Battler
     @effects[PBEffects::WeightChange]        = 0
     @effects[PBEffects::Yawn]                = 0
     #CUSTOM EFFECTS
-    @effects[PBEffects::GyroSquall]           = 0
+    @effects[PBEffects::GyroSquall]          = 0
   end
 
   #=============================================================================
