@@ -181,4 +181,5 @@ module PBEffects
   #=============================================================================
   WindSurfer       = 1000
   StrangeSlime    = 1001
+  GyroSquall      = 1002
 end

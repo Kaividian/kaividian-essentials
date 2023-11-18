@@ -386,6 +386,12 @@ class Battle
        (perishSongUsers.find_all { |idxBattler| !opposes?(idxBattler) }.length == perishSongUsers.length))
       pbJudgeCheckpoint(@battlers[perishSongUsers[0]])
     end
+    #CUSTOM
+
+    #Gyro Squall
+    pbEORCountDownBattlerEffect(priority, PBEffects::GyroSquall) do |battler|
+      pbDisplay(_INTL("{1} was freed from the squall!", battler.pbThis))
+    end
     return if @decision > 0
   end
 
@@ -758,6 +764,9 @@ class Battle
       battler.lastRoundMoveFailed                  = battler.lastMoveFailed
       battler.lastAttacker.clear
       battler.lastFoeAttacker.clear
+      if battler.effects[PBEffects::GyroSquall] == 1
+         battler.pbFlinch()
+      end
     end
     # Reset/count down side-specific effects (no messages)
     2.times do |side|

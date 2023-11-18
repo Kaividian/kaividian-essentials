@@ -19,3 +19,20 @@ class Battle::Move::AddStrangeSlimeToFoeSide < Battle::Move
                               user.pbOpposingTeam(true)))
     end
   end
+
+class Battle::Move::ApplyGyroSquallToTarget < Battle::Move
+    def pbFailsAgainstTarget?(user, target, show_message)
+      if target.effects[PBEffects::GyroSquall] >= 0
+        @battle.pbDisplay(_INTL("{1} is already in a squall!", target.pbThis)) if show_message
+        return true
+      end
+      return false
+    end
+  
+    def pbEffectAgainstTarget(user, target)
+      return if target.fainted? || target.damageState.substitute
+      return if target.effects[PBEffects::GyroSquall > 0]
+      target.effects[PBEffects::GyroSquall] = 2
+      @battle.pbDisplay(_INTL("{1} is facing a strengthening squall!", target.pbThis))
+    end
+  end
