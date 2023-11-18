@@ -1,0 +1,122 @@
+#-------------------------------
+[GYROSQUALL]
+Name = Gyro Squall
+Type = FLYING
+Category = Special
+Power = 30
+Accuracy = 90
+TotalPP = 20
+Target = Other
+FunctionCode = PLACEHOLDER
+Flags = CanProtect,CanMirrorMove,Wind
+Description = The user traps the target in a powerful squall, limiting its movement on the following turn.
+#-------------------------------
+[DRAGFORCE]
+Name = Drag Force
+Type = FLYING
+Category = Special
+Power = 65
+Accuracy = 100
+TotalPP = 20
+Target = Other
+FunctionCode = LowerTargetSpeed1
+Flags = CanProtect,CanMirrorMove,Wind
+EffectChance = 100
+Description = The user creates a vortex of air resistance, reducing the target's Speed stat.
+#-------------------------------
+[TURBULENCE]
+Name = Turbulence
+Type = FLYING
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = None
+Priority = 1
+FunctionCode = PLACEHOLDER
+Flags = CanProtect,Wind
+Description = The user forms a wind barrier, redirecting part of damage taken to the attacker.
+#-------------------------------
+[GLACIERSMASH]
+Name = Glacier Smash
+Type = ICE
+Category = Physical
+Power = 110
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = PLACEHOLDER
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user crashes into the foe with the full force of a glacier, lowering both the target and the user's Defense stat.
+#-------------------------------
+[MYSTERYTEA]
+Name = Mystery Tea
+Type = NORMAL
+Category = Special
+Power = 50
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = PLACEHOLDER
+Flags = CanProtect,CannotMetronome
+Description = This move becomes stronger in the presence of tea Pokémon. Its type varies based on the weather.
+#-------------------------------
+[INVIGORATE]
+Name = Invigorate
+Type = GRASS
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = PLACEHOLDER
+Description = The user roots itself deeply to protect against status conditions, restoring HP every turn. Because it is rooted, it can't switch out.
+#-------------------------------
+[UNROOT]
+Name = Unroot
+Type = GRASS
+Category = Status
+Accuracy = 0
+TotalPP = 15
+Target = User
+Priority = -6
+FunctionCode = PLACEHOLDER
+Description = The user unroots itself and switches out, clearing hazards on its side of the field.
+#-------------------------------
+[SPECTRESABRE]
+Name = Spectre Sabre
+Type = GHOST
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = PLACEHOLDER
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+EffectChance = 20
+Description = The user attacks with an ominous leek, dealing severe damage when landing a critical-hit. It may cause the target to flinch.
+#-------------------------------
+[FRIGIDSNAPSHOT]
+Name = Frigid Snapshot
+Type = ICE
+Category = Physical
+Power = 95
+Accuracy = 95
+TotalPP = 10
+Target = NearOther
+FunctionCode = PLACEHOLDER
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The user strikes with a powerful snapshot. It may cause frostbite or freeze the target.
+#-------------------------------
+[WOODWORKCLOBBER]
+Name = Woodwork Clobber
+Type = FIGHTING
+Category = Physical
+Power = 150
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = FailsIfUserHasUnusedMove
+Flags = Contact,CanProtect,CanMirrorMove
+Description = Putting its pride on the line, the user lands a powerful blow. This move can be used only after the user has used all the other moves it knows in the battle.
+#-------------------------------
