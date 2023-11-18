@@ -7,7 +7,7 @@ Power = 30
 Accuracy = 90
 TotalPP = 20
 Target = Other
-FunctionCode = PLACEHOLDER
+FunctionCode = ApplyGyroSquallToTarget
 Flags = CanProtect,CanMirrorMove,Wind
 Description = The user traps the target in a powerful squall, limiting its movement on the following turn.
 #-------------------------------

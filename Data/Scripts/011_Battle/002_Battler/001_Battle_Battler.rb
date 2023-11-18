@@ -618,6 +618,8 @@ class Battle::Battler
     return true if @effects[PBEffects::Ingrain]
     return true if @effects[PBEffects::NoRetreat]
     return true if @battle.field.effects[PBEffects::FairyLock] > 0
+    #Custom Effects
+    return true if @effects[PBEffects::GyroSquall] > 0
     return false
   end
 
