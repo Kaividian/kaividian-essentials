@@ -59,7 +59,7 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
   }
 )
 
-Battle::AbilityEffects::OnBeingHit.add(:WINDSURFER,
+Battle::AbilityEffects::OnBeingHit.add(:SECONDWIND,
   proc { |ability, user, target, move, battle|
     if move.calcType == :FLYING
       battle.pbShowAbilitySplash(target)
@@ -75,7 +75,7 @@ Battle::AbilityEffects::OnBeingHit.add(:WINDSURFER,
   }
 )
 
-Battle::AbilityEffects::OnSwitchOut.add(:WINDSURFER,
+Battle::AbilityEffects::OnSwitchOut.add(:SECONDWIND,
   proc { |ability, battler, endOfBattle|
     next if endOfBattle
     next if battler.stages[:SPEED] <= 0
