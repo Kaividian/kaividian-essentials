@@ -65,6 +65,7 @@ class Battle::ActiveSide
     @effects[PBEffects::ToxicSpikes]        = 0
     @effects[PBEffects::WideGuard]          = false
 
+    #Custom Effects
     @effects[PBEffects::StrangeSlime]       = false
   end
 end
@@ -86,5 +87,8 @@ class Battle::ActivePosition
     @effects[PBEffects::Wish]                      = 0
     @effects[PBEffects::WishAmount]                = 0
     @effects[PBEffects::WishMaker]                 = -1
+
+    #Custom Effects
+    @effects[PBEffects::WindSurfer]                 = 0
   end
 end

@@ -1,6 +1,6 @@
 Battle::AbilityEffects::OnSwitchIn.add(:FROSTED,
   proc { |ability, battler, battle, switch_in|
-    battler.effects[PBEffects::Type3] = :ICE
+    battler.effects[PBEffects::ExtraType] = :ICE
   }
 )
 
@@ -9,13 +9,13 @@ Battle::AbilityEffects::MoveImmunity.add(:INTANGIBLE,
 
     if (type == :NORMAL || type == :FIGHTING) && !target.effects[PBEffects::Foresight] && !user.hasActiveAbility?(:SCRAPPY)
       if show_message
-        @battle.pbShowAbilitySplash(target)
+        battle.pbShowAbilitySplash(target)
         if Battle::Scene::USE_ABILITY_SPLASH
-          @battle.pbDisplay(_INTL("{1} avoided the attack!", target.pbThis))
+          battle.pbDisplay(_INTL("{1} avoided the attack!", target.pbThis))
         else
-          @battle.pbDisplay(_INTL("{1} avoided the attack with {2}!", target.pbThis, target.abilityName))
+          battle.pbDisplay(_INTL("{1} avoided the attack with {2}!", target.pbThis, target.abilityName))
       end
-      @battle.pbHideAbilitySplash(target)
+      battle.pbHideAbilitySplash(target)
     end
   end
     }
@@ -23,8 +23,7 @@ Battle::AbilityEffects::MoveImmunity.add(:INTANGIBLE,
 
 Battle::AbilityEffects::OnBeingHit.add(:RESILIENCE,
   proc { |ability, user, target, move, battle|
-    typeMod = pbCalcTypeMod(move.type, target, battler)
-    next if !Effectiveness.super_effective?(typeMod)
+    next if !Effectiveness.super_effective?(target.damageState.typeMod)
     next if !target.pbCanRaiseStatStage?(:DEFENSE, target) &&
             !target.pbCanRaiseStatStage?(:SPECIAL_DEFENSE, target)
       battle.pbShowAbilitySplash(target)
@@ -39,28 +38,28 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
     numFainted = 0
     targets.each { |b| numFainted += 1 if b.damageState.fainted }
     next if numFainted == 0
-    @battle.pbShowAbilitySplash(user)
+    battle.pbShowAbilitySplash(user)
     targets.each do |b| 
       amt = b.damageState.hpLost
       if b.hasActiveAbility?(:LIQUIDOOZE)
-        @battle.pbShowAbilitySplash(b)
+        battle.pbShowAbilitySplash(b)
         pbReduceHP(amt)
-        @battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", pbThis))
-        @battle.pbHideAbilitySplash(b)
+        battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", pbThis))
+        battle.pbHideAbilitySplash(b)
       else
         msg = _INTL("{1} had its energy drained!", b.pbThis) if nil_or_empty?(msg)
-        @battle.pbDisplay(msg)
-        if canHeal?
-          amt = (amt * 1.3).floor if hasActiveItem?(:BIGROOT)
+        battle.pbDisplay(msg)
+        if user.canHeal?
+          amt = (amt * 1.3).floor if user.hasActiveItem?(:BIGROOT)
           user.pbRecoverHP(amt)
         end
       end
     end
-    @battle.pbHideAbilitySplash(user)
+    battle.pbHideAbilitySplash(user)
   }
 )
 
-Battle::AbilityEffects::OnBeingHit.add(:WINDRIDER,
+Battle::AbilityEffects::OnBeingHit.add(:SECONDWIND,
   proc { |ability, user, target, move, battle|
     if move.calcType == :FLYING
       battle.pbShowAbilitySplash(target)
@@ -70,17 +69,18 @@ Battle::AbilityEffects::OnBeingHit.add(:WINDRIDER,
     if target.fainted? && target.stages[:SPEED] > 0
       battle.pbShowAbilitySplash(target)
       battle.pbDisplay(_INTL("{1} is surrounded by strong winds!", target))
-      battle.position[target.index].effects[PBEffects::WindRider] = target.stages[:SPEED]
+      battle.positions[target.index].effects[PBEffects::WindSurfer] = target.stages[:SPEED]
       battle.pbHideAbilitySplash(target)
     end
   }
 )
 
-Battle::AbilityEffects::OnSwitchOut.add(:WINDRIDER,
+Battle::AbilityEffects::OnSwitchOut.add(:SECONDWIND,
   proc { |ability, battler, endOfBattle|
-    next if battler.stages[:SPEED] > 0
+    next if endOfBattle
+    next if battler.stages[:SPEED] <= 0
     @battle.pbShowAbilitySplash(battler)
     @battle.pbDisplay(_INTL("{1} is surrounded by strong winds!", battler))
-    @battle.position[target.index].effects[PBEffects::WindRider] = battler.stages[:SPEED]
+    @battle.positions[target.index].effects[PBEffects::WindSurfer] = battler.stages[:SPEED]
     @battle.pbHideAbilitySplash(battler)  }
 )

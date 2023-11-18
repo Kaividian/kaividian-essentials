@@ -420,12 +420,13 @@ class Battle
         position.effects[PBEffects::LunarDance] = false
       end
     end
-    if position.effects[PBEffects::WindRider] > 0
-      battler.stages[:ATTACK] = position.effects[PBEffects::WindRider]
+    # Wind Rider
+    if position.effects[PBEffects::WindSurfer] > 0
+      battler.stages[:ATTACK] = position.effects[PBEffects::WindSurfer]
       battler.statsRaisedThisRound = true
       pbCommonAnimation("StatUp", battler)
       pbDisplay(_INTL("{1} rode the wind!", battler.pbThis))
-      position.effects[PBEffects::WindRider] = 0      
+      position.effects[PBEffects::WindSurfer] = 0      
     end
   end
 
