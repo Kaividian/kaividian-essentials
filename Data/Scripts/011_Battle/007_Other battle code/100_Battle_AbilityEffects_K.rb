@@ -50,7 +50,7 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
         msg = _INTL("{1} had its energy drained!", b.pbThis) if nil_or_empty?(msg)
         battle.pbDisplay(msg)
         if user.canHeal?
-          amt = (amt * 1.3).floor if hasActiveItem?(:BIGROOT)
+          amt = (amt * 1.3).floor if user.hasActiveItem?(:BIGROOT)
           user.pbRecoverHP(amt)
         end
       end
