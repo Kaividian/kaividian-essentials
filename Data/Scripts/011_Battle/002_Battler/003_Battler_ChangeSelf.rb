@@ -35,6 +35,10 @@ class Battle::Battler
   end
 
   def pbRecoverHPFromDrain(amt, target, msg = nil)
+    if hasActiveAbility?(:VAMPIRISM)
+      return if target.fainted?
+      amt = (amt * 1.5).round
+    end
     if target.hasActiveAbility?(:LIQUIDOOZE, true)
       @battle.pbShowAbilitySplash(target)
       pbReduceHP(amt)
