@@ -1494,3 +1494,15 @@ MenuHandlers.add(:debug_menu, :reload_system_cache, {
     pbMessage(_INTL("Done."))
   }
 })
+
+#CUSTOM HANDLERS
+MenuHandlers.add(:debug_menu, :toggle_can_cut, {
+  "name"        => _INTL("Toggle cut ability"),
+  "parent"      => :player_menu,
+  "description" => _INTL("Toggle ability to cut trees."),
+  "effect"      => proc {
+    $player.can_cut_trees = !$player.can_cut_trees
+    pbMessage(_INTL("Gave Ability to Cut.")) if $player.can_cut_trees
+    pbMessage(_INTL("Lost Ability to Cut.")) if !$player.can_cut_trees
+  }
+})

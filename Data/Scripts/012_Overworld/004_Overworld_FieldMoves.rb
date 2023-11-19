@@ -174,6 +174,16 @@ end
 # Cut
 #===============================================================================
 def pbCut
+  if $player.can_cut_trees
+    if pbConfirmMessage(_INTL("This tree looks like it can be cut down!\nWould you like to cut it?"))
+      $stats.cut_count += 1
+      #speciesname = (movefinder) ? movefinder.name : $player.name
+      pbMessage(_INTL("{1} cut the tree!", $player.name))
+      return true
+    else
+      return false
+    end
+  end
   move = :CUT
   movefinder = $player.get_pokemon_with_move(move)
   if !pbCheckHiddenMoveBadge(Settings::BADGE_FOR_CUT, false) || (!$DEBUG && !movefinder)

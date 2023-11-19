@@ -35,6 +35,9 @@ class Player < Trainer
   # @return [Array<Array>] downloaded Mystery Gift data
   attr_accessor :mystery_gifts
 
+  # @return [Boolean] whether the player can use cut (without a Pokemon)
+  attr_accessor :can_cut_trees
+
   def initialize(name, trainer_type)
     super
     @character_ID          = 0
