@@ -36,3 +36,10 @@ class Battle::Move::ApplyGyroSquallToTarget < Battle::Move
       @battle.pbDisplay(_INTL("{1} is facing a strengthening squall!", target.pbThis))
     end
   end
+
+class Battle::Move::ApplyTurbulenceToSelf < Battle::Move
+  def pbEffectGeneral(user)
+    user.effects[PBEffects::Turbulence] = true
+    @battle.pbDisplay(_INTL("{1} is experiencing Turbulence!", user.pbThis))
+  end
+end

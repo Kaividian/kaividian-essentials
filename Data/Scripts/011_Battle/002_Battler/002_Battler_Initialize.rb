@@ -279,6 +279,7 @@ class Battle::Battler
     @effects[PBEffects::Yawn]                = 0
     #CUSTOM EFFECTS
     @effects[PBEffects::GyroSquall]          = 0
+    @effects[PBEffects::Turbulence]          = false
   end
 
   #=============================================================================
