@@ -37,6 +37,8 @@ class Player < Trainer
 
   # @return [Boolean] whether the player can use cut (without a Pokemon)
   attr_accessor :can_cut_trees
+  # @return [Boolean] whether the player can use rocksmash (without a Pokemon)
+  attr_accessor :can_break_rocks
 
   def initialize(name, trainer_type)
     super

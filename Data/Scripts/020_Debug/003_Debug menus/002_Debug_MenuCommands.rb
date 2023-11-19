@@ -1506,3 +1506,14 @@ MenuHandlers.add(:debug_menu, :toggle_can_cut, {
     pbMessage(_INTL("Lost Ability to Cut.")) if !$player.can_cut_trees
   }
 })
+
+MenuHandlers.add(:debug_menu, :toggle_can_smash, {
+  "name"        => _INTL("Toggle smash ability"),
+  "parent"      => :player_menu,
+  "description" => _INTL("Toggle ability to smash rocks."),
+  "effect"      => proc {
+    $player.can_break_rocks = !$player.can_break_rocks
+    pbMessage(_INTL("Gave Ability to Smash.")) if $player.can_break_rocks
+    pbMessage(_INTL("Lost Ability to Smash.")) if !$player.can_break_rocks
+  }
+})
