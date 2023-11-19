@@ -1,0 +1,168 @@
+#-------------------------------
+[SPECIALBALL]
+Name = Special Poké Ball
+NamePlural = Special Poké Balls
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = A special Poké Ball brought as a memento.
+#-------------------------------
+[CARKEY]
+Name = Car Key
+NamePlural = Car Keys
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = This car key belongs to someone else.
+#-------------------------------
+[LIGHTHOUSEKEY]
+Name = Lighthouse Key
+NamePlural = Lighthouse Keys
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = This key opens the door to Mirmirch City's lighthouse.
+#-------------------------------
+[TOY]
+Name = Toy
+NamePlural = Toys
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = A toy that likely belongs to a child.
+#-------------------------------
+[LOCKPICKS]
+Name = Lockpicks
+NamePlural = Lockpicks
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = A crafty set of lockpicks that can open most locks.
+#-------------------------------
+[RESEARCH]
+Name = Research Thesis
+NamePlural = Research Theses
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = This is a complex thesis on the topic of a Experience Shares. The equations are rather convoluted.
+#-------------------------------
+[AXE]
+Name = Axe
+NamePlural = Axes
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = This axe can chop down small trees and obstacles.
+#-------------------------------
+[PICKAXE]
+Name = Pickaxe
+NamePlural = Pickaxes
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = This pickaxe is capable of breaking small rocks.
+#-------------------------------
+[FLASHLIGHT]
+Name = Flashlight
+NamePlural = Flashlights
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = A flashlight with an Elekid pattern on it. It can illuminate dark areas.
+#-------------------------------
+[POWERGLOVES]
+Name = Power Gloves
+NamePlural = Power Gloves
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = These newly-developed gloves by Devon Corp. temporarily enhance one's physical prowess, enabling small boulders to be pushed.
+#-------------------------------
+[ULTRAVACUUM]
+Name = Ultra Vacuum
+NamePlural = Ultra Vacuums
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = This powerful vacuum was developed in a faraway region to absorb Ultra Wormholes. The repurposed product has seen great success overseas a defogger.
+#-------------------------------
+[POGOSTICK]
+Name = Pogo Stick
+NamePlural = Pogo Sticks
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = This fun item can be used to jump over ledges. A helmet is recommended.
+#-------------------------------
+[ICESKATES]
+Name = Ice Skates
+NamePlural = Ice Skates
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = These ice skates provide rapid movement and great control over icy surfaces.
+#-------------------------------
+[SCORCHOUTFIT]
+Name = Scorch Outfit
+NamePlural = Scorch Outfits
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = A uniform worn by members of Team Scorch during working hours and missions.
+#-------------------------------
+[EASTERNPASS]
+Name = Eastern Pass
+NamePlural = Eastern Passes
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = A pass to be presented at border control. It allows someone entry into any of the eastern districts.
+#-------------------------------
+[MAPLEBALL]
+Name = Maple Ball
+NamePlural = Maple Balls
+Pocket = 3
+Price = 1000
+BattleUse = OnFoe
+Flags = PokeBall
+Description = A somewhat different Poké Ball that works especially well on Fire- and Grass-type Pokémon.
+#-------------------------------
+[BRICKPIECE]
+Name = Brick Piece
+NamePlural = Brick Pieces
+Pocket = 1
+Price = 0
+Description = A rare and heavy chunk of brick. Once acquired, it cannot be disposed of. It may be found in unsuspecting places to discourage theft.
+#-------------------------------
+[ULTRAPOTION]
+Name = Ultra Potion
+NamePlural = Ultra Potions
+Pocket = 2
+Price = 1000
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = A spray-type medicine for treating wounds. It can be used to restore 100 HP to a single Pokémon.
+#-------------------------------
+[MAPLESYRUP]
+Name = Maple Syrup
+NamePlural = Maple Syrup
+PortionName = spoonful of Maple Syrup
+PortionNamePlural = spoonfuls of Maple Syrup
+Pocket = 2
+Price = 1500
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = A deliciously sweet syrup that restores the HP of a single Pokémon by 100 points and heals any of its status problems.
+#-------------------------------
+[POUTINE]
+Name = Poutine
+NamePlural = Poutines
+Pocket = 2
+Price = 5000
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = A local delicacy that completely negates all Effort Values of a Pokémon as a result of its high caloric density.
