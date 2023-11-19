@@ -764,9 +764,11 @@ class Battle
       battler.lastRoundMoveFailed                  = battler.lastMoveFailed
       battler.lastAttacker.clear
       battler.lastFoeAttacker.clear
+      #CUSTOM EFFECTS
       if battler.effects[PBEffects::GyroSquall] == 1
          battler.pbFlinch()
       end
+      battler.effects[PBEffects::Turbulence]       = false
     end
     # Reset/count down side-specific effects (no messages)
     2.times do |side|
