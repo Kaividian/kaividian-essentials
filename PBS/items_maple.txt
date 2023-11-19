@@ -68,6 +68,7 @@ Name = Flashlight
 NamePlural = Flashlights
 Pocket = 8
 Price = 0
+FieldUse = Direct
 Flags = KeyItem
 Description = A flashlight with an Elekid pattern on it. It can illuminate dark areas.
 #-------------------------------

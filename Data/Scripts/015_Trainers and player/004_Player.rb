@@ -39,6 +39,8 @@ class Player < Trainer
   attr_accessor :can_cut_trees
   # @return [Boolean] whether the player can use rocksmash (without a Pokemon)
   attr_accessor :can_break_rocks
+  # @return [Boolean] whether the player can use flash (without a Pokemon)
+  attr_accessor :can_light_caves
 
   def initialize(name, trainer_type)
     super
@@ -58,6 +60,10 @@ class Player < Trainer
     @has_exp_all           = false
     @mystery_gift_unlocked = false
     @mystery_gifts         = []
+    #CUSTOM
+    @can_break_rocks       = false
+    @can_cut_trees         = false
+    @can_light_caves       = false
   end
 
   #=============================================================================

@@ -90,6 +90,32 @@ ItemHandlers::UseFromBag.addIf(:move_machines,
   }
 )
 
+#FLASHLIGHT
+ItemHandlers::UseInField.add(:FLASHLIGHT, proc { |item|
+  if !$player.can_light_caves
+    pbMessage(_INTL("You don't know how to use that yet."))
+    next false
+  end
+  if !$game_map.metadata&.dark_map
+    pbMessage(_INTL("You can't use that here."))
+    next false
+  end
+  if $PokemonGlobal.flashUsed
+    pbMessage(_INTL("The area has already been lit up."))
+    next false
+  end
+  darkness = $game_temp.darkness_sprite
+  next false if !darkness || darkness.disposed?
+  pbMessage(_INTL("{1} lit up the area!", $player.name))
+  $PokemonGlobal.flashUsed = true
+  $stats.flash_count += 1
+  duration = 0.7
+  pbWait(duration) do |delta_t|
+    darkness.radius = lerp(darkness.radiusMin, darkness.radiusMax, duration, delta_t)
+  end
+  darkness.radius = darkness.radiusMax
+  next true
+})
 #===============================================================================
 # ConfirmUseInField handlers
 # Return values: true/false

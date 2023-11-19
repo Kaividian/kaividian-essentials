@@ -1517,3 +1517,14 @@ MenuHandlers.add(:debug_menu, :toggle_can_smash, {
     pbMessage(_INTL("Lost Ability to Smash.")) if !$player.can_break_rocks
   }
 })
+
+MenuHandlers.add(:debug_menu, :toggle_can_flash, {
+  "name"        => _INTL("Toggle flash ability"),
+  "parent"      => :player_menu,
+  "description" => _INTL("Toggle ability to light caves."),
+  "effect"      => proc {
+    $player.can_light_caves = !$player.can_light_caves
+    pbMessage(_INTL("Gave Ability to Flash.")) if $player.can_light_caves
+    pbMessage(_INTL("Lost Ability to Flash.")) if !$player.can_light_caves
+  }
+})
