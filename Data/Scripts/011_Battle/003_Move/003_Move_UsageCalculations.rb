@@ -477,6 +477,17 @@ class Battle::Move
     if target.effects[PBEffects::Minimize] && tramplesMinimize?
       multipliers[:final_damage_multiplier] *= 2
     end
+    #CUSTOM MULTIPLIERS
+    # Turbulence
+    if target.effects[PBEffects::Turbulence]
+      #Apply Reckless boost to moves not already boosted
+      if user.hasActiveAbility?(:RECKLESS) && !recoilMove? 
+        multipliers[:final_damage_multiplier] *= 1.2
+      end
+      if !user.hasActiveAbility?(:ROCKHEAD)
+        multipliers[:final_damage_multiplier] /= 2
+      end
+    end
     # Move-specific base damage modifiers
     multipliers[:power_multiplier] = pbBaseDamageMultiplier(multipliers[:power_multiplier], user, target)
     # Move-specific final damage modifiers

@@ -222,15 +222,7 @@ class Battle::Move
       end
     end
     #CUSTOM EFFECTS
-    if target.effects[PBEffects::Turbulence]
-      #Apply Reckless boost to moves not already boosted
-      if user.hasActiveAbility?(:RECKLESS) && !recoilMove? 
-        damage *= 1.2
-      end
-      if !user.hasActiveAbility?(:ROCKHEAD)
-        damage = (damage/2).round
-      end
-    end
+    
     damage = 0 if damage < 0
     target.damageState.hpLost       = damage
     target.damageState.totalHPLost += damage
