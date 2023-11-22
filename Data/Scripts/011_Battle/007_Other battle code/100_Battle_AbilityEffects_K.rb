@@ -38,24 +38,33 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
     numFainted = 0
     targets.each { |b| numFainted += 1 if b.damageState.fainted }
     next if numFainted == 0
-    battle.pbShowAbilitySplash(user)
-    targets.each do |b| 
-      amt = b.damageState.hpLost
+    anyOoze = false
+    targets.each do |b|
       if b.hasActiveAbility?(:LIQUIDOOZE)
-        battle.pbShowAbilitySplash(b)
-        pbReduceHP(amt)
-        battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", pbThis))
-        battle.pbHideAbilitySplash(b)
-      else
-        msg = _INTL("{1} had its energy drained!", b.pbThis) if nil_or_empty?(msg)
-        battle.pbDisplay(msg)
-        if user.canHeal?
-          amt = (amt * 1.3).floor if user.hasActiveItem?(:BIGROOT)
-          user.pbRecoverHP(amt)
-        end
+        anyOoze = true
+        break
       end
     end
-    battle.pbHideAbilitySplash(user)
+    if anyOoze || user.canHeal?
+        battle.pbShowAbilitySplash(user)
+        targets.each do |b| 
+          amt = b.damageState.hpLost
+          if b.hasActiveAbility?(:LIQUIDOOZE)
+            battle.pbShowAbilitySplash(b)
+            pbReduceHP(amt)
+            battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", pbThis))
+            battle.pbHideAbilitySplash(b)
+          else
+            msg = _INTL("{1} had its energy drained!", b.pbThis) if nil_or_empty?(msg)
+            battle.pbDisplay(msg)
+            if user.canHeal?
+              amt = (amt * 1.3).floor if user.hasActiveItem?(:BIGROOT)
+              user.pbRecoverHP(amt)
+            end
+          end
+        end
+        battle.pbHideAbilitySplash(user)
+    end
   }
 )
 
