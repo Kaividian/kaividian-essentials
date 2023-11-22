@@ -3,6 +3,10 @@
 #                                 Version 21.1                                 #
 #                https://github.com/Maruno17/pokemon-essentials                #
 #==============================================================================#
+#                             Kaividian Essentials                             #
+#                                Version 0.1.0                                 #
+#               https://github.com/Kaividian/kaividian-essentials              #
+#==============================================================================#
 
 module Settings
   # The version of your game. It has to adhere to the MAJOR.MINOR.PATCH format.
