@@ -82,7 +82,10 @@ class Battle::Battler
       # Turbulence
       if target.effects[PBEffects::Turbulence]
         if !user.hasActiveAbility?(:ROCKHEAD) && !target.damageState.substitute
-          user.pbReduceHP(target.damageState.hpLost, false)
+          maxDamage = target.totalhp
+          dealtDamage = target.damageState.calcDamage
+          dealtDamage = maxDamage if dealtDamage > maxDamage
+          user.pbReduceHP(dealtDamage, false)
           @battle.pbDisplay(_INTL("{1} is damaged by recoil!", user.pbThis))
         end
       end
