@@ -34,3 +34,5 @@ Thumbs.db
 # Other files
 gh_release.bat
 gh_staging.bat
+Helpers/new_data/*
+Helpers/old_data/*
