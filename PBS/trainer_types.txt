@@ -493,7 +493,7 @@ Name = Police Inspector
 Gender = Male
 BaseMoney = 15
 SkillLevel = 75
-BattleBGM = Battle Inspector
+BattleBGM = PM Battle Inspector
 #-------------------------------
 [SCORCH_M]
 Name = Team Scorch
@@ -526,4 +526,10 @@ VictoryBGM = Battle victory leader
 Name = Pokémon Solstice Dev
 Gender = Male
 BaseMoney = 40
+SkillLevel = 100
+#-------------------------------
+[GTLCHAMPION]
+Name = GTL Champion
+Gender = Male
+BaseMoney = 50
 SkillLevel = 100
