@@ -221,6 +221,8 @@ class Battle::Move
         end
       end
     end
+    #CUSTOM EFFECTS
+    
     damage = 0 if damage < 0
     target.damageState.hpLost       = damage
     target.damageState.totalHPLost += damage

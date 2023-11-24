@@ -78,6 +78,17 @@ class Battle::Battler
          user.effects[PBEffects::DestinyBondTarget] < 0
         user.effects[PBEffects::DestinyBondTarget] = target.index
       end
+      #CUSTOM EFFECTS
+      # Turbulence
+      if target.effects[PBEffects::Turbulence]
+        if !user.hasActiveAbility?(:ROCKHEAD) && !target.damageState.substitute
+          maxDamage = target.totalhp
+          dealtDamage = target.damageState.calcDamage
+          dealtDamage = maxDamage if dealtDamage > maxDamage
+          user.pbReduceHP(dealtDamage, false)
+          @battle.pbDisplay(_INTL("{1} is damaged by recoil!", user.pbThis))
+        end
+      end
     end
   end
 
