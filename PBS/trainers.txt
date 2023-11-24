@@ -116,3 +116,848 @@ Pokemon = CHARIZARD,63
     Item = SITRUSBERRY
 Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
+#-------------------------------
+[BUGCATCHER,Doyle]
+Pokemon = CHIKORITA,6
+    Gender = female
+    Moves = TACKLE,GROWL,RAZORLEAF
+    AbilityIndex = 2
+    Nature = GENTLE
+    IV = 0,0,0,0,0,0
+#-------------------------------
+[SCIENTIST,Heisenberg]
+Pokemon = FOONGUS,6
+    Gender = female
+#-------------------------------
+[BUGCATCHER,Marcus]
+Pokemon = SILCOON,7
+    Gender = male
+Pokemon = CASCOON,7
+    Gender = female
+#-------------------------------
+[BUGCATCHER,Blake]
+Pokemon = SILCOON,7
+    Gender = female
+Pokemon = WURMPLE,4
+    Gender = male
+Pokemon = JOLTIK,5
+    Gender = male
+    Ball = NETBALL
+#-------------------------------
+[BUGCATCHER,Dan]
+Pokemon = MOTHIM,10
+    Gender = male
+    Moves = PROTECT,TACKLE,ATTRACT
+    AbilityIndex = 2
+    Item = ORANBERRY
+    IV = 10,10,10,31,10,10
+    Shiny = true
+    Ball = PREMIERBALL
+#-------------------------------
+[OFFICER,Joe]
+Pokemon = GROWLITHE,9
+    Gender = male
+    AbilityIndex = 0
+Pokemon = GROWLITHE,7
+    Gender = female
+    AbilityIndex = 1
+#-------------------------------
+[OFFICER,Brian]
+Pokemon = MAGNEMITE,8
+    AbilityIndex = 1
+Pokemon = MACHOP,8
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[OFFICER,Caleb]
+Pokemon = GROWLITHE,9
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[OFFICER,Djems]
+Pokemon = MACHOP,9
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[OFFICER,Xavier]
+Pokemon = GROWLITHE,9
+    Gender = female
+    AbilityIndex = 2
+#-------------------------------
+[OFFICER,Nebb]
+Pokemon = MAGNEMITE,9
+    AbilityIndex = 1
+#-------------------------------
+[OFFICER,Maxime]
+Pokemon = MACHOP,9
+    Gender = female
+    AbilityIndex = 0
+#-------------------------------
+[OFFICER,Samuel]
+Pokemon = MAGNEMITE,8
+    AbilityIndex = 1
+Pokemon = GROWLITHE,9
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[OFFICERS,Paul & Blart]
+Pokemon = MAGNEMITE,9
+    AbilityIndex = 1
+Pokemon = MACHOP,8
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[OFFICER,Farva]
+Pokemon = MAGNEMITE,10
+    AbilityIndex = 1
+Pokemon = MACHOP
+    Gender = female
+    AbilityIndex = 0
+#-------------------------------
+[INSPECTOR,Gadjett]
+Pokemon = GROWLITHE,11
+    Gender = male
+    AbilityIndex = 0 
+Pokemon = YUKORO,13
+    Gender = male
+    AbilityIndex = 0
+    Ball = QUICKBALL
+Pokemon = HERDIER,12
+    Gender = male
+    AbilityIndex = 0
+    Ball = ULTRABALL
+#-------------------------------
+[GAMBLER,Gamer7256]
+Pokemon = SCRAGGY,10
+    Gender = male
+    Moves = FIREPUNCH,ICEPUNCH,THUNDERPUNCH,ZENHEADBUTT
+    AbilityIndex = 2
+Pokemon = CHINCHOU,9
+    Gender = female
+    Moves = SUPERSONIC,SIGNABEAM,THUNDERBOLT,BLIZZARD
+    AbilityIndex = 0
+Pokemon = GIBLE,11
+    Gender = male
+    Moves = DRAGONRAGE,METALCLAW,SANDATTACK,ROCKCLIMB
+    AbilityIndex = 2
+    Ball = GREATBALL
+Pokemon = LARVESTA,12
+    Gender = male
+    Moves = BUGBITE,ZENHEADBUTT,HEATWAVE,GIGADRAIN
+    AbilityIndex = 0
+    Ball = GREATBALL
+#-------------------------------
+[SOLSTICEDEV,Legna K]
+Pokemon = SABLEYE
+    Gender = male
+    Moves = WILLOWISP,RAINDANCE,RECOVER,KNOCKOFF
+    AbilityIndex = 2
+    Item = DAMPROCK
+    Ball = DUSKBALL
+Pokemon = CRYOGONAL,9
+    Item = NEVERMELTICE
+    Ball = ULTRABALL
+Pokemon = WHIMSICOTT,12
+    Gender = female
+    AbilityIndex = 0
+    Item = BRIGHTPOWDER
+    Ball = HEALBALL
+Pokemon = POLIWAG,11
+    Gender = female
+    Moves = ICEBEAM,HYDROPUMP,HAZE,ENCORE
+    AbilityIndex = 2
+    Item = WATERGEM
+    Ball = DIVEBALL
+#-------------------------------
+[ROCKER,MoshJarcus]
+Pokemon = CHIKORITA,14
+    Gender = female
+    AbilityIndex = 0
+#-------------------------------
+[PYRE,Pyre]
+Pokemon = CYNDAQUIL
+    Gender = male
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = LITWICK
+    Gender = female
+    AbilityIndex = 1
+    Ball = DUSKBALL
+Pokemon = LARVESTA,14
+    Gender = male
+    Ball = MAPLEBALL
+#-------------------------------
+[POKEMANIAC,Rendarus]
+Pokemon = LITWICK,11
+    Gender = female
+    AbilityIndex = 1
+Pokemon = BELLSPROUT,11
+    Gender = male
+    Ball = PREMIERBALL
+Pokemon = BARBOACH,14
+    Gender = male
+    AbilityIndex = 0
+    Shiny = true
+    Ball = NETBALL
+#-------------------------------
+[LADY,Darcy]
+Pokemon = SNEASEL,18
+    Gender = female
+    AbilityIndex = 2
+    Ball = LUXURYBALL
+#-------------------------------
+[LADY,Miera]
+Pokemon = SNOVER,16
+    Gender = male
+    Ball = LUXURYBALL
+Pokemon = SPHEAL,17
+    Gender = female
+    AbilityIndex = 1
+    Ball = LUXURYBALL
+#-------------------------------
+[LADY,Mackenzie]
+Pokemon = PESCUBE,28
+    Gender = female
+    Moves = IRONDEFENSE,MIST,ICEBALL,DIVE
+    Ball = LUXURYBALL
+#-------------------------------
+[FIREBREATHER,Tanner]
+Pokemon = CHARMELEON,17
+    Gender = male
+Pokemon = MAGMAR,16
+    Gender = male
+    Ball = GREATBALL
+#-------------------------------
+[FIREBREATHER,Connor]
+Pokemon = LARVESTA,18
+    Gender = female
+#-------------------------------
+[FIREBREATHER,George]
+Pokemon = ARCANINE,28
+    Gender = male
+    Moves = MORNINGSUN,FLAMETHROWER,DRAGONPULSE,WILLOWISP
+    AbilityIndex = 0
+    Ball = ULTRABALL
+#-------------------------------
+[FISHERMAN.Darius]
+Pokemon = MAGIKARP,15
+    Gender = male
+    Ball = LUREBALL
+Pokemon = MAGIKARP,15
+    Gender = female
+    Ball = LUREBALL
+Pokemon = MAGIKARP,15
+    Gender = male
+    Ball = LUREBALL
+Pokemon = MAGIKARP,15
+    Gender = female
+    Ball = LUREBALL
+Pokemon = MAGIKARP,15
+    Gender = male
+    Ball = LUREBALL
+Pokemon = MAGIKARP,15
+    Gender = female
+    Ball = LUREBALL
+#-------------------------------
+[FISHERMAN,Perry]
+Pokemon = PSYDUCK,16
+    Gender = female
+    AbilityIndex = 2
+    Ball = DIVEBALL
+Pokemon = DUCKLETT,16
+    Gender = female
+    AbilityIndex = 2
+    Ball = PREMIERBALL
+#-------------------------------
+[FISHERMAN,Mario]
+Pokemon = MILOTIC,28
+    Gender = female
+    AbilityIndex = 0
+    Ball = LOVEBALL
+#-------------------------------
+[HIKER,Dan]
+Pokemon = GEODUDE,16
+    Gender = male
+    AbilityIndex = 1
+Pokemon = ONIX,15
+    Gender = female
+    AbilityIndex = 1
+Pokemon = SHUCKLE,16 
+    Gender = female
+    AbilityIndex = GLUTTONY
+    Item = BERRYJUICE
+    Ball = GREATBALL
+#-------------------------------
+[HIKER,Hayden]
+Pokemon = LARVITAR,18
+    Gender = male
+    AbilityIndex = 2
+    Item = BRIGHTPOWDER
+    Ball = NESTBALL
+#-------------------------------
+[HIKER,Houston]
+Pokemon = ANORITH,28
+    Gender = male
+#-------------------------------
+[COOLTRAINER_M,Julius]
+Pokemon = ARCANINE,32
+    Gender = male
+    Moves = MORNINGSUN,FLAMETHROWER,DRAGONPULSE,WILLOWISP
+    AbilityIndex = 0
+    Item = SITRUSBERRY
+    Ball = ULTRABALL
+Pokemon = MILOTIC,32
+    Gender = female
+    AbilityIndex = 0
+    Item = LEFTOVERS
+    Ball = LUXURYBALL
+Pokemon = PESCUBE,32
+    Gender = male
+    Item = CUSTAPBERRY
+    Ball = LUREBALL
+Pokemon = ARMALDO,35
+    Gender = male
+    Item = SITRUSBERRY
+Pokemon = CASTFORM,30
+    Gender = female
+    Item = CHOPLEBERRY
+    Ball = GREATBALL
+#-------------------------------
+[RUINMANIAC,Jared]
+Pokemon = KABUTO,38
+    Gender = male
+    AbilityIndex = 1
+Pokemon = OMANYTE,38
+    Gender = male
+    AbilityIndex = 1
+#-------------------------------
+[INSPECTOR,Gadjett,1]
+Pokemon = GROWLITHE,11
+    Gender = male
+    AbilityIndex = 0 
+Pokemon = YUKORO,15
+    Gender = male
+    AbilityIndex = 0
+    Ball = QUICKBALL
+Pokemon = HERDIER,14
+    Gender = male
+    AbilityIndex = 0
+    Ball = ULTRABALL
+Pokemon = KLINK,7
+    AbilityIndex = 2
+    Ball = QUICKBALL
+#-------------------------------
+[OFFICER,Joan]
+Pokemon = GROWLITHE,9
+    Gender = female
+    AbilityIndex = 0
+Pokemon = LILLIPUP,11
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[OFFICER,Glock]
+Pokemon = MACHOP,12
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[INSPECTOR,Gadjett,2]
+Pokemon = GROWLITHE,12
+    Gender = male
+    AbilityIndex = 0 
+Pokemon = YUKORO,16
+    Gender = male
+    AbilityIndex = 0
+    Ball = QUICKBALL
+Pokemon = HERDIER,15
+    Gender = male
+    AbilityIndex = 0
+    Ball = ULTRABALL
+Pokemon = KLINK,11
+    AbilityIndex = 2
+    Ball = QUICKBALL
+#-------------------------------
+[HIKER,David]
+Pokemon = MAGMAR,19
+    Gender = male
+    Ball = GREATBALL 
+#-------------------------------
+[HIKER,Dale]
+Pokemon = DRILBUR,15
+    Gender = male
+    AbilityIndex = 2
+Pokemon = TRAPINCH,15
+    Gender = female
+    AbilityIndex = 1
+Pokemon = SANDILE,14
+    Gender = female
+    AbilityIndex = 0
+#-------------------------------
+[HIKER,Mike]
+Pokemon = GEODUDE,15
+    Gender = 
+    AbilityIndex = 
+GEODUDE,15
+SANDILE,16
+#-------------------------------
+HIKER
+Rick
+2
+STUNFISK,15
+NUMEL,16
+#-------------------------------
+HIKER
+Harrison
+2
+SANDSHREW,15
+BALTOY,16
+#-------------------------------
+LEADER_Cliff
+Cliff
+4
+GLIGAR,18,,KNOCKOFF,FURYCUTTER,QUICKATTACK,SANDATTACK,,M
+NUMEL,19,,FLAMEBURST,FOCUSENERGY,AMNESIA,MAGNITUDE,,F
+MARSHTOMP,20,,MUDSHOT,BIDE,WATERGUN,MUDSLAP,,F
+JUNQUITO,21,SITRUSBERRY,LEECHLIFE,SUBSTITUTE,PINMISSILE,FOCUSENERGY,,M
+#-------------------------------
+FISHERMAN
+Scott
+2
+KRABBY,12
+CORPHISH,13
+#-------------------------------
+PYRE2
+Pyre
+3
+QUILAVA,17
+LITWICK,14
+LARVESTA,16
+#-------------------------------
+POKEMANIAC
+Clancee
+1
+CHANSEY,25
+#-------------------------------
+FISHERMAN
+Haddock
+3
+KRABBY,15
+GYARADOS,20
+PESCUBE,16
+#-------------------------------
+SISANDBRO
+Alice & Jacob
+2
+STARYU,16
+SLOWPOKE,15
+#-------------------------------
+SWIMMER_M
+Cena
+2
+OCTILLERY,36
+WAILMER,34
+#-------------------------------
+CRUSHKIN
+Bruce & Karine
+2
+HITMONLEE,20
+HITMONCHAN,20
+#-------------------------------
+GAMBLER
+Sleepy
+1
+MUNNA,12
+#-------------------------------
+FISHERMAN
+Bob
+1
+MAGIKARP,25,,,,,,,,,shiny
+#-------------------------------
+FISHERMAN
+Austin
+2
+SHELLDER,17
+CLAMPERL,16
+#-------------------------------
+FISHERMAN
+Fergus
+1
+REMORAID,18
+#-------------------------------
+FISHERMAN
+Philip
+1
+PESCUBE,19
+#-------------------------------
+SWIMMER_M
+Adam
+2
+CROCONAW,35
+LUVDISC,35
+#-------------------------------
+SWIMMER_F
+Sarah
+1
+LUMINEON,37
+#-------------------------------
+FISHERMAN
+Esperanto
+4
+WAILMER,17
+SQUIRTLE,15
+CROCONAW,16
+VAPOREON,19
+#-------------------------------
+BIRDKEEPER
+Devin
+3
+CHATOT,16
+GLIGAR,14
+HOPPIP,11
+#-------------------------------
+SISANDBRO
+Marie & Robbie
+2
+MARILL,18
+TENTACOOL,17
+#-------------------------------
+FISHERMAN
+Jeremy
+2
+WARTORTLE,20
+STARMIE,24
+#-------------------------------
+HIKER
+Miker
+2
+HIPPOPOTAS,18
+GLIGAR,17
+#-------------------------------
+SWIMMER_M
+Jocelin
+2
+FINNEON,17
+SLOWPOKE,18
+#-------------------------------
+SWIMMER_M
+Carl
+1
+MANTYKE,20
+#-------------------------------
+RUINMANIAC
+Holland
+1
+SANDSLASH,22
+#-------------------------------
+RUINMANIAC
+Seth
+2
+BRONZOR,18
+SANDSHREW,17
+#-------------------------------
+HIKER
+Ronald
+1
+RHYHORN,20
+#-------------------------------
+HIKER
+Don
+2
+NOSEPASS,18
+GEODUDE,17
+#-------------------------------
+HIKER
+Rowan
+6
+GEODUDE,12
+GEODUDE,12
+GEODUDE,12
+GEODUDE,12
+GEODUDE,12
+GEODUDE,14
+#-------------------------------
+HIKER
+Hussein
+3
+HIPPOPOTAS,15
+DIGLETT,18
+TRAPINCH,16
+#-------------------------------
+HIKER
+Braddy
+1
+SANDILE,21
+#-------------------------------
+COOLTRAINER_M
+Antoine
+4
+HIPPOPOTAS,19
+LARVITAR,21
+WORMADAM,20,,,,,,,,1
+STEELIX,23
+#-------------------------------
+SCIENTIST
+Bark
+1
+VOLCARONA,61
+#-------------------------------
+CRUSHGIRL
+Sophie
+2
+TIMBURR,20
+PIGNITE,17
+#-------------------------------
+TUBER_M
+Phiah
+2
+GLACEON,32,LEFTOVERS,SANDATTACK,PROTECT,WISH,ICEBEAM,0,F
+CROAGUNK,29,BLACKSLUDGE,FAKEOUT,POISONJAB,KNOCKOFF,CROSSCHOP,1,M
+#-------------------------------
+ROCKER
+caf
+2
+LUXRAY,31,BLACKGLASSES,THUNDERBOLT,BITE,WILDCHARGE,SWIFT,1,M
+MAGNETON,30,MAGNET,FLASHCANNON,MAGNETRISE,THUNDERBOLT,METALSOUND,1
+#-------------------------------
+COOLTRAINER_M
+Kyle
+2
+PIKACHU,32,LIGHTBALL,THUNDERBOLT,QUICKATTACK,VOLTTACKLE,IRONTAIL,,M
+VENOMOTH,31,MAGNET,PSYCHIC,QUIVERDANCE,SLEEPPOWDER,BUGBUZZ,1
+#-------------------------------
+COOLTRAINER_M
+Lymnus
+3
+ZOROARK,32,LEFTOVERS,SWAGGER,,,,,M,,,BOLD,31,,,,12
+MURKROW,34,EVIOLITE,FOULPLAY,SWAGGER,THUNDERWAVE,ROOST,2,M,,,BOLD,31,,,,12
+HOUNDOOM,36,EXPERTBELT,FLAMETHROWER,DARKPULSE,SLUDGEBOMB,WILLOWISP,1,M,,,TIMID,31,,,,12
+#-------------------------------
+GENTLEMAN
+elpandur0
+1
+GENGAR,33
+#-------------------------------
+HIKER
+Rickerick
+2
+ROGGENROLA,20
+ONIX,19
+#-------------------------------
+BLACKBELT
+Josh
+1
+HITMONTOP,23
+#-------------------------------
+BEAUTY
+McBeard
+5
+JYNX,19
+PURUGLY,23
+GARBODOR,21
+SKUNTANK,23
+PROBOPASS,25
+#-------------------------------
+INSPECTOR
+Navy
+4
+BRONZOR,21
+RIOLU,23
+PAWNIARD,22
+MAGNETON,26
+#-------------------------------
+JANITOR
+Javid
+1
+TRUBBISH,20
+#-------------------------------
+JANITOR
+Jonathan
+1
+STUNKY,20
+#-------------------------------
+JANITOR
+Jacob
+1
+GRIMER,21
+#-------------------------------
+JANITOR
+Jorge
+1
+KOFFING,21
+#-------------------------------
+JANITOR
+Jenkins
+2
+TIMBURR,21
+MUNCHLAX,22
+#-------------------------------
+JANITOR
+Jerky
+2
+RATTATA,21
+MINCCINO,22
+#-------------------------------
+JANITOR
+Jovial
+1
+CINCCINO,24
+#-------------------------------
+JANITOR
+Jabbo
+1
+HITMONCHAN,25
+#-------------------------------
+JANITOR
+Josh
+1
+GURDURR,25
+#-------------------------------
+JANITOR
+Jorden
+1
+RATICATE,25
+#-------------------------------
+GENTLEMAN
+Dang
+3
+MUSHARNA,24
+GURDURR,25
+ROSERADE,27
+#-------------------------------
+BLACKBELT
+Jeff
+3
+DUSCLOPS,30
+MAGNETON,30
+DRAQUITO,25
+#-------------------------------
+PYRE3
+Pyre
+3
+QUILAVA,32
+LITWICK,27
+LARVESTA,29
+#-------------------------------
+PYRE3B
+Pyre
+4
+TYPHLOSION,42
+LITWICK,38
+LARVESTA,39
+SCIZOR,37
+#-------------------------------
+BUGCATCHER
+Suzie
+4
+KAKUNA,7
+CATERPIE,4
+METAPOD,7
+WEEDLE,4
+#-------------------------------
+SCIENTIST
+Rooklu
+3
+GARDEVOIR,30,LEFTOVERS,THUNDERBOLT,PSYSHOCK,THUNDERWAVE,ENERGYBALL,0,F,,,TIMID,31
+SANDSLASH,22,LIFEORB,EARTHQUAKE,KNOCKOFF,ROCKSLIDE,SWORDSDANCE,0,M,,,ADAMANT,31
+GALVANTULA,36,EXPERTBELT,THUNDERWAVE,BUGBUZZ,THUNDER,GIGADRAIN,0,M,,,TIMID,31
+#-------------------------------
+COOLTRAINER_M
+Doyle
+2
+CHIKORITA,9
+MARSHQUITO,7
+#-------------------------------
+BLACKBELT
+Kyle
+1
+MIENFOO,8
+#-------------------------------
+PICNICKER
+Laurie
+1
+SQUIRTLE,8
+#-------------------------------
+SCIENTIST
+Doyle
+2
+CHIKORITA,11
+MARSHQUITO,9
+#-------------------------------
+CAMPER
+Dohf
+3
+SEWADDLE,13
+PRINPLUP,16
+VANILLITE,14
+#-------------------------------
+BLACKBELT
+Raj
+2
+MACHOP,15
+MAKUHITA,16
+#-------------------------------
+FISHERMAN
+Thomas
+2
+FINNEON,14,,,,,,0,F
+STARYU,16,,,,,,2,F,,shiny
+#-------------------------------
+THOMAS2
+Thomas
+3
+FINNEON,17,,,,,,0,F
+CHINCHOU,15,,,,,,0,M
+STARYU,21,,,,,,2,F,,shiny
+#-------------------------------
+THOMAS3
+Thomas
+3
+FINNEON,25,,,,,,0,F
+CHINCHOU,22,,,,,,0,M
+STARMIE,28,,,,,,2,F,,shiny
+#-------------------------------
+THOMAS4
+Thomas
+4
+LUMINEON,34,DAMPROCK,RAINDANCE,SCALD,BLIZZARD,ATTRACT,0,F
+LANTURN,33,LEFTOVERS,SIGNALBEAM,SURF,CONFUSERAY,THUNDERWAVE,0,M
+GYARADOS,36,ROCKYHELMET,WATERFALL,CRUNCH,ICEFANG,DRAGONTAIL,0,M,,shiny
+STARMIE,38,LIFEORB,PSYCHIC,SURF,ICEBEAM,FLASHCANNON,2,F,,shiny
+#-------------------------------
+BIKER
+Rodwell
+2
+KOFFING,13
+STUNKY,16
+#-------------------------------
+BIKERS
+Jake & Jeka
+2
+WEEZING,40
+ARBOK,40
+#-------------------------------
+GENTLEMAN
+Foyle
+2
+ROSELIA,15
+BAYLEEF,18
+#-------------------------------
+PICNICKER
+Kim
+2
+TANGELA,19
+GROTLE,23
+#-------------------------------
+OFFICERS
+Ronald & McDonald
+4
+LILLIPUP,9,,,,,,0
+MACHOP,8,,,,,,0
+GROWLITHE,10,,,,,,0
+MAGNEMITE,11,,,,,,1
+#-------------------------------
+GADJETTBRIDGE
+Gadjett
+3
+GROWLITHE,11,,,,,,0
+HERDIER,11,,,,,,0
+YUKORO,12
