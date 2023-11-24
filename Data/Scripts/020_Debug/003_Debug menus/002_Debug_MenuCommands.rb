@@ -1494,3 +1494,37 @@ MenuHandlers.add(:debug_menu, :reload_system_cache, {
     pbMessage(_INTL("Done."))
   }
 })
+
+#CUSTOM HANDLERS
+MenuHandlers.add(:debug_menu, :toggle_can_cut, {
+  "name"        => _INTL("Toggle cut ability"),
+  "parent"      => :player_menu,
+  "description" => _INTL("Toggle ability to cut trees."),
+  "effect"      => proc {
+    $player.can_cut_trees = !$player.can_cut_trees
+    pbMessage(_INTL("Gave Ability to Cut.")) if $player.can_cut_trees
+    pbMessage(_INTL("Lost Ability to Cut.")) if !$player.can_cut_trees
+  }
+})
+
+MenuHandlers.add(:debug_menu, :toggle_can_smash, {
+  "name"        => _INTL("Toggle smash ability"),
+  "parent"      => :player_menu,
+  "description" => _INTL("Toggle ability to smash rocks."),
+  "effect"      => proc {
+    $player.can_break_rocks = !$player.can_break_rocks
+    pbMessage(_INTL("Gave Ability to Smash.")) if $player.can_break_rocks
+    pbMessage(_INTL("Lost Ability to Smash.")) if !$player.can_break_rocks
+  }
+})
+
+MenuHandlers.add(:debug_menu, :toggle_can_flash, {
+  "name"        => _INTL("Toggle flash ability"),
+  "parent"      => :player_menu,
+  "description" => _INTL("Toggle ability to light caves."),
+  "effect"      => proc {
+    $player.can_light_caves = !$player.can_light_caves
+    pbMessage(_INTL("Gave Ability to Flash.")) if $player.can_light_caves
+    pbMessage(_INTL("Lost Ability to Flash.")) if !$player.can_light_caves
+  }
+})

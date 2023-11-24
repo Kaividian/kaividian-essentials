@@ -174,6 +174,16 @@ end
 # Cut
 #===============================================================================
 def pbCut
+  if $player.can_cut_trees
+    if pbConfirmMessage(_INTL("This tree looks like it can be cut down!\nWould you like to cut it?"))
+      $stats.cut_count += 1
+      #speciesname = (movefinder) ? movefinder.name : $player.name
+      pbMessage(_INTL("{1} cut the tree!", $player.name))
+      return true
+    else
+      return false
+    end
+  end
   move = :CUT
   movefinder = $player.get_pokemon_with_move(move)
   if !pbCheckHiddenMoveBadge(Settings::BADGE_FOR_CUT, false) || (!$DEBUG && !movefinder)
@@ -589,6 +599,16 @@ def pbRockSmashRandomEncounter
 end
 
 def pbRockSmash
+  if $player.can_break_rocks
+    if pbConfirmMessage(_INTL("This rock seems breakable.\nWould you like to break it?"))
+      $stats.rock_smash_count += 1
+      #speciesname = (movefinder) ? movefinder.name : $player.name
+      pbMessage(_INTL("{1} broke the rock!", $player.name))
+      return true
+    else
+      return false
+    end
+  end
   move = :ROCKSMASH
   movefinder = $player.get_pokemon_with_move(move)
   if !pbCheckHiddenMoveBadge(Settings::BADGE_FOR_ROCKSMASH, false) || (!$DEBUG && !movefinder)
