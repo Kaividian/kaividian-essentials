@@ -225,7 +225,7 @@ Pokemon = MACHOP,8
 LoseText = Can I get a litre o' cola at least?
 Pokemon = MAGNEMITE,10
     AbilityIndex = 1
-Pokemon = MACHOP
+Pokemon = MACHOP,12
     Gender = female
     AbilityIndex = 0
 #-------------------------------
@@ -251,7 +251,7 @@ Pokemon = SCRAGGY,10
     AbilityIndex = 2
 Pokemon = CHINCHOU,9
     Gender = female
-    Moves = SUPERSONIC,SIGNABEAM,THUNDERBOLT,BLIZZARD
+    Moves = SUPERSONIC,SIGNALBEAM,THUNDERBOLT,BLIZZARD
     AbilityIndex = 0
 Pokemon = GIBLE,11
     Gender = male
@@ -266,7 +266,7 @@ Pokemon = LARVESTA,12
 #-------------------------------
 [SOLSTICEDEV,Legna K]
 LoseText = My Poliwag can beat legends but falls short against you...
-Pokemon = SABLEYE
+Pokemon = SABLEYE,10
     Gender = male
     Moves = WILLOWISP,RAINDANCE,RECOVER,KNOCKOFF
     AbilityIndex = 2
@@ -366,7 +366,7 @@ Pokemon = ARCANINE,28
     AbilityIndex = 0
     Ball = ULTRABALL
 #-------------------------------
-[FISHERMAN.Darius]
+[FISHERMAN,Darius]
 LoseText = My... beasts...
 Pokemon = MAGIKARP,15
     Gender = male
@@ -415,7 +415,7 @@ Pokemon = ONIX,15
     AbilityIndex = 1
 Pokemon = SHUCKLE,16 
     Gender = female
-    AbilityIndex = GLUTTONY
+    AbilityIndex = 1
     Item = BERRYJUICE
     Ball = GREATBALL
 #-------------------------------
@@ -557,7 +557,7 @@ Pokemon = NUMEL,16
 LoseText = That totally rocked.
 Pokemon = SANDSHREW,15
     Gender = male
-    Ability = 0
+    AbilityIndex = 0
 Pokemon = BALTOY,16
 #-------------------------------
 [LEADER_Cliff,Cliff]
@@ -689,13 +689,13 @@ Pokemon = PESCUBE,19
 LoseText = You dislocated my shoulder!
 Pokemon = CROCONAW,35
     Gender = male
-Pokemon = LUVDISC
+Pokemon = LUVDISC,35
     Gender = female
     Ball = LOVEBALL
 #-------------------------------
 [SWIMMER_F,Sarah]
 LoseText = Just as good as I imagined.
-Pokemon = LUMINEON
+Pokemon = LUMINEON,37
     Gender = female
     AbilityIndex = 1
     Item = MYSTICWATER
@@ -1067,7 +1067,7 @@ Pokemon = MUSHARNA,24
 Pokemon = GURDURR,25
     Gender = male
     AbilityIndex = 1
-Pokemon = ROSERADE
+Pokemon = ROSERADE,27
     Gender = female
     AbilityIndex = 1
 #-------------------------------
