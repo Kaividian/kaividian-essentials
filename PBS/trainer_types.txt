@@ -1,12 +1,12 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-[POKEMONTRAINER_Red]
+[POKEMONTRAINER_Seth]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 50
 SkillLevel = 100
 #-------------------------------
-[POKEMONTRAINER_Leaf]
+[POKEMONTRAINER_Robyn]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 50
