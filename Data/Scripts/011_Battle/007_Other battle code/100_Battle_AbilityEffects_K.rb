@@ -48,7 +48,7 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
     if anyOoze || user.canHeal?
         battle.pbShowAbilitySplash(user)
         targets.each do |b| 
-          amt = b.damageState.hpLost
+          amt = b.damageState.totalHPLost
           if b.hasActiveAbility?(:LIQUIDOOZE)
             battle.pbShowAbilitySplash(b)
             pbReduceHP(amt)
