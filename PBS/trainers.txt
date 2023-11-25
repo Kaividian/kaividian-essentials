@@ -118,6 +118,7 @@ Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
 #-------------------------------
 [BUGCATCHER,Doyle]
+LoseText = You're not even half bad...
 Pokemon = CHIKORITA,6
     Gender = female
     Moves = TACKLE,GROWL,RAZORLEAF
@@ -126,16 +127,19 @@ Pokemon = CHIKORITA,6
     IV = 0,0,0,0,0,0
 #-------------------------------
 [SCIENTIST,Heisenberg]
+LoseText = Buy some next time or I'll fight you again.
 Pokemon = FOONGUS,6
     Gender = female
 #-------------------------------
 [BUGCATCHER,Marcus]
+LoseText = Go ahead and grab the item.
 Pokemon = SILCOON,7
     Gender = male
 Pokemon = CASCOON,7
     Gender = female
 #-------------------------------
-[BUGCATCHER,Blake]
+[BUGCATCHER,Darcus]
+LoseText = You really don't fear anything...
 Pokemon = SILCOON,7
     Gender = female
 Pokemon = WURMPLE,4
@@ -145,6 +149,7 @@ Pokemon = JOLTIK,5
     Ball = NETBALL
 #-------------------------------
 [BUGCATCHER,Dan]
+LoseText = Did you know that Shiny Pokémon appear more commonly in Adanac?
 Pokemon = MOTHIM,10
     Gender = male
     Moves = PROTECT,TACKLE,ATTRACT
@@ -155,6 +160,7 @@ Pokemon = MOTHIM,10
     Ball = PREMIERBALL
 #-------------------------------
 [OFFICER,Joe]
+LoseText = This is your last warning. Leave.
 Pokemon = GROWLITHE,9
     Gender = male
     AbilityIndex = 0
@@ -163,6 +169,7 @@ Pokemon = GROWLITHE,7
     AbilityIndex = 1
 #-------------------------------
 [OFFICER,Brian]
+LoseText = How reckless...
 Pokemon = MAGNEMITE,8
     AbilityIndex = 1
 Pokemon = MACHOP,8
@@ -170,30 +177,36 @@ Pokemon = MACHOP,8
     AbilityIndex = 0
 #-------------------------------
 [OFFICER,Caleb]
+LoseText = Guess you're not one of them.
 Pokemon = GROWLITHE,9
     Gender = male
     AbilityIndex = 0
 #-------------------------------
 [OFFICER,Djems]
+LoseText = No way...
 Pokemon = MACHOP,9
     Gender = male
     AbilityIndex = 0
 #-------------------------------
 [OFFICER,Xavier]
+LoseText = Gasp!
 Pokemon = GROWLITHE,9
     Gender = female
     AbilityIndex = 2
 #-------------------------------
 [OFFICER,Nebb]
+LoseText = Nebber again.
 Pokemon = MAGNEMITE,9
     AbilityIndex = 1
 #-------------------------------
 [OFFICER,Maxime]
+LoseText = I got beater by an intruder again.
 Pokemon = MACHOP,9
     Gender = female
     AbilityIndex = 0
 #-------------------------------
 [OFFICER,Samuel]
+LoseText = So rude...
 Pokemon = MAGNEMITE,8
     AbilityIndex = 1
 Pokemon = GROWLITHE,9
@@ -201,6 +214,7 @@ Pokemon = GROWLITHE,9
     AbilityIndex = 0
 #-------------------------------
 [OFFICERS,Paul & Blart]
+LoseText = Our teamwork failed!
 Pokemon = MAGNEMITE,9
     AbilityIndex = 1
 Pokemon = MACHOP,8
@@ -208,6 +222,7 @@ Pokemon = MACHOP,8
     AbilityIndex = 0
 #-------------------------------
 [OFFICER,Farva]
+LoseText = Can I get a litre o' cola at least?
 Pokemon = MAGNEMITE,10
     AbilityIndex = 1
 Pokemon = MACHOP
@@ -215,6 +230,7 @@ Pokemon = MACHOP
     AbilityIndex = 0
 #-------------------------------
 [INSPECTOR,Gadjett]
+LoseText = My precious Yukoro!
 Pokemon = GROWLITHE,11
     Gender = male
     AbilityIndex = 0 
@@ -228,6 +244,7 @@ Pokemon = HERDIER,12
     Ball = ULTRABALL
 #-------------------------------
 [GAMBLER,Gamer7256]
+LoseText = This is why I rarely bet on myself.
 Pokemon = SCRAGGY,10
     Gender = male
     Moves = FIREPUNCH,ICEPUNCH,THUNDERPUNCH,ZENHEADBUTT
@@ -248,6 +265,7 @@ Pokemon = LARVESTA,12
     Ball = GREATBALL
 #-------------------------------
 [SOLSTICEDEV,Legna K]
+LoseText = My Poliwag can beat legends but falls short against you...
 Pokemon = SABLEYE
     Gender = male
     Moves = WILLOWISP,RAINDANCE,RECOVER,KNOCKOFF
@@ -270,16 +288,18 @@ Pokemon = POLIWAG,11
     Ball = DIVEBALL
 #-------------------------------
 [ROCKER,MoshJarcus]
+LoseText = Woah, you're pretty competitive!
 Pokemon = CHIKORITA,14
     Gender = female
     AbilityIndex = 0
 #-------------------------------
 [PYRE,Pyre]
-Pokemon = CYNDAQUIL
+LoseText = Good enough.
+Pokemon = CYNDAQUIL,15
     Gender = male
     AbilityIndex = 0
     IV = 31,31,31,31,31,31
-Pokemon = LITWICK
+Pokemon = LITWICK,12
     Gender = female
     AbilityIndex = 1
     Ball = DUSKBALL
@@ -288,6 +308,7 @@ Pokemon = LARVESTA,14
     Ball = MAPLEBALL
 #-------------------------------
 [POKEMANIAC,Rendarus]
+LoseText = You're good.
 Pokemon = LITWICK,11
     Gender = female
     AbilityIndex = 1
@@ -301,12 +322,14 @@ Pokemon = BARBOACH,14
     Ball = NETBALL
 #-------------------------------
 [LADY,Darcy]
+LoseText = Hihihi!
 Pokemon = SNEASEL,18
     Gender = female
     AbilityIndex = 2
     Ball = LUXURYBALL
 #-------------------------------
 [LADY,Miera]
+LoseText = Mieta.
 Pokemon = SNOVER,16
     Gender = male
     Ball = LUXURYBALL
@@ -316,12 +339,14 @@ Pokemon = SPHEAL,17
     Ball = LUXURYBALL
 #-------------------------------
 [LADY,Mackenzie]
+LoseText = Hmph!
 Pokemon = PESCUBE,28
     Gender = female
     Moves = IRONDEFENSE,MIST,ICEBALL,DIVE
     Ball = LUXURYBALL
 #-------------------------------
 [FIREBREATHER,Tanner]
+LoseText = I was the one who got tamed.
 Pokemon = CHARMELEON,17
     Gender = male
 Pokemon = MAGMAR,16
@@ -329,10 +354,12 @@ Pokemon = MAGMAR,16
     Ball = GREATBALL
 #-------------------------------
 [FIREBREATHER,Connor]
+LoseText = Heated.
 Pokemon = LARVESTA,18
     Gender = female
 #-------------------------------
 [FIREBREATHER,George]
+LoseText = Now my day isn't so bright.
 Pokemon = ARCANINE,28
     Gender = male
     Moves = MORNINGSUN,FLAMETHROWER,DRAGONPULSE,WILLOWISP
@@ -340,6 +367,7 @@ Pokemon = ARCANINE,28
     Ball = ULTRABALL
 #-------------------------------
 [FISHERMAN.Darius]
+LoseText = My... beasts...
 Pokemon = MAGIKARP,15
     Gender = male
     Ball = LUREBALL
@@ -360,6 +388,7 @@ Pokemon = MAGIKARP,15
     Ball = LUREBALL
 #-------------------------------
 [FISHERMAN,Perry]
+LoseText = Perhaps I would give it yours.
 Pokemon = PSYDUCK,16
     Gender = female
     AbilityIndex = 2
@@ -370,12 +399,14 @@ Pokemon = DUCKLETT,16
     Ball = PREMIERBALL
 #-------------------------------
 [FISHERMAN,Mario]
+LoseText = I tried.
 Pokemon = MILOTIC,28
     Gender = female
     AbilityIndex = 0
     Ball = LOVEBALL
 #-------------------------------
 [HIKER,Dan]
+LoseText = Easy hike it seems.
 Pokemon = GEODUDE,16
     Gender = male
     AbilityIndex = 1
@@ -389,6 +420,7 @@ Pokemon = SHUCKLE,16
     Ball = GREATBALL
 #-------------------------------
 [HIKER,Hayden]
+LoseText = The mountain stands no more.
 Pokemon = LARVITAR,18
     Gender = male
     AbilityIndex = 2
@@ -396,10 +428,12 @@ Pokemon = LARVITAR,18
     Ball = NESTBALL
 #-------------------------------
 [HIKER,Houston]
+LoseText = Brave.
 Pokemon = ANORITH,28
     Gender = male
 #-------------------------------
 [COOLTRAINER_M,Julius]
+LoseText = I have been beaten.
 Pokemon = ARCANINE,32
     Gender = male
     Moves = MORNINGSUN,FLAMETHROWER,DRAGONPULSE,WILLOWISP
@@ -424,6 +458,7 @@ Pokemon = CASTFORM,30
     Ball = GREATBALL
 #-------------------------------
 [RUINMANIAC,Jared]
+LoseText = Most impressive.
 Pokemon = KABUTO,38
     Gender = male
     AbilityIndex = 1
@@ -432,6 +467,7 @@ Pokemon = OMANYTE,38
     AbilityIndex = 1
 #-------------------------------
 [INSPECTOR,Gadjett,1]
+LoseText = Not again...
 Pokemon = GROWLITHE,11
     Gender = male
     AbilityIndex = 0 
@@ -448,6 +484,7 @@ Pokemon = KLINK,7
     Ball = QUICKBALL
 #-------------------------------
 [OFFICER,Joan]
+LoseText = How dare you!
 Pokemon = GROWLITHE,9
     Gender = female
     AbilityIndex = 0
@@ -456,11 +493,13 @@ Pokemon = LILLIPUP,11
     AbilityIndex = 0
 #-------------------------------
 [OFFICER,Glock]
+LoseText = The Glock is what you deserved!
 Pokemon = MACHOP,12
     Gender = male
     AbilityIndex = 0
 #-------------------------------
 [INSPECTOR,Gadjett,2]
+LoseText = My reputation...
 Pokemon = GROWLITHE,12
     Gender = male
     AbilityIndex = 0 
@@ -477,487 +516,822 @@ Pokemon = KLINK,11
     Ball = QUICKBALL
 #-------------------------------
 [HIKER,David]
+LoseText = Your region might be a tad cooler.
 Pokemon = MAGMAR,19
     Gender = male
     Ball = GREATBALL 
 #-------------------------------
 [HIKER,Dale]
+LoseText = Kids just wouldn't do as well as you did.
 Pokemon = DRILBUR,15
     Gender = male
     AbilityIndex = 2
 Pokemon = TRAPINCH,15
     Gender = female
     AbilityIndex = 1
+    Ball = GREATBALL
 Pokemon = SANDILE,14
     Gender = female
     AbilityIndex = 0
 #-------------------------------
 [HIKER,Mike]
+LoseText = You won't beat the Gym Leader this easily.
 Pokemon = GEODUDE,15
-    Gender = 
-    AbilityIndex = 
-GEODUDE,15
-SANDILE,16
-#-------------------------------
-HIKER
-Rick
-2
-STUNFISK,15
-NUMEL,16
-#-------------------------------
-HIKER
-Harrison
-2
-SANDSHREW,15
-BALTOY,16
-#-------------------------------
-LEADER_Cliff
-Cliff
-4
-GLIGAR,18,,KNOCKOFF,FURYCUTTER,QUICKATTACK,SANDATTACK,,M
-NUMEL,19,,FLAMEBURST,FOCUSENERGY,AMNESIA,MAGNITUDE,,F
-MARSHTOMP,20,,MUDSHOT,BIDE,WATERGUN,MUDSLAP,,F
-JUNQUITO,21,SITRUSBERRY,LEECHLIFE,SUBSTITUTE,PINMISSILE,FOCUSENERGY,,M
-#-------------------------------
-FISHERMAN
-Scott
-2
-KRABBY,12
-CORPHISH,13
-#-------------------------------
-PYRE2
-Pyre
-3
-QUILAVA,17
-LITWICK,14
-LARVESTA,16
-#-------------------------------
-POKEMANIAC
-Clancee
-1
-CHANSEY,25
-#-------------------------------
-FISHERMAN
-Haddock
-3
-KRABBY,15
-GYARADOS,20
-PESCUBE,16
-#-------------------------------
-SISANDBRO
-Alice & Jacob
-2
-STARYU,16
-SLOWPOKE,15
-#-------------------------------
-SWIMMER_M
-Cena
-2
-OCTILLERY,36
-WAILMER,34
-#-------------------------------
-CRUSHKIN
-Bruce & Karine
-2
-HITMONLEE,20
-HITMONCHAN,20
-#-------------------------------
-GAMBLER
-Sleepy
-1
-MUNNA,12
-#-------------------------------
-FISHERMAN
-Bob
-1
-MAGIKARP,25,,,,,,,,,shiny
-#-------------------------------
-FISHERMAN
-Austin
-2
-SHELLDER,17
-CLAMPERL,16
-#-------------------------------
-FISHERMAN
-Fergus
-1
-REMORAID,18
-#-------------------------------
-FISHERMAN
-Philip
-1
-PESCUBE,19
-#-------------------------------
-SWIMMER_M
-Adam
-2
-CROCONAW,35
-LUVDISC,35
-#-------------------------------
-SWIMMER_F
-Sarah
-1
-LUMINEON,37
-#-------------------------------
-FISHERMAN
-Esperanto
-4
-WAILMER,17
-SQUIRTLE,15
-CROCONAW,16
-VAPOREON,19
-#-------------------------------
-BIRDKEEPER
-Devin
-3
-CHATOT,16
-GLIGAR,14
-HOPPIP,11
-#-------------------------------
-SISANDBRO
-Marie & Robbie
-2
-MARILL,18
-TENTACOOL,17
-#-------------------------------
-FISHERMAN
-Jeremy
-2
-WARTORTLE,20
-STARMIE,24
-#-------------------------------
-HIKER
-Miker
-2
-HIPPOPOTAS,18
-GLIGAR,17
-#-------------------------------
-SWIMMER_M
-Jocelin
-2
-FINNEON,17
-SLOWPOKE,18
-#-------------------------------
-SWIMMER_M
-Carl
-1
-MANTYKE,20
-#-------------------------------
-RUINMANIAC
-Holland
-1
-SANDSLASH,22
-#-------------------------------
-RUINMANIAC
-Seth
-2
-BRONZOR,18
-SANDSHREW,17
-#-------------------------------
-HIKER
-Ronald
-1
-RHYHORN,20
-#-------------------------------
-HIKER
-Don
-2
-NOSEPASS,18
-GEODUDE,17
-#-------------------------------
-HIKER
-Rowan
-6
-GEODUDE,12
-GEODUDE,12
-GEODUDE,12
-GEODUDE,12
-GEODUDE,12
-GEODUDE,14
-#-------------------------------
-HIKER
-Hussein
-3
-HIPPOPOTAS,15
-DIGLETT,18
-TRAPINCH,16
-#-------------------------------
-HIKER
-Braddy
-1
-SANDILE,21
-#-------------------------------
-COOLTRAINER_M
-Antoine
-4
-HIPPOPOTAS,19
-LARVITAR,21
-WORMADAM,20,,,,,,,,1
-STEELIX,23
-#-------------------------------
-SCIENTIST
-Bark
-1
-VOLCARONA,61
-#-------------------------------
-CRUSHGIRL
-Sophie
-2
-TIMBURR,20
-PIGNITE,17
-#-------------------------------
-TUBER_M
-Phiah
-2
-GLACEON,32,LEFTOVERS,SANDATTACK,PROTECT,WISH,ICEBEAM,0,F
-CROAGUNK,29,BLACKSLUDGE,FAKEOUT,POISONJAB,KNOCKOFF,CROSSCHOP,1,M
-#-------------------------------
-ROCKER
-caf
-2
-LUXRAY,31,BLACKGLASSES,THUNDERBOLT,BITE,WILDCHARGE,SWIFT,1,M
-MAGNETON,30,MAGNET,FLASHCANNON,MAGNETRISE,THUNDERBOLT,METALSOUND,1
-#-------------------------------
-COOLTRAINER_M
-Kyle
-2
-PIKACHU,32,LIGHTBALL,THUNDERBOLT,QUICKATTACK,VOLTTACKLE,IRONTAIL,,M
-VENOMOTH,31,MAGNET,PSYCHIC,QUIVERDANCE,SLEEPPOWDER,BUGBUZZ,1
-#-------------------------------
-COOLTRAINER_M
-Lymnus
-3
-ZOROARK,32,LEFTOVERS,SWAGGER,,,,,M,,,BOLD,31,,,,12
-MURKROW,34,EVIOLITE,FOULPLAY,SWAGGER,THUNDERWAVE,ROOST,2,M,,,BOLD,31,,,,12
-HOUNDOOM,36,EXPERTBELT,FLAMETHROWER,DARKPULSE,SLUDGEBOMB,WILLOWISP,1,M,,,TIMID,31,,,,12
-#-------------------------------
-GENTLEMAN
-elpandur0
-1
-GENGAR,33
-#-------------------------------
-HIKER
-Rickerick
-2
-ROGGENROLA,20
-ONIX,19
-#-------------------------------
-BLACKBELT
-Josh
-1
-HITMONTOP,23
-#-------------------------------
-BEAUTY
-McBeard
-5
-JYNX,19
-PURUGLY,23
-GARBODOR,21
-SKUNTANK,23
-PROBOPASS,25
-#-------------------------------
-INSPECTOR
-Navy
-4
-BRONZOR,21
-RIOLU,23
-PAWNIARD,22
-MAGNETON,26
-#-------------------------------
-JANITOR
-Javid
-1
-TRUBBISH,20
-#-------------------------------
-JANITOR
-Jonathan
-1
-STUNKY,20
-#-------------------------------
-JANITOR
-Jacob
-1
-GRIMER,21
-#-------------------------------
-JANITOR
-Jorge
-1
-KOFFING,21
-#-------------------------------
-JANITOR
-Jenkins
-2
-TIMBURR,21
-MUNCHLAX,22
-#-------------------------------
-JANITOR
-Jerky
-2
-RATTATA,21
-MINCCINO,22
-#-------------------------------
-JANITOR
-Jovial
-1
-CINCCINO,24
-#-------------------------------
-JANITOR
-Jabbo
-1
-HITMONCHAN,25
-#-------------------------------
-JANITOR
-Josh
-1
-GURDURR,25
-#-------------------------------
-JANITOR
-Jorden
-1
-RATICATE,25
-#-------------------------------
-GENTLEMAN
-Dang
-3
-MUSHARNA,24
-GURDURR,25
-ROSERADE,27
-#-------------------------------
-BLACKBELT
-Jeff
-3
-DUSCLOPS,30
-MAGNETON,30
-DRAQUITO,25
-#-------------------------------
-PYRE3
-Pyre
-3
-QUILAVA,32
-LITWICK,27
-LARVESTA,29
-#-------------------------------
-PYRE3B
-Pyre
-4
-TYPHLOSION,42
-LITWICK,38
-LARVESTA,39
-SCIZOR,37
-#-------------------------------
-BUGCATCHER
-Suzie
-4
-KAKUNA,7
-CATERPIE,4
-METAPOD,7
-WEEDLE,4
-#-------------------------------
-SCIENTIST
-Rooklu
-3
-GARDEVOIR,30,LEFTOVERS,THUNDERBOLT,PSYSHOCK,THUNDERWAVE,ENERGYBALL,0,F,,,TIMID,31
-SANDSLASH,22,LIFEORB,EARTHQUAKE,KNOCKOFF,ROCKSLIDE,SWORDSDANCE,0,M,,,ADAMANT,31
-GALVANTULA,36,EXPERTBELT,THUNDERWAVE,BUGBUZZ,THUNDER,GIGADRAIN,0,M,,,TIMID,31
-#-------------------------------
-COOLTRAINER_M
-Doyle
-2
-CHIKORITA,9
-MARSHQUITO,7
-#-------------------------------
-BLACKBELT
-Kyle
-1
-MIENFOO,8
-#-------------------------------
-PICNICKER
-Laurie
-1
-SQUIRTLE,8
-#-------------------------------
-SCIENTIST
-Doyle
-2
-CHIKORITA,11
-MARSHQUITO,9
-#-------------------------------
-CAMPER
-Dohf
-3
-SEWADDLE,13
-PRINPLUP,16
-VANILLITE,14
-#-------------------------------
-BLACKBELT
-Raj
-2
-MACHOP,15
-MAKUHITA,16
-#-------------------------------
-FISHERMAN
-Thomas
-2
-FINNEON,14,,,,,,0,F
-STARYU,16,,,,,,2,F,,shiny
-#-------------------------------
-THOMAS2
-Thomas
-3
-FINNEON,17,,,,,,0,F
-CHINCHOU,15,,,,,,0,M
-STARYU,21,,,,,,2,F,,shiny
-#-------------------------------
-THOMAS3
-Thomas
-3
-FINNEON,25,,,,,,0,F
-CHINCHOU,22,,,,,,0,M
-STARMIE,28,,,,,,2,F,,shiny
-#-------------------------------
-THOMAS4
-Thomas
-4
-LUMINEON,34,DAMPROCK,RAINDANCE,SCALD,BLIZZARD,ATTRACT,0,F
-LANTURN,33,LEFTOVERS,SIGNALBEAM,SURF,CONFUSERAY,THUNDERWAVE,0,M
-GYARADOS,36,ROCKYHELMET,WATERFALL,CRUNCH,ICEFANG,DRAGONTAIL,0,M,,shiny
-STARMIE,38,LIFEORB,PSYCHIC,SURF,ICEBEAM,FLASHCANNON,2,F,,shiny
-#-------------------------------
-BIKER
-Rodwell
-2
-KOFFING,13
-STUNKY,16
-#-------------------------------
-BIKERS
-Jake & Jeka
-2
-WEEZING,40
-ARBOK,40
-#-------------------------------
-GENTLEMAN
-Foyle
-2
-ROSELIA,15
-BAYLEEF,18
-#-------------------------------
-PICNICKER
-Kim
-2
-TANGELA,19
-GROTLE,23
-#-------------------------------
-OFFICERS
-Ronald & McDonald
-4
-LILLIPUP,9,,,,,,0
-MACHOP,8,,,,,,0
-GROWLITHE,10,,,,,,0
-MAGNEMITE,11,,,,,,1
-#-------------------------------
-GADJETTBRIDGE
-Gadjett
-3
-GROWLITHE,11,,,,,,0
-HERDIER,11,,,,,,0
-YUKORO,12
+    Gender = male
+    AbilityIndex = 1
+Pokemon = SANDILE,16
+    Gender = male
+    AbilityIndex = 0 
+#-------------------------------
+[HIKER,Rick]
+LoseText = I hope you can do as well with this puzzle.
+Pokemon = STUNFISK,15
+    Gender = female
+    AbilityIndex = 0
+    Ball = ULTRABALL
+Pokemon = NUMEL,16
+    Gender = female
+    AbilityIndex = 0
+#-------------------------------
+[HIKER,Harrison]
+LoseText = That totally rocked.
+Pokemon = SANDSHREW,15
+    Gender = male
+    Ability = 0
+Pokemon = BALTOY,16
+#-------------------------------
+[LEADER_Cliff,Cliff]
+LoseText = You have done well.
+Pokemon = GLIGAR,18
+    Gender = male
+    Moves = KNOCKOFF,FURYCUTTER,QUICKATTACK,SANDATTACK
+    AbilityIndex = 0
+    Ball = QUICKBALL
+Pokemon = NUMEL,19
+    Gender = female
+    Moves = FLAMEBURST,FOCUSENERGY,AMNESIA,MAGNITUDE
+    AbilityIndex = 0
+    Ball = GREATBALL
+Pokemon = MARSHTOMP,20
+    Gender = female
+    Moves = MUDSHOT,BIDE,WATERGUN,MUDSLAP
+Pokemon = JUNQUITO,21
+    Moves = LEECHLIFE,SUBSTITUTE,PINMISSILE,FOCUSENERGY
+    Item = SITRUSBERRY
+    Ball = NESTBALL
+#-------------------------------
+[FISHERMAN,Scott]
+LoseText = You're a worthy mate of the sea.
+Pokemon = KRABBY,12
+    Gender = male
+    AbilityIndex = 0
+    Ball = LUREBALL
+Pokemon = CORPHISH,13
+    Gender = male
+    AbilityIndex = 2
+    Ball = REPEATBALL
+#-------------------------------
+[PYRE,Pyre,1]
+LoseText = You've gotten better.
+Pokemon = QUILAVA,17
+    Gender = male
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = LITWICK,14
+    Gender = female
+    AbilityIndex = 1
+    Ball = DUSKBALL
+Pokemon = LARVESTA,16
+    Gender = male
+    Ball = MAPLEBALL
+#-------------------------------
+[POKEMANIAC,Clancee]
+LoseText = I love my Chansey.
+Pokemon = CHANSEY,25
+    Gender = female
+    AbilityIndex = 1
+    Item = LUCKYPUNCH
+    Ball = HEALBALL
+#-------------------------------
+[FISHERMAN,Haddock]
+LoseText = You do come from the sea.
+Pokemon = KRABBY,15
+    Gender = male
+    AbilityIndex = 0
+    Ball = LUREBALL
+Pokemon = GYARADOS,20
+    Gender = male
+    Ball = NETBALL
+Pokemon = PESCUBE,16
+    Gender = female
+    Ball = LUREBALL
+#-------------------------------
+[SISANDBRO,Alice & Jacob]
+LoseText = But our teamwork was perfect...
+Pokemon = STARYU,16
+    Gender = female
+    AbilityIndex = 0
+Pokemon = SLOWPOKE,15
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[SWIMMER_M,Cena]
+LoseText = Swimmer power.
+Pokemon = OCTILLERY,36
+    Gender = female
+    AbilityIndex = 2
+    Ball = LUREBALL
+Pokemon = WAILMER,34
+    Gender = male
+    AbilityIndex = 0
+    Ball = DIVEBALL
+#-------------------------------
+[CRUSHKIN,Bruce & Karine]
+LoseText = We made a mistake!
+Pokemon = HITMONLEE,20
+    AbilityIndex = 2
+Pokemon = HITMONCHAN,20
+    AbilityIndex = 1
+#-------------------------------
+[GAMBLER,Sleepy]
+LoseText = I just want to sleep.
+Pokemon = MUNNA,12
+    Gender = female
+    AbilityIndex = 1
+#-------------------------------
+[FISHERMAN,Bob]
+LoseText = My rare catch...
+Pokemon = MAGIKARP,25
+    Gender = male
+    Shiny = true
+    Ball = REPEATBALL
+#-------------------------------
+[FISHERMAN,Austin]
+LoseText = Woah.
+Pokemon = SHELLDER,17
+    Gender = male
+    AbilityIndex = 0
+Pokemon = CLAMPERL,16
+    Gender = female
+#-------------------------------
+[FISHERMAN,Fergus]
+LoseText = So rude...
+Pokemon = REMORAID,18
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[FISHERMAN,Philip]
+LoseText = Argh.
+Pokemon = PESCUBE,19
+    Gender = male
+#-------------------------------
+[SWIMMER_M,Adam]
+LoseText = You dislocated my shoulder!
+Pokemon = CROCONAW,35
+    Gender = male
+Pokemon = LUVDISC
+    Gender = female
+    Ball = LOVEBALL
+#-------------------------------
+[SWIMMER_F,Sarah]
+LoseText = Just as good as I imagined.
+Pokemon = LUMINEON
+    Gender = female
+    AbilityIndex = 1
+    Item = MYSTICWATER
+    Ball = GREATBALL
+#-------------------------------
+[FISHERMAN,Esperanto]
+LoseText = Just don't tell anyone.
+Pokemon = WAILMER,17
+    Gender = male
+    AbilityIndex = 1
+Pokemon = SQUIRTLE,15
+    Gender = male
+Pokemon = CROCONAW,16
+    Gender = female
+Pokemon = VAPOREON,19
+    Gender = male
+    Ball = LOVEBALL
+#-------------------------------
+[BIRDKEEPER,Devin]
+LoseText = Thank you.
+Pokemon = CHATOT,16
+    Gender = male
+    AbilityIndex = 0
+Pokemon = GLIGAR,14
+    Gender = female
+    AbilityIndex = 0
+Pokemon = HOPPIP,11
+    Gender = female
+    AbilityIndex = 0
+#-------------------------------
+[SISANDBRO,Marie & Robbie]
+LoseText = So warm.
+Pokemon = MARILL,18
+    Gender = female
+    AbilityIndex = 0
+Pokemon = TENTACOOL,17
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[FISHERMAN,Jeremy]
+LoseText = Good luck fishing.
+Pokemon = WARTORTLE,20
+    Gender = male
+Pokemon = STARMIE,24
+    Gender = female
+    AbilityIndex = 2
+    Ball = GREATBALL
+#-------------------------------
+[HIKER,Miker]
+LoseText = Mike's getting a Mickey for this one.
+Pokemon = HIPPOPOTAS,18
+    Gender = female
+Pokemon = GLIGAR,17
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[SWIMMER_M,Jocelin]
+LoseText = So I lost.
+Pokemon = FINNEON,17
+    Gender = male
+    AbilityIndex = 1
+Pokemon = SLOWPOKE,18
+    Gender = male
+    AbilityIndex = 0
+    Ball = LUREBALL
+#-------------------------------
+[SWIMMER_M,Carl]
+LoseText = Please go ahead.
+Pokemon = MANTYKE,20
+    Gender = female
+    AbilityIndex = 1
+    Ball = NETBALL
+#-------------------------------
+[RUINMANIAC,Holland]
+LoseText = Us Ruin Maniacs are sneaky.
+Pokemon = SANDSLASH,22
+    Gender = male
+#-------------------------------
+[RUINMANIAC,Seth]
+LoseText = SIKE!
+Pokemon = BRONZOR,18
+    AbilityIndex = 0
+Pokemon = SANDSHREW,18
+    Gender = male
+#-------------------------------
+[HIKER,Ronald]
+LoseText = Congratulations on beating my Rhyhorn.
+Pokemon = RHYHORN,20
+    Gender = female
+    AbilityIndex = 1
+    Ball = GREATBALL
+#-------------------------------
+[HIKER,Don]
+LoseText = You want my pickaxe?
+Pokemon = NOSEPASS,18
+    Gender = female
+    AbilityIndex = 0
+Pokemon = GEODUDE,17
+    Gender = male
+    AbilityIndex = 1
+#-------------------------------
+[HIKER,Rowan]
+LoseText = You earned this one.
+Pokemon = GEODUDE,12
+    Gender = male
+    AbilityIndex = 1
+Pokemon = GEODUDE,12
+    Gender = male
+    AbilityIndex = 1
+Pokemon = GEODUDE,12
+    Gender = female
+    AbilityIndex = 0
+Pokemon = GEODUDE,12
+    Gender = male
+    AbilityIndex = 0
+Pokemon = GEODUDE,12
+    Gender = female
+    AbilityIndex = 1
+Pokemon = GEODUDE,14
+    Gender = male
+    AbilityIndex = 1
+    Shiny = true
+    Ball = GREATBALL
+#-------------------------------
+[HIKER,Hussein]
+LoseText = Well done.
+Pokemon = HIPPOPOTAS,15
+    Gender = male
+Pokemon = DIGLETT,18
+    Gender = male
+    AbilityIndex = 1
+Pokemon = TRAPINCH,16
+    Gender = female
+    AbilityIndex = 1
+#-------------------------------
+[HIKER,Braddy]
+LoseText = Looks like you didn't cut any corners.
+Pokemon = SANDILE,21
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[COOLTRAINER_M,Antoine]
+LoseText = And another one clears this trial. Well done.
+Pokemon = HIPPOPOTAS,19
+    Gender = male
+Pokemon = LARVITAR,21
+    Gender = male
+Pokemon = WORMADAM,20
+    Form = 1
+Pokemon = STEELIX,23
+    Gender = male
+    AbilityIndex = 2
+    Ball = DUSKBALL
+#-------------------------------
+[SCIENTIST,Bark]
+LoseText = You have entertained me.
+Pokemon = VOLCARONA,61
+    Gender = female
+    Ball = ULTRABALL
+#-------------------------------
+[CRUSHGIRL,Sophie]
+LoseText = I had faith in my starter and Timburr.
+Pokemon = TIMBURR,20
+    Gender = male
+    AbilityIndex = 1
+Pokemon = PIGNITE,17
+    Gender = male
+#-------------------------------
+[TUBER_M,Phiah]
+LoseText = What? I thought I was onto something.
+Pokemon = GLACEON,32
+    Gender = female
+    Moves = SANDATTACK,PROTECT,WISH,ICEBEAM
+    Item = LEFTOVERS
+Pokemon = CROAGUNK,29
+    Gender = male
+    AbilityIndex = 1
+    Moves = FAKEOUT,POISONJAB,KNOCKOFF,CROSSCHOP
+    Item = BLACKSLUDGE
+#-------------------------------
+[ROCKER,caf]
+LoseText = WOW! You can rock better than me!
+Pokemon = LUXRAY,31
+    Gender = male
+    Moves = THUNDERBOLT,BITE,WILDCHARGE,SWIFT
+    AbilityIndex = 1
+    Item = BLACKGLASSES
+Pokemon = MAGNETON,30
+    Moves = FLASHCANNON,MAGNETRISE,THUNDERBOLT,METALSOUND
+    AbilityIndex = 1
+    Item = MAGNET
+    Ball = PREMIERBALL
+#-------------------------------
+[COOLTRAINER_M,Kyle]
+LoseText = Darn. You beat me.
+Pokemon = PIKACHU,32
+    Moves = THUNDERBOLT,QUICKATTACK,VOLTTACKLE,IRONTAIL
+    Gender = male
+    Item = LIGHTBALL
+Pokemon = VENOMOTH,31
+    Gender = female
+    Moves = PSYCHIC,QUIVERDANCE,SLEEPPOWDER,BUGBUZZ
+    AbilityIndex = 1
+    Item = BRIGHTPOWDER
+    Ball = NESTBALL
+#-------------------------------
+[COOLTRAINER_M,Lymnus]
+LoseText = You weren't tired at all, it seems.
+Pokemon = ZOROARK,32
+    Gender = male
+    Moves = SWAGGER
+    Nature = BOLD
+    IV = 31,31,31,31,0,31
+    EV = 252,0,4,0,0,252
+    Item = LEFTOVERS
+    Ball = DUSKBALL
+Pokemon = MURKROW,34
+    Gender = male
+    Moves = FOULPLAY,SWAGGER,THUNDERWAVE,ROOST
+    AbilityIndex = 2
+    Nature = BOLD
+    IV = 31,31,31,31,0,31
+    EV = 252,0,4,0,0,252
+    Item = EVIOLITE
+    Ball = DUSKBALL
+Pokemon = HOUNDOOM,36
+    Gender = male
+    Moves = FLAMETHROWER,DARKPULSE,SLUDGEBOMB,WILLOWISP
+    AbilityIndex = 1
+    Nature = TIMID
+    IV = 31,31,31,31,0,31
+    EV = 4,0,0,252,252,0
+    Item = EXPERTBELT
+    Ball = DUSKBALL
+#-------------------------------
+[GENTLEMAN,elpandur0]
+LoseText = May the ghost be with you.
+Pokemon = GENGAR,33
+    Gender = male
+    Ball = GREATBALL
+#-------------------------------
+[HIKER,Rickerick]
+LoseText = That was entertaining!
+Pokemon = ROGGENROLA,20
+    Gender = male
+    AbilityIndex = 0
+Pokemon = ONIX,19
+    Gender = female
+    AbilityIndex = 1
+#-------------------------------
+[BLACKBELT,Josh]
+LoseText = I caught you off guard.
+Pokemon = HITMONTOP,23
+    AbilityIndex = 1
+#-------------------------------
+[BEAUTY,McBeard]
+LoseText = NO! I HATE YOU!
+Pokemon = JYNX,19
+    AbilityIndex = 0
+    Ball = HEAVYBALL
+Pokemon = GARBODOR,21
+    Gender = female
+    AbilityIndex = 2
+    Ball = HEAVYBALL
+Pokemon = SKUNTANK,23
+    Gender = female
+    AbilityIndex = 1
+    Ball = HEAVYBALL
+Pokemon = PROBOPASS,23
+    Gender = female
+    Moves = TRIATTACK,EXPLOSION,THUNDERWAVE,ATTRACT
+    AbilityIndex = 0
+    Item = CUSTAPBERRY
+    Ball = HEAVYBALL
+Pokemon = PURUGLY,25
+    Gender = female
+    Moves = HYPNOSIS,FRUSTRATION,PLAYROUGH,FOULPLAY
+    AbilityIndex = 0
+    Item = LEFTOVERS
+    Ball = HEAVYBALL
+#-------------------------------
+[INSPECTOR,Navy]
+LoseText = You crook! I'll add this to your file!
+Pokemon = BRONZOR,21
+    AbilityIndex = 0
+Pokemon = RIOLU,23
+    Gender = male
+    AbilityIndex = 1
+    Ball = QUICKBALL
+Pokemon = PAWNIARD,22
+    Gender = male
+    AbilityIndex = 0
+Pokemon = MAGNETON,26
+    AbilityIndex = 2
+#-------------------------------
+[JANITOR,Javid]
+LoseText = Well done.
+Pokemon = TRUBBISH,20
+    Gender = female
+    AbilityIndex = 0
+#-------------------------------
+[JANITOR,Jonathan]
+LoseText = Gotta sweep, sweep, sweep.
+Pokemon = STUNKY,20
+    Gender = male
+    AbilityIndex = 1
+#-------------------------------
+[JANITOR,Jacob]
+LoseText = Mmph.
+Pokemon = GRIMER,21
+    Gender = male
+    AbilityIndex = 2
+#-------------------------------
+[JANITOR,Jorge]
+LoseText = Estoy decepcionado.
+Pokemon = KOFFING,21
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[JANITOR,Jenkins]
+LoseText = Old man Jenkins is beaten.
+Pokemon = TIMBURR,21
+    Gender = male
+    AbilityIndex = 1
+Pokemon = MUNCHLAX,22
+    Gender = male
+    AbilityIndex = 1
+#-------------------------------
+[JANITOR,Jerky]
+LoseText = What a jerk.
+Pokemon = RATTATA,21
+    Gender = male
+    AbilityIndex = 1
+Pokemon = MINCCINO,22
+    Gender = female
+    AbilityIndex = 0
+    Ball = QUICKBALL
+#-------------------------------
+[JANITOR,Jovial]
+LoseText = You learn fast.
+Pokemon = CINCCINO,24
+    Gender = female
+    AbilityIndex = 1
+    Ball = GREATBALL
+#-------------------------------
+[JANITOR,Jabbo]
+LoseText = You jabbed harder...
+Pokemon = HITMONCHAN,25
+    AbilityIndex = 1
+#-------------------------------
+[JANITOR,Josh]
+LoseText = Why did I choose this job?
+Pokemon = GURDURR,25
+    Gender = male
+    AbilityIndex = 1
+#-------------------------------
+[JANITOR,Jorden]
+LoseText = So close.
+Pokemon = RATICATE,25
+    Gender = female
+    AbilityIndex = 1
+#-------------------------------
+[GENTLEMAN,Dang]
+LoseText = Dang. That is sound of defeat.
+Pokemon = MUSHARNA,24
+    Gender = female
+    AbilityIndex = 1
+    Ball = HEALBALL
+Pokemon = GURDURR,25
+    Gender = male
+    AbilityIndex = 1
+Pokemon = ROSERADE
+    Gender = female
+    AbilityIndex = 1
+#-------------------------------
+[BLACKBELT,Jeff]
+LoseText = You're a tough one, clearly.
+Pokemon = DUSCLOPS,30
+    Gender = female
+    Ball = DUSKBALL
+Pokemon = MAGNETON,30
+    AbilityIndex = 1
+Pokemon = DRAQUITO,25
+    Ball = NESTBALL
+#-------------------------------
+[PYRE,Pyre,2]
+LoseText = To think you've still got the edge after all this time.
+Pokemon = QUILAVA,32
+    Gender = male
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = LITWICK,27
+    Gender = female
+    AbilityIndex = 1
+    Ball = DUSKBALL
+Pokemon = LARVESTA,29
+    Gender = male
+    Ball = MAPLEBALL
+#-------------------------------
+[PYRE,Pyre,3]
+LoseText = To think you've still got the edge after all this time.
+Pokemon = TYPHLOSION,42
+    Gender = male
+    AbilityIndex = 0
+    IV = 31,31,31,31,31,31
+Pokemon = LITWICK,38
+    Gender = female
+    AbilityIndex = 1
+    Ball = DUSKBALL
+Pokemon = LARVESTA,39
+    Gender = male
+    Ball = MAPLEBALL
+Pokemon = SCIZOR,37
+    Gender = male
+    AbilityIndex = 1
+    Ball = ULTRABALL
+#-------------------------------
+[BUGCATCHER,Suzie]
+LoseText = That was great!
+Pokemon = KAKUNA,7
+    Gender = male
+Pokemon = CATERPIE,4
+    Gender = female
+Pokemon = METAPOD,7
+    Gender = female
+Pokemon = WEEDLE,4
+    Gender = male
+#-------------------------------
+[SCIENTIST,Rooklu]
+LoseText = Wait... where am I again?
+Pokemon = GARDEVOIR,30
+    Gender = female
+    Moves = THUNDERBOLT,PSYSHOCK,THUNDERWAVE,ENERGYBALL
+    AbilityIndex = 0
+    Nature = TIMID
+    IV = 31,31,31,31,31,31
+    Item = LEFTOVERS
+    Ball = GREATBALL
+Pokemon = SANDSLASH,22
+    Gender = male
+    Moves = EARTHQUAKE,KNOCKOFF,ROCKSLIDE,SWORDSDANCE
+    AbilityIndex = 0
+    Nature = ADAMANT
+    IV = 31,31,31,31,31,31
+    Item = LIFEORB
+    Ball = GREATBALL
+Pokemon = GALVANTULA,36
+    Gender = male
+    Moves = THUNDERWAVE,BUGBUZZ,THUNDER,GIGADRAIN
+    AbilityIndex = 0
+    Nature = TIMID
+    IV = 31,31,31,31,31,31
+    Item = EXPERTBELT
+    Ball = GREATBALL
+#-------------------------------
+[COOLTRAINER_M,Doyle]
+LoseText = Again...
+Pokemon = CHIKORITA,9
+    Gender = female
+    AbilityIndex = 2
+    Nature = GENTLE
+    IV = 0,0,0,0,0,0
+Pokemon = MARSHQUITO,7
+    Gender = female
+#-------------------------------
+[BLACKBELT,Kyle]
+LoseText = I pass on the torch to you.
+Pokemon = MIENFOO,8
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[PICNICKER,Laurie]
+LoseText = I probably wouldn't have made it any further anyway.
+Pokemon = SQUIRTLE,8
+    Gender = female
+#-------------------------------
+[SCIENTIST,Doyle]
+LoseText = Fine, your win. Maybe...
+Pokemon = CHIKORITA,11
+    Gender = female
+    AbilityIndex = 2
+    Nature = GENTLE
+    IV = 0,0,0,0,0,0
+Pokemon = MARSHQUITO,9
+    Gender = female
+#-------------------------------
+[CAMPER,Dohf]
+LoseText = I could see you doing well in there.
+Pokemon = SEWADDLE,13
+    Gender = female
+    AbilityIndex = 0
+Pokemon = PRINPLUP,16
+    Gender = male
+Pokemon = VANILLITE,14
+    Gender = female
+    AbilityIndex = 0
+#-------------------------------
+[BLACKBELT,Raj]
+LoseText = You've gotten me out of breath instead.
+Pokemon = MACHOP,15
+    Gender = male
+    AbilityIndex = 1
+Pokemon = MAKUHITA,16
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[FISHERMAN,Thomas]
+LoseText = Now you've seen and beaten my catch of the day.
+Pokemon = FINNEON,14
+    Gender = female
+    AbilityIndex = 0
+Pokemon = STARYU,16
+    Gender = female
+    AbilityIndex = 2
+    Shiny = true
+    Ball = NETBALL
+#-------------------------------
+[FISHERMAN,Thomas,1]
+LoseText = You've kept up your end of the deal it seems.
+Pokemon = FINNEON,17
+    Gender = female
+    AbilityIndex = 0
+Pokemon = CHINCHOU,15
+    Gender = male
+    AbilityIndex = 0
+Pokemon = STARYU,21
+    Gender = female
+    AbilityIndex = 2
+    Shiny = true
+    Ball = NETBALL
+#-------------------------------
+[FISHERMAN,Thomas,2]
+LoseText = Now that's what I'm talking about.
+Pokemon = FINNEON,25
+    Gender = female
+    AbilityIndex = 0
+Pokemon = CHINCHOU,22
+    Gender = male
+    AbilityIndex = 0
+Pokemon = STARMIE,28
+    Gender = female
+    AbilityIndex = 2
+    Shiny = true
+    Ball = NETBALL
+#-------------------------------
+[FISHERMAN,Thomas,3]
+LoseText = I'm not sure how I'll ever beat you. That was my full strength.
+Pokemon = LUMINEON,34
+    Gender = female
+    Moves = RAINDANCE,SCALD,BLIZZARD,ATTRACT
+    AbilityIndex = 0
+    Item = DAMPROCK
+Pokemon = LANTURN,33
+    Gender = male
+    Moves = SIGNALBEAM,SURF,CONFUSERAY,THUNDERWAVE
+    AbilityIndex = 0
+    Item = LEFTOVERS
+Pokemon = GYARADOS,36
+    Gender = male
+    Moves = WATERFALL,CRUNCH,ICEFANG,DRAGONTAIL
+    AbilityIndex = 0
+    Item = ROCKYHELMET
+    Shiny = true
+    Ball = GREATBALL
+Pokemon = STARMIE,38
+    Gender = female
+    Moves = PSYCHIC,SURF,ICEBEAM,FLASHCANNON
+    AbilityIndex = 2
+    Item = LIFEORB
+    Shiny = true
+    Ball = NETBALL
+#-------------------------------
+[BIKER,Rodwell]
+LoseText = I hope you're smelling that exhaust!
+Pokemon = KOFFING,13
+    Gender = male
+    AbilityIndex = 0
+Pokemon = STUNKY,16
+    Gender = male
+    AbilityIndex = 1
+#-------------------------------
+[BIKERS,Jake & Jeka]
+LoseText = No, wait! We can't be sent to the Pokémon Centre!
+Pokemon = WEEZING,40
+    Gender = male
+    AbilityIndex = 0
+Pokemon = ARBOK,40
+    Gender = male
+    AbilityIndex = 0
+#-------------------------------
+[GENTLEMAN,Foyle]
+LoseText = So this is how it is. Seems like I was Foyled as well.
+Items = FULLRESTORE
+Pokemon = ROSELIA,15
+    Gender = female
+    AbilityIndex = 1
+Pokemon = BAYLEEF,18
+    Gender = female
+    AbilityIndex = 2
+    Item = SITRUSBERRY
+    Ball = LUXURYBALL
+#-------------------------------
+[PICNICKER,Kim]
+LoseText = Aw! You got me all tangled up in my own strategy!
+Pokemon = TANGELA,19
+    Gender = female
+    AbilityIndex = 2
+Pokemon = GROTLE,23
+    Gender = female
+    AbilityIndex = 2
+    Ball = GREATBALL
+#-------------------------------
+[OFFICERS,Ronald & McDonald]
+LoseText = Stop resisting!
+Pokemon = LILLIPUP,19
+    Gender = female
+    AbilityIndex = 0
+Pokemon = MACHOP,8
+    Gender = male
+    AbilityIndex = 0
+Pokemon = GROWLITHE,10
+    Gender = female
+    AbilityIndex = 0
+Pokemon = MAGNEMITE,11
+    AbilityIndex = 1
+#-------------------------------
+[INSPECTOR,Gadjett,3]
+LoseText = My precious Yukoro!
+Pokemon = GROWLITHE,11
+    Gender = male
+    AbilityIndex = 0 
+Pokemon = YUKORO,12
+    Gender = male
+    AbilityIndex = 0
+    Ball = QUICKBALL
+Pokemon = HERDIER,11
+    Gender = male
+    AbilityIndex = 0
+    Ball = ULTRABALL
