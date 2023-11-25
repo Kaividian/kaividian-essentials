@@ -99,7 +99,7 @@ def pbGetEnvironment
     terrainTag = $game_player.terrain_tag
   end
   tile_environment = terrainTag.battle_environment
-  if ret == :Forest && [:Grass, :TallGrass].include?(tile_environment)
+  if ret == :Forest && [:Grass, :TallGrass, :DarkGrass].include?(tile_environment)
     ret = :ForestGrass
   elsif tile_environment
     ret = tile_environment
