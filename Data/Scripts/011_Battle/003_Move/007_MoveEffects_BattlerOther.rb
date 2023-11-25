@@ -682,7 +682,8 @@ class Battle::Move::SetUserTypesBasedOnEnvironment < Battle::Move
     :Graveyard   => :GHOST,
     :Sky         => :FLYING,
     :Space       => :DRAGON,
-    :UltraSpace  => :PSYCHIC
+    :UltraSpace  => :PSYCHIC,
+    :DarkGrass   => :GRASS
   }
 
   def canSnatch?; return true; end

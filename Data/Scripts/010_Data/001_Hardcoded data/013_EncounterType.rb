@@ -176,3 +176,39 @@ GameData::EncounterType.register({
   :type           => :contest,
   :trigger_chance => 21
 })
+
+GameData::EncounterType.register({
+  :id             => :DarkGrass,
+  :type           => :land,
+  :trigger_chance => 21
+})
+
+GameData::EncounterType.register({
+  :id             => :DarkGrassMorning,
+  :type           => :land,
+  :trigger_chance => 21
+})
+
+GameData::EncounterType.register({
+  :id             => :DarkGrassDay,
+  :type           => :land,
+  :trigger_chance => 21
+})
+
+GameData::EncounterType.register({
+  :id             => :DarkGrassNight,
+  :type           => :land,
+  :trigger_chance => 21
+})
+
+GameData::EncounterType.register({
+  :id             => :DarkGrassEvening,
+  :type           => :land,
+  :trigger_chance => 21
+})
+
+GameData::EncounterType.register({
+  :id             => :DarkGrassAfternoon,
+  :type           => :land,
+  :trigger_chance => 21
+})

@@ -129,3 +129,9 @@ GameData::Environment.register({
   :id   => :UltraSpace,
   :name => _INTL("Ultra Space")
 })
+
+GameData::Environment.register({
+  :id   => :DarkGrass,
+  :name        => _INTL("Dark Grass"),
+  :battle_base => "grass"
+})
