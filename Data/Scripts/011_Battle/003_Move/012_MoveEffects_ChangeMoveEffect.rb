@@ -240,7 +240,7 @@ class Battle::Move::EffectDependsOnEnvironment < Battle::Move
       @secretPower = 4   # Confusion, lower Speed by 1
     else
       case @battle.environment
-      when :Grass, :TallGrass, :Forest, :ForestGrass
+      when :Grass, :TallGrass, :Forest, :ForestGrass, :DarkGrass
         @secretPower = 2    # (Same as Grassy Terrain)
       when :MovingWater, :StillWater, :Underwater
         @secretPower = 5    # Water Pulse, lower Attack by 1
@@ -880,7 +880,7 @@ class Battle::Move::UseMoveDependingOnEnvironment < Battle::Move
     else
       try_move = nil
       case @battle.environment
-      when :Grass, :TallGrass, :Forest, :ForestGrass
+      when :Grass, :TallGrass, :Forest, :ForestGrass, :DarkGrass
         try_move = (Settings::MECHANICS_GENERATION >= 6) ? :ENERGYBALL : :SEEDBOMB
       when :MovingWater, :StillWater, :Underwater
         try_move = :HYDROPUMP
