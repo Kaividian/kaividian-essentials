@@ -20,6 +20,7 @@ module GameData
     attr_reader :must_walk
     attr_reader :must_walk_or_run
     attr_reader :ignore_passability
+    attr_reader :special_grass
 
     DATA = {}
 
@@ -60,6 +61,7 @@ module GameData
       @must_walk              = hash[:must_walk]              || false
       @must_walk_or_run       = hash[:must_walk_or_run]       || false
       @ignore_passability     = hash[:ignore_passability]     || false
+      @special_grass          = hash[:special_grass]          || ""
     end
 
     alias name real_name
@@ -201,4 +203,14 @@ GameData::TerrainTag.register({
 GameData::TerrainTag.register({
   :id                     => :NoEffect,
   :id_number              => 17
+})
+
+GameData::TerrainTag.register({
+  :id                     => :DarkGrass,
+  :id_number              => 18,
+  :shows_grass_rustle     => true,
+  :land_wild_encounters   => true,
+  :double_wild_encounters => true,
+  :battle_environment     => :DarkGrass,
+  :special_grass          => 'dark_grass'
 })
