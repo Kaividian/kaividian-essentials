@@ -92,8 +92,9 @@ Battle::AbilityEffects::OnSwitchOut.add(:SECONDWIND,
   proc { |ability, battler, endOfBattle|
     next if endOfBattle
     next if battler.stages[:SPEED] <= 0
-    @battle.pbShowAbilitySplash(battler)
-    @battle.pbDisplay(_INTL("{1} is surrounded by strong winds!", battler.pbThis))
-    @battle.positions[target.index].effects[PBEffects::WindSurfer] = battler.stages[:SPEED]
-    @battle.pbHideAbilitySplash(battler)  }
+    battler.battle.pbShowAbilitySplash(battler)
+    battler.battle.pbDisplay(_INTL("{1} is surrounded by strong winds!", battler.pbThis))
+    battler.battle.positions[target.index].effects[PBEffects::WindSurfer] = battler.stages[:SPEED]
+    battler.battle.pbHideAbilitySplash(battler)
+  }
 )
