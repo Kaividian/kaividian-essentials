@@ -70,19 +70,20 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
 
 Battle::AbilityEffects::OnBeingHit.add(:SECONDWIND,
   proc { |ability, user, target, move, battle|
+    showedSplash = false
     if move.calcType == :FLYING
       if !target.statStageAtMax?(:SPEED)
+        showedSplash = true
         battle.pbShowAbilitySplash(target)        
         target.pbRaiseStatStage(:SPEED, 1, target)
-        battle.pbHideAbilitySplash(user)
       end
     end
     if target.fainted? && target.stages[:SPEED] > 0
-      battle.pbShowAbilitySplash(target)
+      battle.pbShowAbilitySplash(target) if !showedSplash
       battle.pbDisplay(_INTL("{1} is surrounded by strong winds!", target.pbThis))
       battle.positions[target.index].effects[PBEffects::WindSurfer] = target.stages[:SPEED]
-      battle.pbHideAbilitySplash(target)
     end
+    battle.pbHideAbilitySplash(target) if !showedSplash
   }
 )
 
