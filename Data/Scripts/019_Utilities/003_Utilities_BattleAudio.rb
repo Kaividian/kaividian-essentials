@@ -5,6 +5,10 @@
 def pbGetWildBattleBGM(_wildParty)
   return $PokemonGlobal.nextBattleBGM.clone if $PokemonGlobal.nextBattleBGM
   ret = nil
+    # Dark Grass
+  if !ret && $game_map && $game_player.terrain_tag == :DarkGrass
+    ret = pbStringToAudioFile("Battle wild strong")
+  end
   if !ret
     # Check map metadata
     music = $game_map.metadata&.wild_battle_BGM
