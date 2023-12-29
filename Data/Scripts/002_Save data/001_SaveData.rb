@@ -3,17 +3,36 @@
 # between Essentials and game versions.
 # @see SaveData.register
 # @see SaveData.register_conversion
+
 module SaveData
-  # Contains the file path of the save file.
-  FILE_PATH = if File.directory?(System.data_directory)
-                System.data_directory + "/Game.rxdata"
-              else
-                "./Game.rxdata"
-              end
+
+  @@save_index = 0
+
+  def self.getSaveIndex
+    return @@save_index
+  end
+
+  def self.setSaveIndex(i)
+    @@save_index = i
+  end
+
+  # Contains the file paths of the save files.
+  FILE_PATHS = lambda do
+    retVal = []
+    for i in 0..Settings::ALLOWED_SAVE_FILES do
+      if File.directory?(System.data_directory)
+        retVal.append(System.data_directory + "/Game" + i.to_s + ".rxdata")
+      else
+        retVal.append("./Game" + i.to_s + ".rxdata")
+      end
+    end
+    retVal
+  end.call
 
   # @return [Boolean] whether the save file exists
-  def self.exists?
-    return File.file?(FILE_PATH)
+  def self.exists?(file_index)
+    Console.echo_h1(Settings::ALLOWED_SAVE_FILES)
+    return File.file?(FILE_PATHS[file_index])
   end
 
   # Fetches the save data from the given file.
@@ -62,9 +81,9 @@ module SaveData
 
   # Deletes the save file (and a possible .bak backup file if one exists)
   # @raise [Error::ENOENT]
-  def self.delete_file
-    File.delete(FILE_PATH)
-    File.delete(FILE_PATH + ".bak") if File.file?(FILE_PATH + ".bak")
+  def self.delete_file(file_index)
+    File.delete(FILE_PATHS[file_index])
+    File.delete(FILE_PATHS[file_index] + ".bak") if File.file?(FILE_PATHS[file_index] + ".bak")
   end
 
   # Converts the pre-v19 format data to the new format.
