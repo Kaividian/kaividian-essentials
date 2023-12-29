@@ -1,326 +1,328 @@
-﻿# Route 5 (41) - Route 4 (40)
-41,North,0,40,South,0
-# Route 5 (41) - Route 6 (45)
-41,South,6,45,North,0
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+# Route 5 (41) - Route 4 Cycling Road (40)
+41,N,0,40,S,0
+# Route 5 (41) - Route 6 Cycling Road (45)
+41,S,6,45,N,0
 # Route 6 (44) - Route 1 (5)
-44,South,43,5,North,0
-# Safari Zone (66) - Route 1 (5)
-66,North,18,5,South,0
+44,S,43,5,N,0
+# Safari Zone outside (66) - Route 1 (5)
+66,N,18,5,S,0
 # Cedolan City (7) - Route 1 (5)
-7,South,0,5,North,2
+7,S,0,5,N,2
 # Lappet Town (2) - Route 1 (5)
-2,North,0,5,South,4
+2,N,0,5,S,4
 # Cedolan City (7) - Route 6 (44)
-7,West,5,44,East,0
-# Lappet Town (2) - Safari Zone (66)
-2,West,0,66,East,0
-# Route 8 (69) - Safari Zone (66)
-69,North,0,66,South,10
-# Ingido Plateau (35) - Route 4 (39)
-35,West,11,39,East,0
+7,W,5,44,E,0
+# Lappet Town (2) - Safari Zone outside (66)
+2,W,0,66,E,0
+# Route 8 (69) - Safari Zone outside (66)
+69,N,0,66,S,10
+# Ingido Plateau outside (35) - Route 4 (39)
+35,W,11,39,E,0
 # Cedolan City (7) - Lerucean Town (23)
-7,East,0,23,West,78
+7,E,0,23,W,78
 # Route 3 (31) - Lerucean Town (23)
-31,South,32,23,North,0
+31,S,32,23,N,0
 # Route 2 (21) - Lerucean Town (23)
-21,East,0,23,West,1
+21,E,0,23,W,1
 # Route 7 (47) - Cedolan City (7)
-47,West,0,7,East,0
+47,W,0,7,E,0
 # Route 2 (21) - Cedolan City (7)
-21,South,0,7,North,21
-# Route 3 (31) - Ingido Plateau (35)
-31,West,0,35,East,10
+21,S,0,7,N,21
+# Route 3 (31) - Ingido Plateau outside (35)
+31,W,0,35,E,10
 # Route 8 (69) - Lappet Town (2)
-69,North,12,2,South,0
+69,N,12,2,S,0
 # Route 7 (47) - Battle Frontier (52)
-47,East,8,52,West,0
+47,E,8,52,W,0
 # Route 2 (21) - Route 7 (47)
-21,East,77,47,West,0
+21,E,77,47,W,0
 # Poké Federation Bridge (144) - Poké Federation Bridge (143)
-144,West,0,143,East,0
+144,W,0,143,E,0
 # Poké Federation Bridge (142) - Poké Federation Bridge (143)
-142,East,0,143,West,0
+142,E,0,143,W,0
 # Poké Federation Bridge (145) - Poké Federation Bridge (144)
-145,West,4,144,East,0
+145,W,4,144,E,0
 # Poké Federation Bridge (140) - Poké Federation Bridge (139)
-140,West,0,139,East,3
+140,W,0,139,E,3
 # Federation Path (146) - Poké Federation Bridge (139)
-146,North,0,139,South,573
+146,N,0,139,S,573
 # Poké Federation Bridge (141) - Poké Federation Bridge (140)
-141,West,0,140,East,0
+141,W,0,140,E,0
 # Poké Federation Bridge (142) - Federation Path (146)
-142,South,77,146,North,0
+142,S,77,146,N,0
 # Poké Federation Bridge (142) - Poké Federation Bridge (141)
-142,West,0,141,East,0
+142,W,0,141,E,0
 # Halax City Plaza (177) - Route 6 (170)
-177,East,10,170,West,0
+177,E,10,170,W,0
 # Halax City Docks (185) - Route 6 (170)
-185,East,0,170,West,25
+185,E,0,170,W,25
 # Route 6 (169) - Route 6 (170)
-169,West,0,170,East,0
+169,W,0,170,E,0
 # Glasgow Town (156) - Glasgow Town (155)
-156,North,0,155,South,6
+156,N,0,155,S,6
 # Route 4 (151) - Glasgow Town (155)
-151,South,5,155,North,0
+151,S,5,155,N,0
 # Route 5 (168) - Glasgow Town (155)
-168,East,0,155,West,14
+168,E,0,155,W,14
 # Halax City (184) - Halax City Plaza (177)
-184,East,0,177,West,1
+184,E,0,177,W,1
 # Halax City Docks (185) - Halax City Plaza (177)
-185,North,0,177,South,0
+185,N,0,177,S,0
 # Halax City Docks (185) - Halax City (184)
-185,West,0,184,East,34
+185,W,0,184,E,34
 # Route 6 (169) - Route 5 (168)
-169,East,0,168,West,6
+169,E,0,168,W,6
 # Bridge 5 (226) - Bridge 4 (225)
-226,West,0,225,East,13
+226,W,0,225,E,13
 # Bridge 11 (232) - Bridge 4 (225)
-232,West,30,225,East,0
+232,W,30,225,E,0
 # Bridge 6 (227) - Bridge 4 (225)
-227,North,0,225,South,30
+227,N,0,225,S,30
 # Bridge 7 (228) - Bridge 4 (225)
-228,West,0,225,East,55
+228,W,0,225,E,55
 # Bridge 8 (229) - Bridge 4 (225)
-229,West,7,225,East,0
+229,W,7,225,E,0
 # Bridge 3 (224) - Bridge 4 (225)
-224,East,0,225,West,0
+224,E,0,225,W,0
 # Bridge 16 (237) - Bridge 15 (236)
-237,North,0,236,South,50
+237,N,0,236,S,50
 # Bridge 27 (248) - Bridge 15 (236)
-248,North,0,236,South,140
+248,N,0,236,S,140
 # Bridge 22 (243) - Bridge 15 (236)
-243,West,0,236,East,130
+243,W,0,236,E,130
 # Bridge 12 (233) - Bridge 15 (236)
-233,East,0,236,West,0
+233,E,0,236,W,0
 # Bridge 13 (234) - Bridge 15 (236)
-234,North,0,236,South,0
+234,N,0,236,S,0
 # Bridge 19 (240) - Bridge 15 (236)
-240,West,0,236,East,80
+240,W,0,236,E,80
 # Bridge 20 (241) - Bridge 15 (236)
-241,West,0,236,East,56
+241,W,0,236,E,56
 # Bridge 27 (248) - Bridge 26 (247)
-248,South,0,247,North,0
+248,S,0,247,N,0
 # Bridge 28 (249) - Bridge 26 (247)
-249,West,0,247,East,0
+249,W,0,247,E,0
 # Bridge 23 (244) - Bridge 26 (247)
-244,East,20,247,West,0
+244,E,20,247,W,0
 # Bridge 18 (239) - Bridge 26 (247)
-239,North,120,247,South,0
+239,N,120,247,S,0
 # Bridge 24 (245) - Bridge 26 (247)
-245,North,30,247,South,0
+245,N,30,247,S,0
 # Bridge 8 (229) - Bridge 26 (247)
-229,North,200,247,South,0
+229,N,200,247,S,0
 # Bridge 19 (240) - Bridge 26 (247)
-240,North,70,247,South,0
+240,N,70,247,S,0
 # Bridge 25 (246) - Bridge 26 (247)
-246,North,0,247,South,0
+246,N,0,247,S,0
 # Bridge 9 (230) - Bridge 26 (247)
-230,North,160,247,South,0
+230,N,160,247,S,0
 # Bridge 10 (231) - Bridge 21 (242)
-231,East,10,242,West,0
+231,E,10,242,W,0
 # Bridge 22 (243) - Bridge 21 (242)
-243,West,0,242,East,0
+243,W,0,242,E,0
 # Bridge 18 (239) - Bridge 21 (242)
-239,South,0,242,North,0
+239,S,0,242,N,0
 # Bridge 24 (245) - Bridge 21 (242)
-245,South,0,242,North,90
+245,S,0,242,N,90
 # Bridge 19 (240) - Bridge 21 (242)
-240,West,50,242,East,0
+240,W,50,242,E,0
 # Bridge 20 (241) - Bridge 21 (242)
-241,West,74,242,East,0
+241,W,74,242,E,0
 # Bridge 9 (230) - Bridge 21 (242)
-230,East,50,242,West,0
+230,E,50,242,W,0
 # Bridge 5 (226) - Bridge 10 (231)
-226,East,20,231,West,0
+226,E,20,231,W,0
 # Bridge 11 (232) - Bridge 10 (231)
-232,East,63,231,West,0
+232,E,63,231,W,0
 # Bridge 7 (228) - Bridge 10 (231)
-228,East,0,231,West,22
+228,E,0,231,W,22
 # Bridge 18 (239) - Bridge 10 (231)
-239,West,40,231,East,0
+239,W,40,231,E,0
 # Bridge 8 (229) - Bridge 10 (231)
-229,East,40,231,West,0
+229,E,40,231,W,0
 # Bridge 9 (230) - Bridge 10 (231)
-230,South,0,231,North,0
+230,S,0,231,N,0
 # Bridge 2 (223) - Bridge 1 (138)
-223,West,0,138,East,24
+223,W,0,138,E,24
 # Bridge 6 (227) - Bridge 5 (226)
-227,North,20,226,South,0
+227,N,20,226,S,0
 # Bridge 12 (233) - Bridge 5 (226)
-233,West,100,226,East,0
+233,W,100,226,E,0
 # Bridge 7 (228) - Bridge 5 (226)
-228,North,0,226,South,0
+228,N,0,226,S,0
 # Bridge 8 (229) - Bridge 5 (226)
-229,South,0,226,North,0
+229,S,0,226,N,0
 # Bridge 9 (230) - Bridge 5 (226)
-230,West,20,226,East,0
+230,W,20,226,E,0
 # Bridge 22 (243) - Bridge 16 (237)
-243,West,0,237,East,110
+243,W,0,237,E,110
 # Bridge 17 (238) - Bridge 16 (237)
-238,North,0,237,South,0
+238,N,0,237,S,0
 # Bridge 13 (234) - Bridge 16 (237)
-234,East,0,237,West,0
+234,E,0,237,W,0
 # Bridge 19 (240) - Bridge 16 (237)
-240,West,0,237,East,60
+240,W,0,237,E,60
 # Bridge 14 (235) - Bridge 16 (237)
-235,North,50,237,South,0
+235,N,50,237,S,0
 # Bridge 20 (241) - Bridge 16 (237)
-241,West,0,237,East,36
+241,W,0,237,E,36
 # Bridge 28 (249) - Bridge 27 (248)
-249,North,0,248,South,30
+249,N,0,248,S,30
 # Bridge 23 (244) - Bridge 27 (248)
-244,East,0,248,West,10
+244,E,0,248,W,10
 # Bridge 24 (245) - Bridge 27 (248)
-245,East,0,248,West,60
+245,E,0,248,W,60
 # Bridge 6 (227) - Bridge 11 (232)
-227,East,0,232,West,85
+227,E,0,232,W,85
 # Bridge 12 (233) - Bridge 11 (232)
-233,West,57,232,East,0
+233,W,57,232,E,0
 # Bridge 18 (239) - Bridge 11 (232)
-239,North,0,232,South,80
+239,N,0,232,S,80
 # Bridge 24 (245) - Bridge 11 (232)
-245,North,0,232,South,170
+245,N,0,232,S,170
 # Bridge 8 (229) - Bridge 11 (232)
-229,North,0,232,South,0
+229,N,0,232,S,0
 # Bridge 19 (240) - Bridge 11 (232)
-240,North,0,232,South,130
+240,N,0,232,S,130
 # Bridge 25 (246) - Bridge 11 (232)
-246,North,0,232,South,200
+246,N,0,232,S,200
 # Bridge 9 (230) - Bridge 11 (232)
-230,West,0,232,East,23
+230,W,0,232,E,23
 # Bridge 17 (238) - Bridge 22 (243)
-238,East,70,243,West,0
+238,E,70,243,W,0
 # Bridge 18 (239) - Bridge 22 (243)
-239,East,50,243,West,0
+239,E,50,243,W,0
 # Bridge 24 (245) - Bridge 22 (243)
-245,South,0,243,North,40
+245,S,0,243,N,40
 # Bridge 19 (240) - Bridge 22 (243)
-240,South,0,243,North,0
+240,S,0,243,N,0
 # Bridge 7 (228) - Bridge 6 (227)
-228,West,0,227,East,0
+228,W,0,227,E,0
 # Bridge 8 (229) - Bridge 6 (227)
-229,West,62,227,East,0
+229,W,62,227,E,0
 # Bridge 18 (239) - Bridge 17 (238)
-239,North,30,238,South,0
+239,N,30,238,S,0
 # Bridge 13 (234) - Bridge 17 (238)
-234,East,40,238,West,0
+234,E,40,238,W,0
 # Bridge 24 (245) - Bridge 17 (238)
-245,North,0,238,South,60
+245,N,0,238,S,60
 # Bridge 8 (229) - Bridge 17 (238)
-229,North,110,238,South,0
+229,N,110,238,S,0
 # Bridge 19 (240) - Bridge 17 (238)
-240,West,0,238,East,20
+240,W,0,238,E,20
 # Bridge 25 (246) - Bridge 17 (238)
-246,North,0,238,South,90
+246,N,0,238,S,90
 # Bridge 14 (235) - Bridge 17 (238)
-235,East,0,238,West,0
+235,E,0,238,W,0
 # Bridge 20 (241) - Bridge 17 (238)
-241,West,4,238,East,0
+241,W,4,238,E,0
 # Bridge 9 (230) - Bridge 17 (238)
-230,North,70,238,South,0
+230,N,70,238,S,0
 # Bridge 18 (239) - Bridge 28 (249)
-239,North,150,249,South,0
+239,N,150,249,S,0
 # Bridge 24 (245) - Bridge 28 (249)
-245,North,60,249,South,0
+245,N,60,249,S,0
 # Bridge 8 (229) - Bridge 28 (249)
-229,North,230,249,South,0
+229,N,230,249,S,0
 # Bridge 19 (240) - Bridge 28 (249)
-240,North,100,249,South,0
+240,N,100,249,S,0
 # Bridge 25 (246) - Bridge 28 (249)
-246,North,30,249,South,0
+246,N,30,249,S,0
 # Bridge 9 (230) - Bridge 28 (249)
-230,North,190,249,South,0
+230,N,190,249,S,0
 # Bridge 18 (239) - Bridge 23 (244)
-239,North,90,244,South,0
+239,N,90,244,S,0
 # Bridge 24 (245) - Bridge 23 (244)
-245,North,0,244,South,0
+245,N,0,244,S,0
 # Bridge 8 (229) - Bridge 23 (244)
-229,North,170,244,South,0
+229,N,170,244,S,0
 # Bridge 19 (240) - Bridge 23 (244)
-240,North,40,244,South,0
+240,N,40,244,S,0
 # Bridge 25 (246) - Bridge 23 (244)
-246,West,0,244,East,50
+246,W,0,244,E,50
 # Bridge 20 (241) - Bridge 23 (244)
-241,East,0,244,West,26
+241,E,0,244,W,26
 # Bridge 9 (230) - Bridge 23 (244)
-230,North,130,244,South,0
+230,N,130,244,S,0
 # Bridge 7 (228) - Bridge 12 (233)
-228,East,0,233,West,142
+228,E,0,233,W,142
 # Bridge 18 (239) - Bridge 12 (233)
-239,North,0,233,South,40
+239,N,0,233,S,40
 # Bridge 13 (234) - Bridge 12 (233)
-234,West,0,233,East,20
+234,W,0,233,E,20
 # Bridge 24 (245) - Bridge 12 (233)
-245,North,0,233,South,130
+245,N,0,233,S,130
 # Bridge 8 (229) - Bridge 12 (233)
-229,North,40,233,South,0
+229,N,40,233,S,0
 # Bridge 19 (240) - Bridge 12 (233)
-240,North,0,233,South,90
+240,N,0,233,S,90
 # Bridge 25 (246) - Bridge 12 (233)
-246,North,0,233,South,160
+246,N,0,233,S,160
 # Bridge 14 (235) - Bridge 12 (233)
-235,West,0,233,East,60
+235,W,0,233,E,60
 # Bridge 9 (230) - Bridge 12 (233)
-230,North,0,233,South,0
+230,N,0,233,S,0
 # Bridge 9 (230) - Bridge 7 (228)
-230,West,62,228,East,0
+230,W,62,228,E,0
 # Bridge 19 (240) - Bridge 18 (239)
-240,West,0,239,East,0
+240,W,0,239,E,0
 # Bridge 14 (235) - Bridge 18 (239)
-235,South,20,239,North,0
+235,S,20,239,N,0
 # Bridge 20 (241) - Bridge 18 (239)
-241,West,24,239,East,0
+241,W,24,239,E,0
 # Bridge 9 (230) - Bridge 18 (239)
-230,East,0,239,West,0
+230,E,0,239,W,0
 # Bridge 3 (224) - Bridge 2 (223)
-224,West,0,223,East,0
+224,W,0,223,E,0
 # Bridge 14 (235) - Bridge 13 (234)
-235,North,0,234,South,0
+235,N,0,234,S,0
 # Bridge 19 (240) - Bridge 24 (245)
-240,East,0,245,West,0
+240,E,0,245,W,0
 # Bridge 25 (246) - Bridge 24 (245)
-246,West,0,245,East,0
+246,W,0,245,E,0
 # Bridge 14 (235) - Bridge 24 (245)
-235,South,110,245,North,0
+235,S,110,245,N,0
 # Bridge 20 (241) - Bridge 24 (245)
-241,East,24,245,West,0
+241,E,24,245,W,0
 # Bridge 14 (235) - Bridge 8 (229)
-235,South,0,229,North,60
+235,S,0,229,N,60
 # Bridge 20 (241) - Bridge 8 (229)
-241,South,0,229,North,130
+241,S,0,229,N,130
 # Bridge 9 (230) - Bridge 8 (229)
-230,West,0,229,East,0
+230,W,0,229,E,0
 # Bridge 14 (235) - Bridge 19 (240)
-235,South,70,240,North,0
+235,S,70,240,N,0
 # Bridge 20 (241) - Bridge 19 (240)
-241,South,0,240,North,0
+241,S,0,240,N,0
 # Bridge 14 (235) - Bridge 25 (246)
-235,South,140,246,North,0
+235,S,140,246,N,0
 # Bridge 20 (241) - Bridge 25 (246)
-241,South,70,246,North,0
+241,S,70,246,N,0
 # Bridge 9 (230) - Bridge 14 (235)
-230,North,20,235,South,0
+230,N,20,235,S,0
 # Bridge 9 (230) - Bridge 20 (241)
-230,North,90,241,South,0
+230,N,90,241,S,0
 # Kracket Village (32) - Kracket Beach (137)
-32,North,0,137,South,4
+32,N,0,137,S,4
 # Mirmirch Town (78) - Route 8-1 (77)
-78,North,0,77,South,0
+78,N,0,77,S,0
 # Mirmirch Path (79) - Route 8-1 (77)
-79,North,36,77,South,0
+79,N,36,77,S,0
 # Kracket Village (32) - Route 8-1 (77)
-32,South,0,77,North,0
+32,S,0,77,N,0
 # Mirmirch Path (79) - Mirmirch Town (78)
-79,East,0,78,West,0
+79,E,0,78,W,0
 # Mirmirch Town (97) - Mirmirch Town (78)
-97,North,0,78,South,0
+97,N,0,78,S,0
 # Mirmirch Town (97) - Mirmirch Path (79)
-97,West,0,79,East,44
+97,W,0,79,E,44
 # Kracket Village (32) - Mirmirch Path (79)
-32,West,94,79,East,0
+32,W,94,79,E,0
 # Route 8-3 (102) - Route 8-2 (116)
-102,North,0,116,South,0
+102,N,0,116,S,0
 # New Monten City (119) - Route 8-2 (116)
-119,East,12,116,West,0
+119,E,12,116,W,0
 # New Monten City (119) - Route 8-3 (102)
-119,East,42,102,West,0
+119,E,42,102,W,0
