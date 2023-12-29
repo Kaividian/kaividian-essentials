@@ -19,7 +19,7 @@ module Game
   # Loads bootup data from save file (if it exists) or creates bootup data (if
   # it doesn't).
   def self.set_up_system
-    save_data = (SaveData.exists?) ? SaveData.read_from_file(SaveData::FILE_PATH) : {}
+    save_data = (SaveData.exists?(SaveData.getSaveIndex)) ? SaveData.read_from_file(SaveData::FILE_PATHS[SaveData.getSaveIndex]) : {}
     if save_data.empty?
       SaveData.initialize_bootup_values
     else
@@ -108,7 +108,7 @@ module Game
   # @param safe [Boolean] whether $PokemonGlobal.safesave should be set to true
   # @return [Boolean] whether the operation was successful
   # @raise [SaveData::InvalidValueError] if an invalid value is being saved
-  def self.save(save_file = SaveData::FILE_PATH, safe: false)
+  def self.save(save_file = SaveData::FILE_PATHS[SaveData.getSaveIndex], safe: false)
     validate save_file => String, safe => [TrueClass, FalseClass]
     $PokemonGlobal.safesave = safe
     $game_system.save_count += 1

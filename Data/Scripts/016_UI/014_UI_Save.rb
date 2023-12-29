@@ -3,9 +3,9 @@ def pbEmergencySave
   $scene = nil
   pbMessage(_INTL("The script is taking too long. The game will restart."))
   return if !$player
-  if SaveData.exists?
-    File.open(SaveData::FILE_PATH, "rb") do |r|
-      File.open(SaveData::FILE_PATH + ".bak", "wb") do |w|
+  if SaveData.exists?(SaveData.getSaveIndex)
+    File.open(SaveData::FILE_PATHS[SaveData.getSaveIndex], "rb") do |r|
+      File.open(SaveData::FILE_PATHS[SaveData.getSaveIndex] + ".bak", "wb") do |w|
         loop do
           s = r.read(4096)
           break if !s
@@ -101,7 +101,7 @@ class PokemonSaveScreen
     ret = false
     @scene.pbStartScreen
     if pbConfirmMessage(_INTL("Would you like to save the game?"))
-      if SaveData.exists? && $game_temp.begun_new_game
+      if SaveData.exists?(SaveData.getSaveIndex) && $game_temp.begun_new_game
         pbMessage(_INTL("WARNING!") + "\1")
         pbMessage(_INTL("There is a different game file that is already saved.") + "\1")
         pbMessage(_INTL("If you save now, the other file's adventure, including items and Pokémon, will be entirely lost.") + "\1")
