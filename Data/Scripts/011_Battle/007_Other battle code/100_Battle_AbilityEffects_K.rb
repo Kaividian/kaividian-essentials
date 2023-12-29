@@ -51,7 +51,7 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
           amt = b.damageState.totalHPLost
           if b.hasActiveAbility?(:LIQUIDOOZE, true)
             battle.pbShowAbilitySplash(b)
-            pbReduceHP(amt)
+            user.pbReduceHP(amt)
             battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", pbThis))
             battle.pbHideAbilitySplash(b)
           elsif user.canHeal?
