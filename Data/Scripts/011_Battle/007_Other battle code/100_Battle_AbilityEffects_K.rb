@@ -40,7 +40,7 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
     next if numFainted == 0
     anyOoze = false
     targets.each do |b|
-      if b.hasActiveAbility?(:LIQUIDOOZE)
+      if b.hasActiveAbility?(:LIQUIDOOZE, true)
         anyOoze = true
         break
       end
@@ -49,12 +49,12 @@ Battle::AbilityEffects::OnEndOfUsingMove.add(:VAMPIRISM,
         battle.pbShowAbilitySplash(user)
         targets.each do |b| 
           amt = b.damageState.totalHPLost
-          if b.hasActiveAbility?(:LIQUIDOOZE)
+          if b.hasActiveAbility?(:LIQUIDOOZE, true)
             battle.pbShowAbilitySplash(b)
             pbReduceHP(amt)
             battle.pbDisplay(_INTL("{1} sucked up the liquid ooze!", pbThis))
             battle.pbHideAbilitySplash(b)
-          else
+          elsif user.canHeal?
             msg = _INTL("{1} had its energy drained!", b.pbThis) if nil_or_empty?(msg)
             battle.pbDisplay(msg)
             if user.canHeal?
