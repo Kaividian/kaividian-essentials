@@ -256,11 +256,12 @@ class PokemonEncounters
         ret = :BugContest if pbInBugContest? && has_encounter_type?(:BugContest)
         if  $game_player.pbTerrainTag.special_grass
           grassType =  $game_player.pbTerrainTag.special_grass
-          if  grassType == 'dark_grass'
-            ret = find_valid_encounter_type_for_time(:DarkGrass, time) if !ret
+          if !ret && grassType == 'dark_grass'
+            ret = find_valid_encounter_type_for_time(:DarkGrass, time)
           end
-        else
-          ret = find_valid_encounter_type_for_time(:Land, time) if !ret
+        end
+        if !ret
+          ret = find_valid_encounter_type_for_time(:Land, time)
         end
       end
       if !ret && has_cave_encounters?
