@@ -216,7 +216,7 @@ end
 class PokemonLoadScreen
   def initialize(scene)
     #Nah, not this one. let's use our swanky new one!
-   # return PokemonLoadSelectScreen.new(scene)
+    return SaveSelection.new()
     @scene = scene
     if SaveData.exists?(SaveData.getSaveIndex)
       @save_data = load_save_file(SaveData::FILE_PATHS[SaveData.getSaveIndex])
