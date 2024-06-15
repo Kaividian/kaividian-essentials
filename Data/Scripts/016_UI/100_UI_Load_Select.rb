@@ -75,16 +75,16 @@ class SaveSelection
     @sprites["right"].x = 478
     @sprites["right"].y = 66
     @sprites["deletepanel"] = SelectableSprite.new(@path + "delete_button", @viewport)
-    #FIX THIS
-    #@sprites["delete"].x = 160
-    #@sprites["delete"].y = 288
+    @sprites["deletepanel"].x = 160
+    @sprites["deletepanel"].y = 288
     # @sprites["delete"]["text"] = TextSprite.new(@viewport, nil, 192, 32)
     # @sprites["delete"]["text"].x = @sprites["delete"]["panel"].x
     # @sprites["delete"]["text"].y = @sprites["delete"]["panel"].y
     # @sprites["delete"]["text"].z = @sprites["delete"]["panel"].z
    # pbSetSmallFont(@sprites["delete"]["panel"].bitmap)
    # @sprites["delete"]["text"].draw([
-    pbDrawTextPositions(@sprites["deletepanel"].bitmap, [[_INTL("Delete Game"), 96, 2, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+    pbDrawTextPositions(@sprites["deletepanel"].bitmap, [[_INTL("New Game"), 96, 3, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+    pbDrawTextPositions(@sprites["deletepanel"].bitmap, [[_INTL("New Game"), 96 + 192, 3, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
     #])
     @sprites["down"] = SelectableSprite.new(@path + "down_arrow", @viewport)
     @sprites["down"].x = 194
@@ -94,25 +94,31 @@ class SaveSelection
     @sprites["up"].y = 384
     @sel = 0
     times = []
-    for i in 1..3
-      if safeExists?(RTP.getSaveFileName("Game_#{i}.rxdata"))
-        times << File.mtime(RTP.getSaveFileName("Game_#{i}.rxdata")).to_i
+    for i in 0..2
+      if FileTest.exist?(RTP.getSaveFileName("Game#{i}.rxdata"))
+        times << File.mtime(RTP.getSaveFileName("Game#{i}.rxdata")).to_i
       else
         times << 0
       end
     end
-    @save_index = times.index(times.max) + 1
+    @save_index = times.index(times.max)
     #FontInstaller.install
     load_save(@save_index, true)
     Graphics.transition
     mainloop
   end
+
+  def to_digits(num, size)
+    str = num.to_s
+    (size - str.size).times { str = str.prepend("0") }
+    return str
+  end
   
   def load_save(index, initial = false)
-    filename = RTP.getSaveFileName("Game_#{index}.rxdata")
-    oldnewgame = @new_game
-    if safeExists?(filename)
-      $Trainer, Graphics.frame_count,
+    SaveData.setSaveIndex(index)
+    filename = RTP.getSaveFileName("Game#{index}.rxdata")
+    if FileTest.exist?(filename)
+      $Trainer, $stats,
           $game_system, $PokemonSystem, @mapid,
           $PokemonGlobal = try_load(filename)
       @new_game = false
@@ -125,32 +131,48 @@ class SaveSelection
         Graphics.update
         Input.update
         update
-        @sprites["cartridge"].y += 3
+        @sprites["cartridgepanel"].y += 3
+        for i in 0...6 do
+          @sprites["cartridgeparty#{i}"].y += 3 if @sprites["cartridgeparty#{i}"]
+        end
+        @sprites["char"].y += 3 if @sprites["char"]
       end
       4.times { Graphics.update; Input.update; update }
       for i in 0...4
         Graphics.update
         Input.update
         update
-        @sprites["cartridge"].y -= 3
+        @sprites["cartridgepanel"].y -= 3
+        for i in 0...6 do
+          @sprites["cartridgeparty#{i}"].y -= 3 if @sprites["cartridgeparty#{i}"]
+        end
+        @sprites["char"].y -= 3 if @sprites["char"]
       end
       for i in 0...21
         Graphics.update
         Input.update
         update
         sy = -2 * i * 1.1 ** i
-        @sprites["cartridge"].y = sy
-        @sprites["deletepanel"].opacity -= 16 if @new_game && !oldnewgame
+        @sprites["cartridgepanel"].y = sy
+        for i in 0...6 do
+          @sprites["cartridgeparty#{i}"].y = sy + 90 if @sprites["cartridgeparty#{i}"]
+        end
+        @sprites["char"].y = sy + 10 if @sprites["char"]
+        @sprites["deletepanel"].opacity -= 16 if @new_game
       end
-      @sprites["cartridge"].y = 0
+      @sprites["cartridgepanel"].y = 0
     end
     @sprites["deletepanel"].opacity = 0 if @new_game
-    @sprites["cartridge"].dispose if @sprites["cartridge"]
-    @sprites["cartridge"] = nil
-    for i in 0...4
-      if @sprites["buttons" + i.to_s]
-        @sprites["buttons" + i.to_s].dispose
-      end
+    @sprites["cartridgepanel"].dispose if @sprites["cartridgepanel"]
+    @sprites["cartridgepanel"] = nil
+    for i in 0...6 do
+      @sprites["cartridgeparty#{i}"].dispose if @sprites["cartridgeparty#{i}"]
+      @sprites["cartridgeparty#{i}"] = nil if @sprites["cartridgeparty#{i}"]
+    end
+    @sprites["char"].dispose if @sprites["char"]
+    @sprites["char"] = nil
+    for i in 0..3
+      @sprites["buttons#{i}"].dispose if @sprites["buttons#{i}"]
     end
     @sprites["buttonstext"].dispose if @sprites["buttonstext"]
     if @new_game
@@ -158,16 +180,16 @@ class SaveSelection
       @sprites["buttons0"] = SelectableSprite.new(@path + "panel_top", @viewport)
       @sprites["buttons0"].x = 48
       @sprites["buttons0"].y = 112 + 384
+      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("CREDITS"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("CREDITS"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
       # Quit Game
       @sprites["buttons1"] = SelectableSprite.new(@path + "panel_bottom", @viewport)
       @sprites["buttons1"].x = 48
       @sprites["buttons1"].y = 192 + 384
+      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("EXIT GAME"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("EXIT GAME"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
-      @buttonstextpos = [
-          ["CREDITS", 256, 112+32, 2, Color.new(255, 255, 255), Color.new(32, 32, 32)],
-          ["QUIT GAME", 256, 192+32, 2, Color.new(255, 255, 255), Color.new(32, 32, 32)],
-      ]
       @sprites["buttonstext"] = Sprite.new(@viewport)
       @sprites["buttonstext"].x = 384
       @sprites["buttonstext"].y = 384
@@ -179,31 +201,45 @@ class SaveSelection
       @sprites["cartridgepanel"].y = 40
 
       @sprites["cartridgepanel"].select
-      #FIX LATER
-      # @sprites["cartridge"]["text"]["textpos"] = TextSprite.new(@viewport, [
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}: New Game"), 192, 82, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}: New Game"), 192 + 416, 82, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+
+      # @sprites["cartridgepanel"]["text"]["textpos"] = TextSprite.new(@viewport, [
       #     "Slot #{index}: New Game", 192, 82, 2, Color.new(255, 255, 255), Color.new(32, 32, 32)
       # ], 384, 192)
-      # @sprites["cartridge"]["text"].x = @sprites["cartridge"]["panel"].x
-      # @sprites["cartridge"]["text"].y = @sprites["cartridge"]["panel"].y
-      # @sprites["cartridge"]["text"].z = @sprites["cartridge"]["panel"].z
+      # @sprites["cartridgepanel"]["text"].x = @sprites["cartridgepanel"]["panel"].x
+      # @sprites["cartridgepanel"]["text"].y = @sprites["cartridgepanel"]["panel"].y
+      # @sprites["cartridgepanel"]["text"].z = @sprites["cartridgepanel"]["panel"].z
 
     else
       # Options
       @sprites["buttons0"] = SelectableSprite.new(@path + "panel_top", @viewport)
       @sprites["buttons0"].x = 48
       @sprites["buttons0"].y = 48 + 384
+      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("OPTIONS"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("OPTIONS"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+
       # Mystery Gift
       @sprites["buttons1"] = SelectableSprite.new(@path + "panel", @viewport)
       @sprites["buttons1"].x = 48
       @sprites["buttons1"].y = 128 + 384
+      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("MYSTERY GIFT"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("MYSTERY GIFT"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+
       # Credits
       @sprites["buttons2"] = SelectableSprite.new(@path + "panel", @viewport)
       @sprites["buttons2"].x = 48
       @sprites["buttons2"].y = 208 + 384
+      pbDrawTextPositions(@sprites["buttons2"].bitmap, [[_INTL("CREDITS"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons2"].bitmap, [[_INTL("CREDITS"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+
       # Quit Game
       @sprites["buttons3"] = SelectableSprite.new(@path + "panel_bottom", @viewport)
       @sprites["buttons3"].x = 48
       @sprites["buttons3"].y = 288 + 384
+      pbDrawTextPositions(@sprites["buttons3"].bitmap, [[_INTL("EXIT GAME"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons3"].bitmap, [[_INTL("EXIT GAME"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+
       # @sprites["buttonstext"] = TextSprite.new(@viewport, [
       #     ["OPTIONS", 256, 80, 2, Color.new(255, 255, 255), Color.new(32, 32, 32)],
       #     ["MYSTERY GIFT", 256, 160, 2, Color.new(255, 255, 255), Color.new(32, 32, 32)],
@@ -214,7 +250,7 @@ class SaveSelection
       # @sprites["buttons"]["text"].y = 384
       # @sprites["buttons"]["text"].z = 1
       
-      @sprites["cartridgepanel"] = SelectableSprite.new(@path + "cartridge", @viewport)
+      @sprites["cartridgepanel"] = SelectableSprite.new(@path + "load_save", @viewport)
       @sprites["cartridgepanel"].x = 48
       @sprites["cartridgepanel"].y = 16
       @sprites["cartridgepanel"].select
@@ -222,17 +258,17 @@ class SaveSelection
       # @sprites["cartridgetext"] = TextSprite.new(@viewport,
       #     ["Slot #{index}", 44, 42, 0, Color.new(255, 255, 255), Color.new(32, 32, 32)],
       # 414, 240)
-      # @sprites["cartridge"]["text"].x = @sprites["cartridge"]["panel"].x
-      # @sprites["cartridge"]["text"].y = @sprites["cartridge"]["panel"].y
-      # @sprites["cartridge"]["text"].z = @sprites["cartridge"]["panel"].z
+      # @sprites["cartridgepanel"]["text"].x = @sprites["cartridgepanel"]["panel"].x
+      # @sprites["cartridgepanel"]["text"].y = @sprites["cartridgepanel"]["panel"].y
+      # @sprites["cartridgepanel"]["text"].z = @sprites["cartridgepanel"]["panel"].z
 
-      # @sprites["cartridge"]["small"] = TextSprite.new(@viewport, nil, 414, 240)
-      # @sprites["cartridge"]["small"].x = @sprites["cartridge"]["panel"].x
-      # @sprites["cartridge"]["small"].y = @sprites["cartridge"]["panel"].y
-      # @sprites["cartridge"]["small"].z = @sprites["cartridge"]["panel"].z
+      # @sprites["cartridgepanel"]["small"] = TextSprite.new(@viewport, nil, 414, 240)
+      # @sprites["cartridgepanel"]["small"].x = @sprites["cartridgepanel"]["panel"].x
+      # @sprites["cartridgepanel"]["small"].y = @sprites["cartridgepanel"]["panel"].y
+      # @sprites["cartridgepanel"]["small"].z = @sprites["cartridgepanel"]["panel"].z
 
-      #pbSetSmallFont(@sprites["cartridge"]["small"].bitmap)
-      totalsec = Graphics.frame_count / Graphics.frame_rate
+      #pbSetSmallFont(@sprites["cartridgepanel"]["small"].bitmap)
+      totalsec = $stats.play_time.to_i
       hour = totalsec / 60 / 60
       min = totalsec / 60 % 60
       sec = totalsec % 60
@@ -241,13 +277,37 @@ class SaveSelection
         min = 59
         sec = 59
       end
-      hour = hour.to_digits(2)
-      min = min.to_digits(2)
-      sec = sec.to_digits(2)
+      hour = to_digits(hour, 2)
+      min = to_digits(min, 2)
+      sec = to_digits(sec, 2)
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}"), 44, 42, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}"), 44 + 416, 42, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
       mapname = pbGetMapNameFromId(@mapid)
-      mapname.gsub!(/\\PN/, $Trainer.name)
-      #FIX THIS LATER
-      # @sprites["cartridge"]["small"].draw([
+      mapname = mapname.gsub(/\\PN/, $Trainer.name)
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(mapname), 380, 54, 1, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Badges"), 54, 146, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.badge_count.to_s), 192, 146, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Money"), 54, 178, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(get_money_text($Trainer.money)), 192, 178, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Pokedex"), 218, 146, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.pokedex.owned_count.to_s + "/" + $Trainer.pokedex.seen_count.to_s), 366, 146, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Time"), 218, 178, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("#{hour}:#{min}:#{sec}"), 366, 178, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      
+#      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}"), 44 + 416, 42, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(mapname), 380 + 416, 54, 1, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Badges"), 54 + 416, 146, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.badge_count.to_s), 192 + 416, 146, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Money"), 54 + 416, 178, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(get_money_text($Trainer.money)), 192 + 416, 178, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Pokedex"), 218 + 416, 146, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.pokedex.owned_count.to_s + "/" + $Trainer.pokedex.seen_count.to_s), 366 + 416, 146, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Time"), 218 + 416, 178, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("#{hour}:#{min}:#{sec}"), 366 + 416, 178, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+
+
+      # @sprites["cartridgepanel"]["small"].draw([
       #     [mapname, 380, 54, 1, Color.new(255, 255, 255), Color.new(32, 32, 32)],
       #     ["Badges", 54, 146, 0, Color.new(255, 255, 255), Color.new(32, 32, 32)],
       #     [$Trainer.numbadges.to_s, 192, 146, 1, Color.new(212, 204, 87), Color.new(32, 32, 32)],
@@ -258,50 +318,80 @@ class SaveSelection
       #     ["Time", 218, 178, 0, Color.new(255, 255, 255), Color.new(32, 32, 32)],
       #     ["#{hour}:#{min}:#{sec}", 366, 178, 1, Color.new(212, 204, 87), Color.new(32, 32, 32)],
       # ])
-      # @sprites["cartridge"]["party"] = SpriteHash.new
-      # for i in 0...$Trainer.party.size
-      #   p = $Trainer.party[i]
-      #   s = PokemonSpeciesIconSprite.new(p.species, @viewport)
-      #   s.x = 64 + 64 * i
-      #   s.y = 90
+      
 
-      #   @sprites["cartridge"]["party"][i] = s
+      for i in 0...$Trainer.party.size
+        p = $Trainer.party[i]
+        @sprites["cartridgeparty#{i}"] = PokemonSpeciesIconSprite.new(p.species, @viewport)
+        @sprites["cartridgeparty#{i}"].x = 64 + 64 * i
+        @sprites["cartridgeparty#{i}"].y = (initial ? 90 : -100)
+      end
+
+      #   @sprites["cartridgepanel"]["party"][i] = s
       # end
-      # meta = pbGetMetadata(0, MetadataPlayerA + $Trainer.metaID)
-      # if meta
-      #   filename = pbGetPlayerCharset(meta, 1, $Trainer)
-      #   @sprites["cartridge"]["char"] = TrainerWalkingCharSprite.new(filename, @viewport)
-      #   cw = @sprites["cartridge"]["char"].bitmap.width
-      #   ch = @sprites["cartridge"]["char"].bitmap.height
-      #   @sprites["cartridge"]["char"].x = 238
-      #   @sprites["cartridge"]["char"].y = 10
-      #   @sprites["cartridge"]["char"].src_rect = Rect.new(0, 0, cw / 4, ch / 4)
-      # end
+      meta = GameData::PlayerMetadata.get($Trainer.character_ID) 
+      if meta
+        filename = pbGetPlayerCharset(meta.walk_charset)
+        @sprites["char"] = TrainerWalkingCharSprite.new(filename, @viewport)
+        cw = @sprites["char"].bitmap.width
+        ch = @sprites["char"].bitmap.height
+        @sprites["char"].x = 238
+        @sprites["char"].y = (initial ? 10 : -100)
+        @sprites["char"].src_rect = Rect.new(0, 0, cw / 4, ch / 4)
+      end
     end
     if !initial
-      @sprites["cartridge"].y = sy
-      12.times { Graphics.update; Input.update; update }
+      @sprites["cartridgepanel"].y = sy
+      12.times {
+        Graphics.update
+        Input.update
+        update
+      }
       for i in 0...21
         Graphics.update
         Input.update
         update
-        @sprites["cartridge"].y = sy + 2 * i * 1.1 ** i
+        @sprites["cartridgepanel"].y = sy + 2 * i * 1.1 ** i
         @sprites["deletepanel"].opacity += 16 if !@new_game
+        if !@new_game
+          for i in 0...6
+            @sprites["cartridgeparty#{i}"].y = sy + 90 + 2 * i * 1.1 ** i if @sprites["cartridgeparty#{i}"]
+          end
+          @sprites["char"].y = sy + 10 + 2 * i * 1.1 ** i
+        end
       end
       pbSEPlay("load_click")
-      @sprites["cartridge"].y = 0
+      @sprites["cartridgepanel"].y = 16
+      if !@new_game
+        for i in 0...6
+          @sprites["cartridgeparty#{i}"].y = 90 if @sprites["cartridgeparty#{i}"]
+        end
+        @sprites["char"].y = 10
+      end
       for i in 0...4
         Graphics.update
         Input.update
         update
-        @sprites["cartridge"].y += 3
+        @sprites["cartridgepanel"].y += 3
+        if !@new_game
+          for i in 0...6
+            @sprites["cartridgeparty#{i}"].y +=3 if @sprites["cartridgeparty#{i}"]
+          end
+          @sprites["char"].y += 3
+        end
       end
       4.times { Graphics.update; Input.update; update }
       for i in 0...4
         Graphics.update
         Input.update
         update
-        @sprites["cartridge"].y -= 3
+        @sprites["cartridgepanel"].y -= 3
+        if !@new_game
+          for i in 0...6
+            @sprites["cartridgeparty#{i}"].y -=3 if @sprites["cartridgeparty#{i}"]
+          end
+          @sprites["char"].y -= 3
+        end
       end
     end
   end
@@ -310,7 +400,7 @@ class SaveSelection
     mult1 = mult2 = sel == 2 ? 1 : -1
     if sel == 2
       @sprites["down"].select(1, 2, 3, 9, 10, 11)
-      @sprites["buttons"][0].select
+      @sprites["buttons0"].select
     else
       @sprites["up"].select(1, 2, 3, 9, 10, 11)
       if !@new_game
@@ -324,18 +414,26 @@ class SaveSelection
       Graphics.update
       Input.update
       update
-      @sprites["cartridge"].y -= mult1 * 384.0 / frames
+      @sprites["cartridgepanel"].y -= mult1 * 384.0 / frames
       @sprites["left"].y -= mult1 * 384.0 / frames
       @sprites["right"].y -= mult1 * 384.0 / frames
       @sprites["deletepanel"].y -= mult1 * 384.0 / frames
       @sprites["down"].y -= mult1 * 384.0 / frames
       @sprites["up"].y -= mult2 * 384.0 / frames
-      @sprites["buttons"].y -= mult2 * 384.0 / frames
+      @sprites["buttons0"].y -= mult2 * 384.0 / frames
+      @sprites["buttons1"].y -= mult2 * 384.0 / frames
+      @sprites["buttons2"].y -= mult2 * 384.0 / frames if !@new_game
+      @sprites["buttons3"].y -= mult2 * 384.0 / frames if !@new_game
+
+      for i in 0...6
+        @sprites["cartridgeparty#{i}"].y -= mult1 * 384.0 / frames if  @sprites["cartridgeparty#{i}"] 
+      end
+      @sprites["char"].y -= mult1 * 384.0 / frames if  @sprites["char"]
     end
     if sel == 2
       @sprites["deletepanel"].deselect
     else
-      @sprites["buttons"][0].deselect
+      @sprites["buttons0"].deselect
     end
     if @new_game && sel == 1
       @sel = 0
@@ -361,32 +459,30 @@ class SaveSelection
   
   def try_load(filename)
     trainer = nil
-    framecount = nil
+    stats = nil
     game_system = nil
     pokemon_system = nil
     mapid = nil
     pokemonglobal = nil
+    iterated = false
     File.open(filename) do |f|
-      trainer = Marshal.load(f)
-      framecount = Marshal.load(f)
-      game_system = Marshal.load(f)
-      pokemon_system = Marshal.load(f)
-      mapid = Marshal.load(f)
-      Marshal.load(f)
-      Marshal.load(f)
-      Marshal.load(f)
-      Marshal.load(f)
-      Marshal.load(f)
-      Marshal.load(f)
-      pokemonglobal = Marshal.load(f)
+      next if iterated
+      iterated = true
+      data = Marshal.load(f)
+      trainer = data[:player]
+      stats = data[:stats]
+      game_system = data[:game_system]
+      pokemon_system = data[:pokemon_system]
+      mapid = data[:map_factory].map.map_id || 0
+      pokemonglobal = data[:global_metadata]
     end
-    raise "Corrupted file" if !trainer.is_a?(PokeBattle_Trainer)
-    raise "Corrupted file" if !framecount.is_a?(Numeric)
+    raise "Corrupted file" if !trainer.is_a?(Player)
+    raise "Corrupted file" if !stats.is_a?(GameStats)
     raise "Corrupted file" if !game_system.is_a?(Game_System)
     raise "Corrupted file" if !pokemon_system.is_a?(PokemonSystem)
-    raise "Corrupted file" if !mapid.is_a?(Numeric)
+    #raise "Corrupted file" if !mapid.is_a?(Numeric)
     raise "Corrupted file" if !pokemonglobal.is_a?(PokemonGlobalMetadata)
-    return [trainer, framecount, game_system, pokemon_system, mapid, pokemonglobal]
+    return [trainer, stats, game_system, pokemon_system, mapid, pokemonglobal]
   end
   
   def mainloop
@@ -397,13 +493,13 @@ class SaveSelection
       if @sel == 0 # Save File
         if Input.trigger?(Input::RIGHT)
           @save_index += 1
-          @save_index = 1 if @save_index > 3
+          @save_index = 0 if @save_index >= 3
           @sprites["right"].select(1, 2, 3, 9, 10, 11)
           load_save(@save_index)
         end
         if Input.trigger?(Input::LEFT)
           @save_index -= 1
-          @save_index = 3 if @save_index < 1
+          @save_index = 2 if @save_index < 0
           @sprites["left"].select(1, 2, 3, 9, 10, 11)
           load_save(@save_index)
         end
@@ -418,9 +514,9 @@ class SaveSelection
           change_sel(2)
         elsif !@new_game && @sel < 5 || @new_game && @sel < 3
           pbSEPlay("load_cursor")
-          @sprites["buttons"][@sel - 2].deselect
+          @sprites["buttons#{@sel - 2}"].deselect
           @sel += 1
-          @sprites["buttons"][@sel - 2].select
+          @sprites["buttons#{@sel - 2}"].select
         end
       end
       if Input.trigger?(Input::UP)
@@ -433,9 +529,9 @@ class SaveSelection
           change_sel(1)
         elsif @sel > 2
           pbSEPlay("load_cursor")
-          @sprites["buttons"][@sel - 2].deselect
+          @sprites["buttons#{@sel - 2}"].deselect
           @sel -= 1
-          @sprites["buttons"][@sel - 2].select
+          @sprites["buttons#{@sel - 2}"].select
         end
       end
       if Input.trigger?(Input::C)
@@ -453,14 +549,14 @@ class SaveSelection
   def confirm_choice
     case @sel
     when 0 # Save File
-      filename = RTP.getSaveFileName("Game_#{@save_index}.rxdata")
-      if safeExists?(filename)
+      filename = RTP.getSaveFileName("Game#{@save_index}.rxdata")
+      if FileTest.exist?(filename)
         continue_game
       else
         new_game
       end
     when 1 # Delete Save
-      confirm_delete
+      new_game
     when 2 # Options
       @new_game ? credits : options
     when 3 # Mystery Gift
@@ -473,10 +569,15 @@ class SaveSelection
   end
   
   def continue_game
+    filename = RTP.getSaveFileName("Game#{@save_index}.rxdata")
+    savedata = SaveData.read_from_file(filename)
+    dispose
+    Game.load(savedata)
+    return
     $ItemData = readItemList("Data/items.dat")
     metadata = nil
     $game_temp.save_slot = @save_index
-    filename = RTP.getSaveFileName("Game_#{@save_index}.rxdata")
+    filename = RTP.getSaveFileName("Game#{@save_index}.rxdata")
     File.open(filename) do |f|
       Marshal.load(f) # Trainer already loaded
       Graphics.frame_count = Marshal.load(f)
@@ -577,25 +678,24 @@ class SaveSelection
     # dispose
     #pbFadeOutAndHide(@sprites) { pbUpdate }
     #pbDisposeSpriteHash(@sprites)
-    #@viewport.dispose
+    dispose
     Game.start_new
   end
   
   def confirm_delete
     blk = Sprite.new(@viewport)
-    blk.bitmap(-1, -1)
-    blk.bitmap.fill_rect(0,0,Graphics.width,Graphics.height,Color.new(0,0,0))
-    blk.opacity = 0
-    blk.z = 999998
+    blk = Rect.new(0, 0, Graphics.width, Graphics.height)
+    #blk.opacity = 0
+    #blk.z = 999998
     confirm = Sprite.new(@viewport)
     confirm.bitmap(@path + "confirm")
-    confirm.src_rect.height = confirm.bitmap.height / 3
+    #confirm.height /= 3
     confirm.x = Graphics.width / 2
     confirm.y = Graphics.height / 2
     confirm.ox = confirm.bitmap.width / 2
     confirm.oy = confirm.bitmap.height / 6
-    confirm.opacity = 0
-    confirm.z = 999999
+    #confirm.opacity = 0
+    #confirm.z = 999999
     for i in 0...16
       Graphics.update
       Input.update
@@ -632,8 +732,8 @@ class SaveSelection
       
     elsif cfrm == 2 # Yes
       # Delete save
-      filename = RTP.getSaveFileName("Game_#{@save_index}.rxdata")
-      if safeExists?(filename)
+      filename = RTP.getSaveFileName("Game#{@save_index}.rxdata")
+      if FileTest.exist?(filename)
         File.delete(filename)
       end
       @sel = 0
@@ -684,23 +784,29 @@ class SaveSelection
   def update
     @i ||= 0
     @i += 1
-    if @sprites["cartridgeparty"] && @i % 3 == 0
-      @sprites["cartridgeparty"].update
+    for i in 0..6 do
+      if @sprites["cartridgeparty#{i}"] && @i % 3 == 0
+        @sprites["cartridgeparty#{i}"].update
+      end
     end
-    if @sprites["cartridgechar"]
-      @sprites["cartridgechar"].update
+    if @sprites["char"] && @i % 3 == 0
+      @sprites["char"].update
     end
-    @sprites.keys.each do |key|
-      next if key.match(/^cartridge/)
-      @sprites[key].update
+    @sprites.each do |k, v|
+      next if k.include? ("cartridge")
+      next if k.include? ("button")
+      next if k == "char"
+      v.update
     end
   end
   
   def dispose
     @disposed = true
-    showBlk { update }
-    @sprites.dispose
+    pbFadeOutAndHide(@sprites)
+    pbDisposeSpriteHash(@sprites)
+    @sprites.each do |sprite|
+      sprite.dispose
+    end
     @viewport.dispose
-    hideBlk
   end
 end
