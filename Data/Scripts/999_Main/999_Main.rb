@@ -3,7 +3,7 @@ class Scene_DebugIntro
     Graphics.transition(0)
     sscene = PokemonLoad_Scene.new
     sscreen = PokemonLoadScreen.new(sscene)
-    sscreen.pbStartLoadScreen
+    #sscreen.pbStartLoadScreen
     Graphics.freeze
   end
 end
