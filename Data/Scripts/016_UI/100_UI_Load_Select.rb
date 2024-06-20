@@ -83,8 +83,9 @@ class SaveSelection
     # @sprites["delete"]["text"].z = @sprites["delete"]["panel"].z
    # pbSetSmallFont(@sprites["delete"]["panel"].bitmap)
    # @sprites["delete"]["text"].draw([
-    pbDrawTextPositions(@sprites["deletepanel"].bitmap, [[_INTL("New Game"), 96, 3, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-    pbDrawTextPositions(@sprites["deletepanel"].bitmap, [[_INTL("New Game"), 96 + 192, 3, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+    pbSetSmallFont(@sprites["deletepanel"].bitmap)
+    pbDrawTextPositions(@sprites["deletepanel"].bitmap, [[_INTL("New Game"), 96, 8, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+    pbDrawTextPositions(@sprites["deletepanel"].bitmap, [[_INTL("New Game"), 96 + 192, 8, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
     #])
     @sprites["down"] = SelectableSprite.new(@path + "down_arrow", @viewport)
     @sprites["down"].x = 194
@@ -180,15 +181,17 @@ class SaveSelection
       @sprites["buttons0"] = SelectableSprite.new(@path + "panel_top", @viewport)
       @sprites["buttons0"].x = 48
       @sprites["buttons0"].y = 112 + 384
-      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("CREDITS"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("CREDITS"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbSetSystemFont(@sprites["buttons0"].bitmap)
+      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("CREDITS"), 208, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("CREDITS"), 208 + 416, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
       # Quit Game
       @sprites["buttons1"] = SelectableSprite.new(@path + "panel_bottom", @viewport)
       @sprites["buttons1"].x = 48
       @sprites["buttons1"].y = 192 + 384
-      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("EXIT GAME"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("EXIT GAME"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbSetSystemFont(@sprites["buttons1"].bitmap)
+      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("EXIT GAME"), 208, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("EXIT GAME"), 208 + 416, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
       @sprites["buttonstext"] = Sprite.new(@viewport)
       @sprites["buttonstext"].x = 384
@@ -201,8 +204,9 @@ class SaveSelection
       @sprites["cartridgepanel"].y = 40
 
       @sprites["cartridgepanel"].select
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}: New Game"), 192, 82, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}: New Game"), 192 + 416, 82, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbSetSystemFont(@sprites["cartridgepanel"].bitmap)
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}: New Game"), 192, 90, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}: New Game"), 192 + 416, 90, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
       # @sprites["cartridgepanel"]["text"]["textpos"] = TextSprite.new(@viewport, [
       #     "Slot #{index}: New Game", 192, 82, 2, Color.new(255, 255, 255), Color.new(32, 32, 32)
@@ -216,29 +220,33 @@ class SaveSelection
       @sprites["buttons0"] = SelectableSprite.new(@path + "panel_top", @viewport)
       @sprites["buttons0"].x = 48
       @sprites["buttons0"].y = 48 + 384
-      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("OPTIONS"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("OPTIONS"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbSetSystemFont(@sprites["buttons0"].bitmap)
+      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("OPTIONS"), 208, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons0"].bitmap, [[_INTL("OPTIONS"), 208 + 416, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
       # Mystery Gift
       @sprites["buttons1"] = SelectableSprite.new(@path + "panel", @viewport)
       @sprites["buttons1"].x = 48
       @sprites["buttons1"].y = 128 + 384
-      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("MYSTERY GIFT"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("MYSTERY GIFT"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbSetSystemFont(@sprites["buttons1"].bitmap)
+      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("MYSTERY GIFT"), 208, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons1"].bitmap, [[_INTL("MYSTERY GIFT"), 208 + 416, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
       # Credits
       @sprites["buttons2"] = SelectableSprite.new(@path + "panel", @viewport)
       @sprites["buttons2"].x = 48
       @sprites["buttons2"].y = 208 + 384
-      pbDrawTextPositions(@sprites["buttons2"].bitmap, [[_INTL("CREDITS"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["buttons2"].bitmap, [[_INTL("CREDITS"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbSetSystemFont(@sprites["buttons2"].bitmap)
+      pbDrawTextPositions(@sprites["buttons2"].bitmap, [[_INTL("CREDITS"), 208, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons2"].bitmap, [[_INTL("CREDITS"), 208 + 416, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
       # Quit Game
       @sprites["buttons3"] = SelectableSprite.new(@path + "panel_bottom", @viewport)
       @sprites["buttons3"].x = 48
       @sprites["buttons3"].y = 288 + 384
-      pbDrawTextPositions(@sprites["buttons3"].bitmap, [[_INTL("EXIT GAME"), 208, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["buttons3"].bitmap, [[_INTL("EXIT GAME"), 208 + 416, 36, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbSetSystemFont(@sprites["buttons3"].bitmap)
+      pbDrawTextPositions(@sprites["buttons3"].bitmap, [[_INTL("EXIT GAME"), 208, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["buttons3"].bitmap, [[_INTL("EXIT GAME"), 208 + 416, 40, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
       # @sprites["buttonstext"] = TextSprite.new(@viewport, [
       #     ["OPTIONS", 256, 80, 2, Color.new(255, 255, 255), Color.new(32, 32, 32)],
@@ -280,31 +288,33 @@ class SaveSelection
       hour = to_digits(hour, 2)
       min = to_digits(min, 2)
       sec = to_digits(sec, 2)
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}"), 44, 42, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}"), 44 + 416, 42, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbSetSystemFont(@sprites["cartridgepanel"].bitmap)
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}"), 44, 50, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}"), 44 + 416, 50, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
       mapname = pbGetMapNameFromId(@mapid)
       mapname = mapname.gsub(/\\PN/, $Trainer.name)
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(mapname), 380, 54, 1, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Badges"), 54, 146, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.badge_count.to_s), 192, 146, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Money"), 54, 178, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(get_money_text($Trainer.money)), 192, 178, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Pokedex"), 218, 146, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.pokedex.owned_count.to_s + "/" + $Trainer.pokedex.seen_count.to_s), 366, 146, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Time"), 218, 178, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("#{hour}:#{min}:#{sec}"), 366, 178, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbSetSmallFont(@sprites["cartridgepanel"].bitmap)
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(mapname), 380, 62, 1, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Badges"), 54, 152, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.badge_count.to_s), 192, 152, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Money"), 54, 184, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(get_money_text($Trainer.money)), 192, 186, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Pokédex"), 218, 152, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.pokedex.owned_count.to_s + "/" + $Trainer.pokedex.seen_count.to_s), 366, 152, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Time"), 218, 184, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("#{hour}:#{min}:#{sec}"), 366, 184, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
       
 #      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}"), 44 + 416, 42, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(mapname), 380 + 416, 54, 1, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Badges"), 54 + 416, 146, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.badge_count.to_s), 192 + 416, 146, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Money"), 54 + 416, 178, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(get_money_text($Trainer.money)), 192 + 416, 178, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Pokedex"), 218 + 416, 146, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.pokedex.owned_count.to_s + "/" + $Trainer.pokedex.seen_count.to_s), 366 + 416, 146, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Time"), 218 + 416, 178, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("#{hour}:#{min}:#{sec}"), 366 + 416, 178, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(mapname), 380 + 416, 62, 1, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Badges"), 54 + 416, 152, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.badge_count.to_s), 192 + 416, 152, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Money"), 54 + 416, 184, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(get_money_text($Trainer.money)), 192 + 416, 184, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Pokédex"), 218 + 416, 152, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.pokedex.owned_count.to_s + "/" + $Trainer.pokedex.seen_count.to_s), 366 + 416, 152, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Time"), 218 + 416, 184, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("#{hour}:#{min}:#{sec}"), 366 + 416, 184, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
 
 
       # @sprites["cartridgepanel"]["small"].draw([
@@ -768,13 +778,21 @@ class SaveSelection
   
   def credits
     oldscene = $scene
+    dispose
+    # @sprites.each do |sprite|
+    #   sprite.visible = false
+    # end
+    pbFadeOutIn
     $scene = Scene_Credits.new
     Graphics.freeze
-    @sprites.visible = false
     $scene.main
     $scene = oldscene
-    @sprites.visible = true
+    # @sprites.each do |sprite|
+    #   sprite.visible = true
+    # end
     Graphics.transition
+    pbFadeOutIn
+    initialize
   end
   
   def quit_game
