@@ -462,6 +462,11 @@ module Settings
 
   ALLOWED_SAVE_FILES = 3
 
+  def self.region_badge_count(region=0)
+    return 10 if region == 100
+    return 8
+  end
+
 end
 
 # DO NOT EDIT THESE!
