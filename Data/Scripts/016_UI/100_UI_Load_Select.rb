@@ -298,7 +298,7 @@ class SaveSelection
       pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Badges"), 54, 152, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
       pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.badge_count.to_s), 192, 152, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
       pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Money"), 54, 184, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(get_money_text($Trainer.money)), 192, 186, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL(get_money_text($Trainer.money)), 192, 184, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
       pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Pokédex"), 218, 152, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
       pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL($Trainer.pokedex.owned_count.to_s + "/" + $Trainer.pokedex.seen_count.to_s), 366, 152, 1, Color.new(212, 204, 87), Color.new(32, 32, 32, 255)]])
       pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Time"), 218, 184, 0, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
