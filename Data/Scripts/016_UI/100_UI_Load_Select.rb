@@ -69,11 +69,11 @@ class SaveSelection
     @path = "Graphics/UI/Load/"
     @sprites = {}
     addBackgroundOrColoredPlane(@sprites, BackgroundImage, "Load/bg", Color.new(248, 248, 248), @viewport)
-    @sprites["left"] = SelectableSprite.new(@path + "left_arrow", @viewport)
-    @sprites["left"].y = 66
-    @sprites["right"] = SelectableSprite.new(@path + "right_arrow", @viewport)
-    @sprites["right"].x = 478
-    @sprites["right"].y = 66
+    @sprites["left"] = SelectableSprite.new(@path + "left_arrow", @viewport) if Settings::ALLOWED_SAVE_FILES > 1
+    @sprites["left"].y = 66 if Settings::ALLOWED_SAVE_FILES > 1
+    @sprites["right"] = SelectableSprite.new(@path + "right_arrow", @viewport) if Settings::ALLOWED_SAVE_FILES > 1
+    @sprites["right"].x = 478 if Settings::ALLOWED_SAVE_FILES > 1
+    @sprites["right"].y = 66 if Settings::ALLOWED_SAVE_FILES > 1
     @sprites["deletepanel"] = SelectableSprite.new(@path + "delete_button", @viewport)
     @sprites["deletepanel"].x = 160
     @sprites["deletepanel"].y = 288
@@ -425,8 +425,8 @@ class SaveSelection
       Input.update
       update
       @sprites["cartridgepanel"].y -= mult1 * 384.0 / frames
-      @sprites["left"].y -= mult1 * 384.0 / frames
-      @sprites["right"].y -= mult1 * 384.0 / frames
+      @sprites["left"].y -= mult1 * 384.0 / frames if Settings::ALLOWED_SAVE_FILES > 1
+      @sprites["right"].y -= mult1 * 384.0 / frames if Settings::ALLOWED_SAVE_FILES > 1
       @sprites["deletepanel"].y -= mult1 * 384.0 / frames
       @sprites["down"].y -= mult1 * 384.0 / frames
       @sprites["up"].y -= mult2 * 384.0 / frames
@@ -501,15 +501,15 @@ class SaveSelection
       Input.update
       update
       if @sel == 0 # Save File
-        if Input.trigger?(Input::RIGHT)
+        if Input.trigger?(Input::RIGHT) && Settings::ALLOWED_SAVE_FILES > 1
           @save_index += 1
-          @save_index = 0 if @save_index >= 3
+          @save_index = 0 if @save_index >= Settings::ALLOWED_SAVE_FILES
           @sprites["right"].select(1, 2, 3, 9, 10, 11)
           load_save(@save_index)
         end
-        if Input.trigger?(Input::LEFT)
+        if Input.trigger?(Input::LEFT) && Settings::ALLOWED_SAVE_FILES > 1
           @save_index -= 1
-          @save_index = 2 if @save_index < 0
+          @save_index = (Settings::ALLOWED_SAVE_FILES - 1) if @save_index < 0
           @sprites["left"].select(1, 2, 3, 9, 10, 11)
           load_save(@save_index)
         end
@@ -721,10 +721,10 @@ class SaveSelection
         cfrm = 1
       elsif cfrm == 1
         cfrm = 0 if Input.trigger?(Input::UP)
-        cfrm = 2 if Input.trigger?(Input::RIGHT)
+        cfrm = 2 if Input.trigger?(Input::RIGHT) && Settings::ALLOWED_SAVE_FILES > 1
       elsif cfrm == 2
         cfrm = 0 if Input.trigger?(Input::UP)
-        cfrm = 1 if Input.trigger?(Input::LEFT)
+        cfrm = 1 if Input.trigger?(Input::LEFT) && Settings::ALLOWED_SAVE_FILES > 1
       end
       if old != cfrm
         pbSEPlay("load_cursor")
