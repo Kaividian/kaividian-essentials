@@ -186,6 +186,12 @@ Battle::PokeBallEffects::ModifyCatchRate.add(:BEASTBALL, proc { |ball, catchRate
   next catchRate
 })
 
+Battle::PokeBallEffects::ModifyCatchRate.add(:MAPLEBALL, proc { |ball, catchRate, battle, battler|
+  multiplier = 3.5
+  catchRate *= multiplier if battler.pbHasType?(:FIRE) || battler.pbHasType?(:GRASS)
+  next catchRate
+})
+
 #===============================================================================
 # OnCatch
 #===============================================================================
