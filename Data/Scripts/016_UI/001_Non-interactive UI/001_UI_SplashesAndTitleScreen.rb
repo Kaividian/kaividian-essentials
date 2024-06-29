@@ -92,14 +92,14 @@ class IntroEventScene < EventScene
     fade_out_title_screen(scene)
     sscene = PokemonLoad_Scene.new
     sscreen = PokemonLoadScreen.new(sscene)
-    sscreen.pbStartLoadScreen
+    #sscreen.pbStartLoadScreen
   end
 
   def close_title_screen_delete(scene, *args)
     fade_out_title_screen(scene)
     sscene = PokemonLoad_Scene.new
     sscreen = PokemonLoadScreen.new(sscene)
-    sscreen.pbStartDeleteScreen
+    #sscreen.pbStartDeleteScreen
   end
 
   def title_screen_update(scene, args)
