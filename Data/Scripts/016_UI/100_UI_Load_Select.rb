@@ -206,7 +206,7 @@ class SaveSelection
       @sprites["cartridgepanel"].select
       pbSetSystemFont(@sprites["cartridgepanel"].bitmap)
       pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}: New Game"), 192, 90, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
-      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}: New Game"), 192 + 416, 90, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
+      pbDrawTextPositions(@sprites["cartridgepanel"].bitmap, [[_INTL("Slot #{index + 1}: New Game"), 192 + 384, 90, 2, Color.new(255, 255, 255), Color.new(32, 32, 32, 255)]])
 
       # @sprites["cartridgepanel"]["text"]["textpos"] = TextSprite.new(@viewport, [
       #     "Slot #{index}: New Game", 192, 82, 2, Color.new(255, 255, 255), Color.new(32, 32, 32)
