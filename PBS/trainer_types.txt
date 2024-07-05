@@ -227,6 +227,7 @@ Name = Youngster
 Gender = Male
 BaseMoney = 5
 SkillLevel = 32
+IntroBGM = BW Intro Youngster
 #-------------------------------
 [LASS]
 Name = Lass
@@ -481,19 +482,27 @@ Name = Police Officer
 Gender = Male
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = PM Intro Officer
+BattleBGM = PM Battle Officer
+VictoryBGM = PM Victory Officer
 #-------------------------------
 [OFFICERS]
 Name = Police Officers
 Gender = Unknown
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = PM Intro Officer
+BattleBGM = PM Battle Officer
+VictoryBGM = PM Victory Officer
 #-------------------------------
 [INSPECTOR]
 Name = Police Inspector
 Gender = Male
 BaseMoney = 15
 SkillLevel = 75
+IntroBGM = PM Intro Officer
 BattleBGM = PM Battle Inspector
+VictoryBGM = PM Victory Officer
 #-------------------------------
 [SCORCH_M]
 Name = Team Scorch
@@ -533,3 +542,4 @@ Name = GTL Champion
 Gender = Male
 BaseMoney = 50
 SkillLevel = 100
+BattleBGM = PM Jazzed On Tea
