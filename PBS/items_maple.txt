@@ -167,3 +167,11 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = A local delicacy that completely negates all Effort Values of a Pokémon as a result of its high caloric density.
+#-------------------------------
+[ODDTEACUP]
+Name = Odd Teacup
+NamePlural = Odd Teacups
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = An odd teacup that never empties. It bears a GTL mark at its bottom.
