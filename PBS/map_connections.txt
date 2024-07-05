@@ -38,3 +38,291 @@
 47,E,8,52,W,0
 # Route 2 (21) - Route 7 (47)
 21,E,77,47,W,0
+# Poké Federation Bridge (144) - Poké Federation Bridge (143)
+144,W,0,143,E,0
+# Poké Federation Bridge (142) - Poké Federation Bridge (143)
+142,E,0,143,W,0
+# Poké Federation Bridge (145) - Poké Federation Bridge (144)
+145,W,4,144,E,0
+# Poké Federation Bridge (140) - Poké Federation Bridge (139)
+140,W,0,139,E,3
+# Federation Path (146) - Poké Federation Bridge (139)
+146,N,0,139,S,573
+# Poké Federation Bridge (141) - Poké Federation Bridge (140)
+141,W,0,140,E,0
+# Poké Federation Bridge (142) - Federation Path (146)
+142,S,77,146,N,0
+# Poké Federation Bridge (142) - Poké Federation Bridge (141)
+142,W,0,141,E,0
+# Halax City Plaza (177) - Route 6 (170)
+177,E,10,170,W,0
+# Halax City Docks (185) - Route 6 (170)
+185,E,0,170,W,25
+# Route 6 (169) - Route 6 (170)
+169,W,0,170,E,0
+# Glasgow Town (156) - Glasgow Town (155)
+156,N,0,155,S,6
+# Route 4 (151) - Glasgow Town (155)
+151,S,5,155,N,0
+# Route 5 (168) - Glasgow Town (155)
+168,E,0,155,W,14
+# Halax City (184) - Halax City Plaza (177)
+184,E,0,177,W,1
+# Halax City Docks (185) - Halax City Plaza (177)
+185,N,0,177,S,0
+# Halax City Docks (185) - Halax City (184)
+185,W,0,184,E,34
+# Route 6 (169) - Route 5 (168)
+169,E,0,168,W,6
+# Bridge 5 (226) - Bridge 4 (225)
+226,W,0,225,E,13
+# Bridge 11 (232) - Bridge 4 (225)
+232,W,30,225,E,0
+# Bridge 6 (227) - Bridge 4 (225)
+227,N,0,225,S,30
+# Bridge 7 (228) - Bridge 4 (225)
+228,W,0,225,E,55
+# Bridge 8 (229) - Bridge 4 (225)
+229,W,7,225,E,0
+# Bridge 3 (224) - Bridge 4 (225)
+224,E,0,225,W,0
+# Bridge 16 (237) - Bridge 15 (236)
+237,N,0,236,S,50
+# Bridge 27 (248) - Bridge 15 (236)
+248,N,0,236,S,140
+# Bridge 22 (243) - Bridge 15 (236)
+243,W,0,236,E,130
+# Bridge 12 (233) - Bridge 15 (236)
+233,E,0,236,W,0
+# Bridge 13 (234) - Bridge 15 (236)
+234,N,0,236,S,0
+# Bridge 19 (240) - Bridge 15 (236)
+240,W,0,236,E,80
+# Bridge 20 (241) - Bridge 15 (236)
+241,W,0,236,E,56
+# Bridge 27 (248) - Bridge 26 (247)
+248,S,0,247,N,0
+# Bridge 28 (249) - Bridge 26 (247)
+249,W,0,247,E,0
+# Bridge 23 (244) - Bridge 26 (247)
+244,E,20,247,W,0
+# Bridge 18 (239) - Bridge 26 (247)
+239,N,120,247,S,0
+# Bridge 24 (245) - Bridge 26 (247)
+245,N,30,247,S,0
+# Bridge 8 (229) - Bridge 26 (247)
+229,N,200,247,S,0
+# Bridge 19 (240) - Bridge 26 (247)
+240,N,70,247,S,0
+# Bridge 25 (246) - Bridge 26 (247)
+246,N,0,247,S,0
+# Bridge 9 (230) - Bridge 26 (247)
+230,N,160,247,S,0
+# Bridge 10 (231) - Bridge 21 (242)
+231,E,10,242,W,0
+# Bridge 22 (243) - Bridge 21 (242)
+243,W,0,242,E,0
+# Bridge 18 (239) - Bridge 21 (242)
+239,S,0,242,N,0
+# Bridge 24 (245) - Bridge 21 (242)
+245,S,0,242,N,90
+# Bridge 19 (240) - Bridge 21 (242)
+240,W,50,242,E,0
+# Bridge 20 (241) - Bridge 21 (242)
+241,W,74,242,E,0
+# Bridge 9 (230) - Bridge 21 (242)
+230,E,50,242,W,0
+# Bridge 5 (226) - Bridge 10 (231)
+226,E,20,231,W,0
+# Bridge 11 (232) - Bridge 10 (231)
+232,E,63,231,W,0
+# Bridge 7 (228) - Bridge 10 (231)
+228,E,0,231,W,22
+# Bridge 18 (239) - Bridge 10 (231)
+239,W,40,231,E,0
+# Bridge 8 (229) - Bridge 10 (231)
+229,E,40,231,W,0
+# Bridge 9 (230) - Bridge 10 (231)
+230,S,0,231,N,0
+# Bridge 2 (223) - Bridge 1 (138)
+223,W,0,138,E,24
+# Bridge 6 (227) - Bridge 5 (226)
+227,N,20,226,S,0
+# Bridge 12 (233) - Bridge 5 (226)
+233,W,100,226,E,0
+# Bridge 7 (228) - Bridge 5 (226)
+228,N,0,226,S,0
+# Bridge 8 (229) - Bridge 5 (226)
+229,S,0,226,N,0
+# Bridge 9 (230) - Bridge 5 (226)
+230,W,20,226,E,0
+# Bridge 22 (243) - Bridge 16 (237)
+243,W,0,237,E,110
+# Bridge 17 (238) - Bridge 16 (237)
+238,N,0,237,S,0
+# Bridge 13 (234) - Bridge 16 (237)
+234,E,0,237,W,0
+# Bridge 19 (240) - Bridge 16 (237)
+240,W,0,237,E,60
+# Bridge 14 (235) - Bridge 16 (237)
+235,N,50,237,S,0
+# Bridge 20 (241) - Bridge 16 (237)
+241,W,0,237,E,36
+# Bridge 28 (249) - Bridge 27 (248)
+249,N,0,248,S,30
+# Bridge 23 (244) - Bridge 27 (248)
+244,E,0,248,W,10
+# Bridge 24 (245) - Bridge 27 (248)
+245,E,0,248,W,60
+# Bridge 6 (227) - Bridge 11 (232)
+227,E,0,232,W,85
+# Bridge 12 (233) - Bridge 11 (232)
+233,W,57,232,E,0
+# Bridge 18 (239) - Bridge 11 (232)
+239,N,0,232,S,80
+# Bridge 24 (245) - Bridge 11 (232)
+245,N,0,232,S,170
+# Bridge 8 (229) - Bridge 11 (232)
+229,N,0,232,S,0
+# Bridge 19 (240) - Bridge 11 (232)
+240,N,0,232,S,130
+# Bridge 25 (246) - Bridge 11 (232)
+246,N,0,232,S,200
+# Bridge 9 (230) - Bridge 11 (232)
+230,W,0,232,E,23
+# Bridge 17 (238) - Bridge 22 (243)
+238,E,70,243,W,0
+# Bridge 18 (239) - Bridge 22 (243)
+239,E,50,243,W,0
+# Bridge 24 (245) - Bridge 22 (243)
+245,S,0,243,N,40
+# Bridge 19 (240) - Bridge 22 (243)
+240,S,0,243,N,0
+# Bridge 7 (228) - Bridge 6 (227)
+228,W,0,227,E,0
+# Bridge 8 (229) - Bridge 6 (227)
+229,W,62,227,E,0
+# Bridge 18 (239) - Bridge 17 (238)
+239,N,30,238,S,0
+# Bridge 13 (234) - Bridge 17 (238)
+234,E,40,238,W,0
+# Bridge 24 (245) - Bridge 17 (238)
+245,N,0,238,S,60
+# Bridge 8 (229) - Bridge 17 (238)
+229,N,110,238,S,0
+# Bridge 19 (240) - Bridge 17 (238)
+240,W,0,238,E,20
+# Bridge 25 (246) - Bridge 17 (238)
+246,N,0,238,S,90
+# Bridge 14 (235) - Bridge 17 (238)
+235,E,0,238,W,0
+# Bridge 20 (241) - Bridge 17 (238)
+241,W,4,238,E,0
+# Bridge 9 (230) - Bridge 17 (238)
+230,N,70,238,S,0
+# Bridge 18 (239) - Bridge 28 (249)
+239,N,150,249,S,0
+# Bridge 24 (245) - Bridge 28 (249)
+245,N,60,249,S,0
+# Bridge 8 (229) - Bridge 28 (249)
+229,N,230,249,S,0
+# Bridge 19 (240) - Bridge 28 (249)
+240,N,100,249,S,0
+# Bridge 25 (246) - Bridge 28 (249)
+246,N,30,249,S,0
+# Bridge 9 (230) - Bridge 28 (249)
+230,N,190,249,S,0
+# Bridge 18 (239) - Bridge 23 (244)
+239,N,90,244,S,0
+# Bridge 24 (245) - Bridge 23 (244)
+245,N,0,244,S,0
+# Bridge 8 (229) - Bridge 23 (244)
+229,N,170,244,S,0
+# Bridge 19 (240) - Bridge 23 (244)
+240,N,40,244,S,0
+# Bridge 25 (246) - Bridge 23 (244)
+246,W,0,244,E,50
+# Bridge 20 (241) - Bridge 23 (244)
+241,E,0,244,W,26
+# Bridge 9 (230) - Bridge 23 (244)
+230,N,130,244,S,0
+# Bridge 7 (228) - Bridge 12 (233)
+228,E,0,233,W,142
+# Bridge 18 (239) - Bridge 12 (233)
+239,N,0,233,S,40
+# Bridge 13 (234) - Bridge 12 (233)
+234,W,0,233,E,20
+# Bridge 24 (245) - Bridge 12 (233)
+245,N,0,233,S,130
+# Bridge 8 (229) - Bridge 12 (233)
+229,N,40,233,S,0
+# Bridge 19 (240) - Bridge 12 (233)
+240,N,0,233,S,90
+# Bridge 25 (246) - Bridge 12 (233)
+246,N,0,233,S,160
+# Bridge 14 (235) - Bridge 12 (233)
+235,W,0,233,E,60
+# Bridge 9 (230) - Bridge 12 (233)
+230,N,0,233,S,0
+# Bridge 9 (230) - Bridge 7 (228)
+230,W,62,228,E,0
+# Bridge 19 (240) - Bridge 18 (239)
+240,W,0,239,E,0
+# Bridge 14 (235) - Bridge 18 (239)
+235,S,20,239,N,0
+# Bridge 20 (241) - Bridge 18 (239)
+241,W,24,239,E,0
+# Bridge 9 (230) - Bridge 18 (239)
+230,E,0,239,W,0
+# Bridge 3 (224) - Bridge 2 (223)
+224,W,0,223,E,0
+# Bridge 14 (235) - Bridge 13 (234)
+235,N,0,234,S,0
+# Bridge 19 (240) - Bridge 24 (245)
+240,E,0,245,W,0
+# Bridge 25 (246) - Bridge 24 (245)
+246,W,0,245,E,0
+# Bridge 14 (235) - Bridge 24 (245)
+235,S,110,245,N,0
+# Bridge 20 (241) - Bridge 24 (245)
+241,E,24,245,W,0
+# Bridge 14 (235) - Bridge 8 (229)
+235,S,0,229,N,60
+# Bridge 20 (241) - Bridge 8 (229)
+241,S,0,229,N,130
+# Bridge 9 (230) - Bridge 8 (229)
+230,W,0,229,E,0
+# Bridge 14 (235) - Bridge 19 (240)
+235,S,70,240,N,0
+# Bridge 20 (241) - Bridge 19 (240)
+241,S,0,240,N,0
+# Bridge 14 (235) - Bridge 25 (246)
+235,S,140,246,N,0
+# Bridge 20 (241) - Bridge 25 (246)
+241,S,70,246,N,0
+# Bridge 9 (230) - Bridge 14 (235)
+230,N,20,235,S,0
+# Bridge 9 (230) - Bridge 20 (241)
+230,N,90,241,S,0
+# Kracket Village (32) - Kracket Beach (137)
+32,N,0,137,S,4
+# Mirmirch Town (78) - Route 8-1 (77)
+78,N,0,77,S,0
+# Mirmirch Path (79) - Route 8-1 (77)
+79,N,36,77,S,0
+# Kracket Village (32) - Route 8-1 (77)
+32,S,0,77,N,0
+# Mirmirch Path (79) - Mirmirch Town (78)
+79,E,0,78,W,0
+# Mirmirch Town (97) - Mirmirch Town (78)
+97,N,0,78,S,0
+# Mirmirch Town (97) - Mirmirch Path (79)
+97,W,0,79,E,44
+# Kracket Village (32) - Mirmirch Path (79)
+32,W,94,79,E,0
+# Route 8-3 (102) - Route 8-2 (116)
+102,N,0,116,S,0
+# New Monten City (119) - Route 8-2 (116)
+119,E,12,116,W,0
+# New Monten City (119) - Route 8-3 (102)
+119,E,42,102,W,0

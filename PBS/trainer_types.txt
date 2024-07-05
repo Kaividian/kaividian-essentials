@@ -1,401 +1,535 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-[POKEMONTRAINER_Red]
+[POKEMONTRAINER_Seth]
 Name = Pokémon Trainer
 Gender = Male
-BaseMoney = 60
+BaseMoney = 50
+SkillLevel = 100
 #-------------------------------
-[POKEMONTRAINER_Leaf]
+[POKEMONTRAINER_Robyn]
 Name = Pokémon Trainer
 Gender = Female
-BaseMoney = 60
+BaseMoney = 50
+SkillLevel = 100
 #-------------------------------
 [POKEMONTRAINER_Brendan]
 Name = Pokémon Trainer
 Gender = Male
-BaseMoney = 60
+BaseMoney = 50
+SkillLevel = 100
 #-------------------------------
 [POKEMONTRAINER_May]
 Name = Pokémon Trainer
 Gender = Female
-BaseMoney = 60
+BaseMoney = 50
+SkillLevel = 100
 #-------------------------------
 [RIVAL1]
 Name = Rival
 Gender = Male
-BaseMoney = 16
+BaseMoney = 5
+SkillLevel = 80
 #-------------------------------
 [RIVAL2]
 Name = Rival
 Gender = Male
-BaseMoney = 36
+BaseMoney = 10
+SkillLevel = 80
 #-------------------------------
 [AROMALADY]
 Name = Aroma Lady
 Gender = Female
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [BEAUTY]
 Name = Beauty
 Gender = Female
-BaseMoney = 56
+BaseMoney = 15
+SkillLevel = 50
 #-------------------------------
 [BIKER]
 Name = Biker
 Gender = Male
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [BIRDKEEPER]
 Name = Bird Keeper
 Gender = Male
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [BUGCATCHER]
 Name = Bug Catcher
 Gender = Male
-BaseMoney = 16
+BaseMoney = 5
+SkillLevel = 40
 #-------------------------------
 [BURGLAR]
 Name = Burglar
 Gender = Male
-BaseMoney = 88
-SkillLevel = 32
+BaseMoney = 22
+SkillLevel = 50
 #-------------------------------
 [CHANNELER]
 Name = Channeler
 Gender = Female
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [CUEBALL]
 Name = Cue Ball
 Gender = Male
-BaseMoney = 24
+BaseMoney = 12
+SkillLevel = 50
 #-------------------------------
 [ENGINEER]
 Name = Engineer
 Gender = Male
-BaseMoney = 48
+BaseMoney = 20
+SkillLevel = 70
 #-------------------------------
 [FISHERMAN]
 Name = Fisherman
 Gender = Male
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [GAMBLER]
 Name = Gambler
 Gender = Male
-BaseMoney = 72
-SkillLevel = 32
+BaseMoney = 25
+SkillLevel = 55
 #-------------------------------
 [GENTLEMAN]
 Name = Gentleman
 Gender = Male
-BaseMoney = 72
+BaseMoney = 40
+SkillLevel = 60
 #-------------------------------
 [HIKER]
 Name = Hiker
 Gender = Male
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [JUGGLER]
 Name = Juggler
 Gender = Male
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [LADY]
 Name = Lady
 Gender = Female
-BaseMoney = 160
-SkillLevel = 72
+BaseMoney = 40
+SkillLevel = 60
 #-------------------------------
 [PAINTER]
 Name = Painter
 Gender = Female
-BaseMoney = 16
+BaseMoney = 5
+SkillLevel = 50
 #-------------------------------
 [POKEMANIAC]
 Name = Poké Maniac
 Gender = Male
-BaseMoney = 64
+BaseMoney = 15
+SkillLevel = 70
 #-------------------------------
 [POKEMONBREEDER]
 Name = Pokémon Breeder
 Gender = Female
-BaseMoney = 48
+BaseMoney = 15
+SkillLevel = 70
 #-------------------------------
 [PROFESSOR]
 Name = Professor
 Gender = Male
-BaseMoney = 100
+BaseMoney = 40
+SkillLevel = 100
 #-------------------------------
 [ROCKER]
 Name = Rocker
 Gender = Male
-BaseMoney = 24
+BaseMoney = 5
+SkillLevel = 50
 #-------------------------------
 [RUINMANIAC]
 Name = Ruin Maniac
 Gender = Male
-BaseMoney = 48
+BaseMoney = 15
+SkillLevel = 50
 #-------------------------------
 [SAILOR]
 Name = Sailor
 Gender = Male
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [SCIENTIST]
 Name = Scientist
 Gender = Male
-BaseMoney = 48
+BaseMoney = 15
+SkillLevel = 70
 #-------------------------------
 [SUPERNERD]
 Name = Super Nerd
 Gender = Male
-BaseMoney = 48
+BaseMoney = 15
+SkillLevel = 70
 #-------------------------------
 [TAMER]
 Name = Tamer
 Gender = Male
-BaseMoney = 40
+BaseMoney = 15
+SkillLevel = 70
 #-------------------------------
 [BLACKBELT]
 Name = Black Belt
 Gender = Male
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 65
 #-------------------------------
 [CRUSHGIRL]
 Name = Crush Girl
 Gender = Female
-BaseMoney = 24
+BaseMoney = 5
+SkillLevel = 65
 #-------------------------------
 [CAMPER]
 Name = Camper
 Gender = Male
-BaseMoney = 16
+BaseMoney = 5
+SkillLevel = 40
 #-------------------------------
 [PICNICKER]
 Name = Picnicker
 Gender = Female
-BaseMoney = 16
+BaseMoney = 5
+SkillLevel = 40
 #-------------------------------
 [COOLTRAINER_M]
 Name = Cool Trainer
 Gender = Male
-BaseMoney = 60
+BaseMoney = 20
+SkillLevel = 55
 #-------------------------------
 [COOLTRAINER_F]
 Name = Cool Trainer
 Gender = Female
-BaseMoney = 60
+BaseMoney = 20
+SkillLevel = 55
 #-------------------------------
 [YOUNGSTER]
 Name = Youngster
 Gender = Male
-BaseMoney = 16
+BaseMoney = 5
+SkillLevel = 32
 #-------------------------------
 [LASS]
 Name = Lass
 Gender = Female
-BaseMoney = 16
+BaseMoney = 5
+SkillLevel = 32
 #-------------------------------
 [POKEMONRANGER_M]
 Name = Pokémon Ranger
 Gender = Male
-BaseMoney = 60
+BaseMoney = 20
+SkillLevel = 70
 #-------------------------------
 [POKEMONRANGER_F]
 Name = Pokémon Ranger
 Gender = Female
-BaseMoney = 60
+BaseMoney = 20
+SkillLevel = 70
 #-------------------------------
 [PSYCHIC_M]
 Name = Psychic
 Gender = Male
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 65
 #-------------------------------
 [PSYCHIC_F]
 Name = Psychic
 Gender = Female
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 65
 #-------------------------------
 [SWIMMER_M]
 Name = Swimmer
 Gender = Male
-BaseMoney = 16
+BaseMoney = 5
 SkillLevel = 32
 #-------------------------------
 [SWIMMER_F]
 Name = Swimmer
 Gender = Female
-BaseMoney = 16
+BaseMoney = 5
 SkillLevel = 32
 #-------------------------------
 [SWIMMER2_M]
 Name = Swimmer
 Gender = Male
-BaseMoney = 16
+BaseMoney = 5
 SkillLevel = 32
 #-------------------------------
 [SWIMMER2_F]
 Name = Swimmer
 Gender = Female
-BaseMoney = 16
+BaseMoney = 5
 SkillLevel = 32
 #-------------------------------
 [TUBER_M]
 Name = Tuber
 Gender = Male
-BaseMoney = 4
+BaseMoney = 1
 SkillLevel = 16
 #-------------------------------
 [TUBER_F]
 Name = Tuber
 Gender = Female
-BaseMoney = 4
+BaseMoney = 1
 SkillLevel = 16
 #-------------------------------
 [TUBER2_M]
 Name = Tuber
 Gender = Male
-BaseMoney = 4
+BaseMoney = 1
 SkillLevel = 16
 #-------------------------------
 [TUBER2_F]
 Name = Tuber
 Gender = Female
-BaseMoney = 4
+BaseMoney = 1
 SkillLevel = 16
 #-------------------------------
 [COOLCOUPLE]
 Name = Cool Couple
 Gender = Unknown
-BaseMoney = 72
-SkillLevel = 48
+BaseMoney = 20
+SkillLevel = 55
 #-------------------------------
 [CRUSHKIN]
 Name = Crush Kin
 Gender = Unknown
-BaseMoney = 48
+BaseMoney = 15
+SkillLevel = 65
 #-------------------------------
 [SISANDBRO]
 Name = Sis and Bro
 Gender = Unknown
-BaseMoney = 16
-SkillLevel = 48
+BaseMoney = 5
+SkillLevel = 16
 #-------------------------------
 [TWINS]
 Name = Twins
 Gender = Unknown
-BaseMoney = 24
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [YOUNGCOUPLE]
 Name = Young Couple
 Gender = Unknown
-BaseMoney = 60
-SkillLevel = 32
+BaseMoney = 20
+SkillLevel = 50
 #-------------------------------
 [TEAMROCKET_M]
 Name = Team Rocket
 Gender = Male
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [TEAMROCKET_F]
 Name = Team Rocket
 Gender = Female
-BaseMoney = 32
+BaseMoney = 10
+SkillLevel = 50
 #-------------------------------
 [ROCKETBOSS]
 Name = Rocket Boss
 Gender = Male
-BaseMoney = 100
+BaseMoney = 50
+SkillLevel = 100
 #-------------------------------
 [LEADER_Brock]
 Name = Gym Leader
 Gender = Male
-BaseMoney = 100
+BaseMoney = 40
+SkillLevel = 100
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
 [LEADER_Misty]
 Name = Gym Leader
 Gender = Female
-BaseMoney = 100
+BaseMoney = 40
+SkillLevel = 100
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
 [LEADER_Surge]
 Name = Gym Leader
 Gender = Male
-BaseMoney = 100
+BaseMoney = 40
+SkillLevel = 100
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
 [LEADER_Erika]
 Name = Gym Leader
 Gender = Female
-BaseMoney = 100
+BaseMoney = 40
+SkillLevel = 100
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
 [LEADER_Koga]
 Name = Gym Leader
 Gender = Male
-BaseMoney = 100
+BaseMoney = 40
+SkillLevel = 100
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
 [LEADER_Sabrina]
 Name = Gym Leader
 Gender = Female
-BaseMoney = 100
+BaseMoney = 40
+SkillLevel = 100
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
 [LEADER_Blaine]
 Name = Gym Leader
 Gender = Male
-BaseMoney = 100
+BaseMoney = 40
+SkillLevel = 100
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
 [LEADER_Giovanni]
 Name = Gym Leader
 Gender = Male
-BaseMoney = 100
+BaseMoney = 40
+SkillLevel = 100
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
 [ELITEFOUR_Lorelei]
 Name = Elite Four
 Gender = Female
-BaseMoney = 100
+BaseMoney = 50
+SkillLevel = 100
 BattleBGM = Battle Elite
 VictoryBGM = Battle victory leader
 #-------------------------------
 [ELITEFOUR_Bruno]
 Name = Elite Four
 Gender = Male
-BaseMoney = 100
+BaseMoney = 50
+SkillLevel = 100
 BattleBGM = Battle Elite
 VictoryBGM = Battle victory leader
 #-------------------------------
 [ELITEFOUR_Agatha]
 Name = Elite Four
 Gender = Female
-BaseMoney = 100
+BaseMoney = 50
+SkillLevel = 100
 BattleBGM = Battle Elite
 VictoryBGM = Battle victory leader
 #-------------------------------
 [ELITEFOUR_Lance]
 Name = Elite Four
 Gender = Male
-BaseMoney = 100
+BaseMoney = 50
+SkillLevel = 100
 BattleBGM = Battle Elite
 VictoryBGM = Battle victory leader
 #-------------------------------
 [CHAMPION]
 Name = Champion
 Gender = Male
-BaseMoney = 100
+BaseMoney = 60
+SkillLevel = 100
 BattleBGM = Battle Champion
 VictoryBGM = Battle victory leader
+#-------------------------------
+[JANITOR]
+Name = Janitor
+Gender = Male
+BaseMoney = 5
+SkillLevel = 50
+#-------------------------------
+[BIKERS]
+Name = Bikers
+Gender = Unknown
+BaseMoney = 20
+SkillLevel = 60
+#-------------------------------
+[FIREBREATHER]
+Name = Firebreather
+Gender = Male
+BaseMoney = 15
+SkillLevel = 50
+#-------------------------------
+[OFFICER]
+Name = Police Officer
+Gender = Male
+BaseMoney = 10
+SkillLevel = 50
+#-------------------------------
+[OFFICERS]
+Name = Police Officers
+Gender = Unknown
+BaseMoney = 10
+SkillLevel = 50
+#-------------------------------
+[INSPECTOR]
+Name = Police Inspector
+Gender = Male
+BaseMoney = 15
+SkillLevel = 75
+BattleBGM = PM Battle Inspector
+#-------------------------------
+[SCORCH_M]
+Name = Team Scorch
+Gender = Male
+BaseMoney = 10
+SkillLevel = 55
+#-------------------------------
+[SCORCH_F]
+Name = Team Scorch
+Gender = Female
+BaseMoney = 10
+SkillLevel = 55
+#-------------------------------
+[PYRE]
+Name = Team Scorch
+Gender = Male
+BaseMoney = 15
+SkillLevel = 100
+BattleBGM = BW Rival
+#-------------------------------
+[LEADER_Cliff]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 40
+SkillLevel = 100
+BattleBGM = Battle Gym Leader
+VictoryBGM = Battle victory leader
+#-------------------------------
+[SOLSTICEDEV]
+Name = Pokémon Solstice Dev
+Gender = Male
+BaseMoney = 40
+SkillLevel = 100
+#-------------------------------
+[GTLCHAMPION]
+Name = GTL Champion
+Gender = Male
+BaseMoney = 50
+SkillLevel = 100

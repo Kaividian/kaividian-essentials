@@ -152,6 +152,17 @@ MapPosition = 0,14,6
 BattleBack = field
 MapSize = 2,1101
 #-------------------------------
+[032]   # Kracket Village
+Name = Kracket Village
+Bicycle = true
+Outdoor = true
+ShowArea = true
+BattleBack = field
+#-------------------------------
+[033]   # \Player's  House
+Name = \PN's house
+HealingSpot=33,11,5
+#-------------------------------
 [034]   # Ice Cave
 Name = Route 3
 Bicycle = true
@@ -396,3 +407,513 @@ Name = Tiall Region
 Outdoor = true
 MapPosition = 1,13,16
 BattleBack = city
+#-------------------------------
+[077]   # Route 8-1
+Name = Route 8-1
+Bicycle = true
+Outdoor = true
+ShowArea = true
+BattleBack = field
+#-------------------------------
+[078]   # Mirmirch Town
+Name = Mirmirch Town
+Bicycle = true
+Outdoor = true
+ShowArea = true
+BattleBack = field
+#-------------------------------
+[079]   # Mirmirch Path
+Name = Mirmirch Path
+Bicycle = true
+Outdoor = true
+ShowArea = true
+BattleBack = field
+#-------------------------------
+[080]   # Brown Forest Inner
+Name = Brown Forest
+Bicycle = true
+Outdoor = true
+ShowArea = true
+BattleBack = forest
+Environment = Forest
+#-------------------------------
+[090]   # Brown Forest Deeper
+Name = Brown Forest
+Bicycle = true
+Outdoor = true
+ShowArea = true
+BattleBack = forest
+Environment = Forest
+#-------------------------------
+[091]   # Lighthouse 1F
+Name = Lighthouse 1F
+ShowArea = true
+#-------------------------------
+[092]   # Lighthouse 2F
+Name = Lighthouse 2F
+ShowArea = true
+#-------------------------------
+[093]   # Lighthouse 3F
+Name = Lighthouse 3F
+ShowArea = true
+#-------------------------------
+[094]   # Lighthouse 4F
+Name = Lighthouse 4F
+ShowArea = true
+#-------------------------------
+[095]   # Lighthouse 5F
+Name = Lighthouse 5F
+ShowArea = true
+#-------------------------------
+[097]   # Mirmirch Town
+Name = Mirmirch Town
+Bicycle = true
+Outdoor = true
+ShowArea = true
+BattleBack = field
+#-------------------------------
+[102]   # Route 8-3
+Name = Route 8-3
+Weather = Rain,20
+Bicycle = true
+Outdoor = true
+ShowArea = true
+BattleBack = field
+#-------------------------------
+[106]   # Kugwak National Park
+Name = Kugwak National Park
+Weather = Rain,0
+Bicycle = true
+Outdoor = true
+ShowArea = true
+BattleBack = field
+#-------------------------------
+[107]   # Kugwak Cave 1
+Name = Kugwak Cave
+Bicycle = true
+ShowArea = true
+Battleback = cave1
+Environment = Cave
+#-------------------------------
+[108]   # Kugwak Cave 2
+Name = Kugwak Cave
+Bicycle = true
+ShowArea = true
+Battleback = cave1
+Environment = Cave
+#-------------------------------
+[109]   # Kugwak Cave 3
+Name = Kugwak Cave
+Bicycle = true
+ShowArea = true
+Battleback = cave1
+Environment = Cave
+#-------------------------------
+[110]   # Rocky Hideout
+Name = Rocky Hideout
+Bicycle = true
+Outdoor = true
+ShowArea = true
+Battleback = cave1
+Environment = Cave
+#-------------------------------
+[116]   # Route 8-2
+Name = Route 8-2
+Bicycle = true
+Outdoor = true
+ShowArea = true
+Battleback = field
+#-------------------------------
+[119]   # New Monten City
+Name = New Monten City
+Bicycle = true
+Outdoor = true
+ShowArea = true
+Battleback = field
+#-------------------------------
+[133]   # Bordridge Village
+Name = Bordridge Village
+Bicycle = true
+Outdoor = true
+ShowArea = true
+Battleback = field
+#-------------------------------
+[137]   # Kracket Beach
+Name = Kracket Beach
+Weather = Rain,0
+Bicycle = true
+Outdoor = true
+ShowArea = true
+Battleback = field
+#-------------------------------
+[138]
+# Bridge 1
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[139]
+# Poké Federation Bridge
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[140]
+# Poké Federation Bridge
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[141]
+# Poké Federation Bridge
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[142]
+# Poké Federation Bridge
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[143]
+# Poké Federation Bridge
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[144]
+# Poké Federation Bridge
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[145]
+# Poké Federation Bridge
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[146]
+# Federation Path
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[147]
+# Iceberg Cave
+#-------------------------------
+[151]
+# Route 4
+Weather=Rain,40
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[155]
+# Glasgow Town
+Weather=Rain,20
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[156]
+# Glasgow Town
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[157]
+# Glasgow Passage
+DiveMap=158
+Bicycle = true
+DarkMap=true
+Outdoor=false
+ShowArea = true
+#-------------------------------
+[158]
+# Glasgow Passage
+DarkMap=true
+ShowArea = true
+#-------------------------------
+[168]
+# Route 5
+Weather=Rain,40
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[169]
+# Route 6
+Weather=Rain,40
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[170]
+# Route 6
+Weather=Rain,40
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[171]
+# Sea Cave 1F
+Bicycle = true
+DarkMap=true
+ShowArea = true
+#-------------------------------
+[172]
+# Sea Cave 2F
+Bicycle = true
+DarkMap=true
+Outdoor=false
+ShowArea = true
+#-------------------------------
+[173]
+# Sea Cave 3F
+Bicycle = true
+DarkMap=true
+ShowArea = true
+#-------------------------------
+[174]
+# Sea Cave Secret Path
+Bicycle = true
+DarkMap=true
+ShowArea = true
+#-------------------------------
+[175]
+# Sea Cave Summit
+Weather=Snow,100
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[177]
+# Halax City Plaza
+Weather=Rain,20
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[178]
+# Halax Tourist Bureau
+#-------------------------------
+[184]
+# Halax City
+Weather=Rain,20
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[185]
+# Halax City Docks
+DiveMap=187
+Weather=Rain,20
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[186]
+# Pokémon Center
+ShowArea = true
+#-------------------------------
+[187]
+# Halax City Docks
+DarkMap=true
+#-------------------------------
+[201]
+# Lighthouse 1F
+SnapEdges=false
+DarkMap=true
+ShowArea = true
+#-------------------------------
+[202]
+# Lighthouse 2F
+SnapEdges=false
+DarkMap=true
+ShowArea = true
+#-------------------------------
+[206]
+# Lighthouse 3F
+SnapEdges=false
+DarkMap=true
+ShowArea = true
+#-------------------------------
+[207]
+# Lighthouse 4F
+SnapEdges=false
+DarkMap=true
+ShowArea = true
+#-------------------------------
+[208]
+# Lighthouse 5F
+SnapEdges=false
+DarkMap=true
+ShowArea = true
+#-------------------------------
+[209]
+# Halax Weather Institute
+Weather=Rain,0
+#-------------------------------
+[223]
+# Bridge 2
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[224]
+# Bridge 3
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[225]
+# Bridge 4
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[226]
+# Bridge 5
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[227]
+# Bridge 6
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[228]
+# Bridge 7
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[229]
+# Bridge 8
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[230]
+# Bridge 9
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[231]
+# Bridge 10
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[232]
+# Bridge 11
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[233]
+# Bridge 12
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[234]
+# Bridge 13
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[235]
+# Bridge 14
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[236]
+# Bridge 15
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[237]
+# Bridge 16
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[238]
+# Bridge 17
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[239]
+# Bridge 18
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[240]
+# Bridge 19
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[241]
+# Bridge 20
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[242]
+# Bridge 21
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[243]
+# Bridge 22
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[244]
+# Bridge 23
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[245]
+# Bridge 24
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[246]
+# Bridge 25
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[247]
+# Bridge 26
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[248]
+# Bridge 27
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[249]
+# Bridge 28
+Bicycle = true
+Outdoor = true
+ShowArea = true
