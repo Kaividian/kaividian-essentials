@@ -293,7 +293,7 @@ Pokemon = CHIKORITA,14
     Gender = female
     AbilityIndex = 0
 #-------------------------------
-[PYRE,Pyre]
+[SCORCH_M,Pyre]
 LoseText = Good enough.
 Pokemon = CYNDAQUIL,15
     Gender = male
@@ -560,7 +560,7 @@ Pokemon = SANDSHREW,15
     AbilityIndex = 0
 Pokemon = BALTOY,16
 #-------------------------------
-[LEADER_Cliff,Cliff]
+[LEADER_CLIFF,Cliff]
 LoseText = You have done well.
 Pokemon = GLIGAR,18
     Gender = male

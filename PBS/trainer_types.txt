@@ -5,222 +5,259 @@ Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 50
 SkillLevel = 100
+IntroBGM = BW Intro Rival
 #-------------------------------
 [POKEMONTRAINER_Robyn]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 50
 SkillLevel = 100
+IntroBGM = BW Intro Rival
 #-------------------------------
 [POKEMONTRAINER_Brendan]
 Name = Pokémon Trainer
 Gender = Male
 BaseMoney = 50
 SkillLevel = 100
+IntroBGM = BW Intro Rival
 #-------------------------------
 [POKEMONTRAINER_May]
 Name = Pokémon Trainer
 Gender = Female
 BaseMoney = 50
 SkillLevel = 100
+IntroBGM = BW Intro Rival
 #-------------------------------
 [RIVAL1]
 Name = Rival
 Gender = Male
 BaseMoney = 5
 SkillLevel = 80
+IntroBGM = BW Intro Rival
 #-------------------------------
 [RIVAL2]
 Name = Rival
 Gender = Male
 BaseMoney = 10
 SkillLevel = 80
+IntroBGM = BW Intro Rival
 #-------------------------------
 [AROMALADY]
 Name = Aroma Lady
 Gender = Female
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = DPPT Intro Aroma Lady
 #-------------------------------
 [BEAUTY]
 Name = Beauty
 Gender = Female
 BaseMoney = 15
 SkillLevel = 50
+IntroBGM = B2W2 Intro Beauty
 #-------------------------------
 [BIKER]
 Name = Biker
 Gender = Male
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = BW Intro Biker
 #-------------------------------
 [BIRDKEEPER]
 Name = Bird Keeper
 Gender = Male
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = DPPT Intro Bird Keeper
 #-------------------------------
 [BUGCATCHER]
 Name = Bug Catcher
 Gender = Male
 BaseMoney = 5
 SkillLevel = 40
+IntroBGM = HGSS Intro Bug Catcher
 #-------------------------------
 [BURGLAR]
 Name = Burglar
 Gender = Male
 BaseMoney = 22
 SkillLevel = 50
+IntroBGM = HGSS Intro Burglar
 #-------------------------------
 [CHANNELER]
 Name = Channeler
 Gender = Female
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = ORAS Intro Channeler
 #-------------------------------
 [CUEBALL]
 Name = Cue Ball
 Gender = Male
 BaseMoney = 12
 SkillLevel = 50
+IntroBGM = XY Intro Cueball
 #-------------------------------
 [ENGINEER]
 Name = Engineer
 Gender = Male
 BaseMoney = 20
 SkillLevel = 70
+IntroBGM = BW Intro Engineer
 #-------------------------------
 [FISHERMAN]
 Name = Fisherman
 Gender = Male
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = ORAS Intro Fisherman
 #-------------------------------
 [GAMBLER]
 Name = Gambler
 Gender = Male
 BaseMoney = 25
 SkillLevel = 55
+IntroBGM = DPPT Intro Gambler
 #-------------------------------
 [GENTLEMAN]
 Name = Gentleman
 Gender = Male
 BaseMoney = 40
 SkillLevel = 60
+IntroBGM = ORAS Intro Gentleman
 #-------------------------------
 [HIKER]
 Name = Hiker
 Gender = Male
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = BW Intro Hiker
 #-------------------------------
 [JUGGLER]
 Name = Juggler
 Gender = Male
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = B2W2 Intro Juggler
 #-------------------------------
 [LADY]
 Name = Lady
 Gender = Female
 BaseMoney = 40
 SkillLevel = 60
+IntroBGM = BW Intro Lady
 #-------------------------------
 [PAINTER]
 Name = Painter
 Gender = Female
 BaseMoney = 5
 SkillLevel = 50
+IntroBGM = DPPT Intro Painter
 #-------------------------------
 [POKEMANIAC]
 Name = Poké Maniac
 Gender = Male
 BaseMoney = 15
 SkillLevel = 70
+IntroBGM = XY Intro Pokémaniac
 #-------------------------------
 [POKEMONBREEDER]
 Name = Pokémon Breeder
 Gender = Female
 BaseMoney = 15
 SkillLevel = 70
+IntroBGM = BW Intro Pokémon Breeder
 #-------------------------------
 [PROFESSOR]
 Name = Professor
 Gender = Male
 BaseMoney = 40
 SkillLevel = 100
+IntroBGM = XY Intro Professor
 #-------------------------------
 [ROCKER]
 Name = Rocker
 Gender = Male
 BaseMoney = 5
 SkillLevel = 50
+IntroBGM = XY Intro Rocker
 #-------------------------------
 [RUINMANIAC]
 Name = Ruin Maniac
 Gender = Male
 BaseMoney = 15
 SkillLevel = 50
+IntroBGM = DPPT Intro Ruin Maniac
 #-------------------------------
 [SAILOR]
 Name = Sailor
 Gender = Male
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = DPPT Intro Sailor
 #-------------------------------
 [SCIENTIST]
 Name = Scientist
 Gender = Male
 BaseMoney = 15
 SkillLevel = 70
+IntroBGM = BW Intro Scientist
 #-------------------------------
 [SUPERNERD]
 Name = Super Nerd
 Gender = Male
 BaseMoney = 15
 SkillLevel = 70
+IntroBGM = BW Intro Supernerd
 #-------------------------------
 [TAMER]
 Name = Tamer
 Gender = Male
 BaseMoney = 15
 SkillLevel = 70
+IntroBGM = DPPT Intro Tamer
 #-------------------------------
 [BLACKBELT]
 Name = Black Belt
 Gender = Male
 BaseMoney = 10
 SkillLevel = 65
+IntroBGM = XY Intro Black Belt
 #-------------------------------
 [CRUSHGIRL]
 Name = Crush Girl
 Gender = Female
 BaseMoney = 5
 SkillLevel = 65
+IntroBGM = XY Intro Black Belt
 #-------------------------------
 [CAMPER]
 Name = Camper
 Gender = Male
 BaseMoney = 5
 SkillLevel = 40
+IntroBGM = DPPT Intro Camper
 #-------------------------------
 [PICNICKER]
 Name = Picnicker
 Gender = Female
 BaseMoney = 5
 SkillLevel = 40
+IntroBGM = DPPT Intro Picnicker
 #-------------------------------
 [COOLTRAINER_M]
 Name = Cool Trainer
 Gender = Male
 BaseMoney = 20
 SkillLevel = 55
+IntroBGM = ORAS Intro Cooltrainer
 #-------------------------------
 [COOLTRAINER_F]
 Name = Cool Trainer
 Gender = Female
 BaseMoney = 20
 SkillLevel = 55
+IntroBGM = ORAS Intro Cooltrainer
 #-------------------------------
 [YOUNGSTER]
 Name = Youngster
@@ -234,132 +271,154 @@ Name = Lass
 Gender = Female
 BaseMoney = 5
 SkillLevel = 32
+IntroBGM = BW Intro Lass
 #-------------------------------
 [POKEMONRANGER_M]
 Name = Pokémon Ranger
 Gender = Male
 BaseMoney = 20
 SkillLevel = 70
+IntroBGM = BW Intro Pokémon Ranger
 #-------------------------------
 [POKEMONRANGER_F]
 Name = Pokémon Ranger
 Gender = Female
 BaseMoney = 20
 SkillLevel = 70
+IntroBGM = BW Intro Pokémon Ranger
 #-------------------------------
 [PSYCHIC_M]
 Name = Psychic
 Gender = Male
 BaseMoney = 10
 SkillLevel = 65
+IntroBGM = BW Intro Psychic
 #-------------------------------
 [PSYCHIC_F]
 Name = Psychic
 Gender = Female
 BaseMoney = 10
 SkillLevel = 65
+IntroBGM = BW Intro Psychic
 #-------------------------------
 [SWIMMER_M]
 Name = Swimmer
 Gender = Male
 BaseMoney = 5
-SkillLevel = 32
+SkillLevel = 40
+IntroBGM = XY Intro Swimmer M
 #-------------------------------
 [SWIMMER_F]
 Name = Swimmer
 Gender = Female
 BaseMoney = 5
-SkillLevel = 32
+SkillLevel = 40
+IntroBGM = XY Intro Swimmer F
 #-------------------------------
 [SWIMMER2_M]
 Name = Swimmer
 Gender = Male
 BaseMoney = 5
-SkillLevel = 32
+SkillLevel = 40
+IntroBGM = XY Intro Swimmer M
 #-------------------------------
 [SWIMMER2_F]
 Name = Swimmer
 Gender = Female
 BaseMoney = 5
-SkillLevel = 32
+SkillLevel = 40
+IntroBGM = XY Intro Swimmer F
 #-------------------------------
 [TUBER_M]
 Name = Tuber
 Gender = Male
 BaseMoney = 1
 SkillLevel = 16
+IntroBGM = ORAS Intro Tuber
 #-------------------------------
 [TUBER_F]
 Name = Tuber
 Gender = Female
 BaseMoney = 1
 SkillLevel = 16
+IntroBGM = ORAS Intro Tuber
 #-------------------------------
 [TUBER2_M]
 Name = Tuber
 Gender = Male
 BaseMoney = 1
 SkillLevel = 16
+IntroBGM = ORAS Intro Tuber
 #-------------------------------
 [TUBER2_F]
 Name = Tuber
 Gender = Female
 BaseMoney = 1
 SkillLevel = 16
+IntroBGM = ORAS Intro Tuber
 #-------------------------------
 [COOLCOUPLE]
 Name = Cool Couple
 Gender = Unknown
 BaseMoney = 20
 SkillLevel = 55
+IntroBGM = ORAS Intro Cooltrainer
 #-------------------------------
 [CRUSHKIN]
 Name = Crush Kin
 Gender = Unknown
 BaseMoney = 15
 SkillLevel = 65
+IntroBGM = XY Intro Black Belt
 #-------------------------------
 [SISANDBRO]
 Name = Sis and Bro
 Gender = Unknown
 BaseMoney = 5
 SkillLevel = 16
+IntroBGM = ORAS Intro Tuber
 #-------------------------------
 [TWINS]
 Name = Twins
 Gender = Unknown
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = DPPT Intro Twins
 #-------------------------------
 [YOUNGCOUPLE]
 Name = Young Couple
 Gender = Unknown
 BaseMoney = 20
 SkillLevel = 50
+IntroBGM = ORAS Intro Young Couple
 #-------------------------------
 [TEAMROCKET_M]
 Name = Team Rocket
 Gender = Male
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = HGSS Intro Team Rocket
 #-------------------------------
 [TEAMROCKET_F]
 Name = Team Rocket
 Gender = Female
 BaseMoney = 10
 SkillLevel = 50
+IntroBGM = HGSS Intro Team Rocket
 #-------------------------------
 [ROCKETBOSS]
 Name = Rocket Boss
 Gender = Male
 BaseMoney = 50
 SkillLevel = 100
+IntroBGM = HGSS Intro Team Rocket
 #-------------------------------
 [LEADER_Brock]
 Name = Gym Leader
 Gender = Male
 BaseMoney = 40
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -368,6 +427,7 @@ Name = Gym Leader
 Gender = Female
 BaseMoney = 40
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -376,6 +436,7 @@ Name = Gym Leader
 Gender = Male
 BaseMoney = 40
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -384,6 +445,7 @@ Name = Gym Leader
 Gender = Female
 BaseMoney = 40
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -392,6 +454,7 @@ Name = Gym Leader
 Gender = Male
 BaseMoney = 40
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -400,6 +463,7 @@ Name = Gym Leader
 Gender = Female
 BaseMoney = 40
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -408,6 +472,7 @@ Name = Gym Leader
 Gender = Male
 BaseMoney = 40
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -416,6 +481,7 @@ Name = Gym Leader
 Gender = Male
 BaseMoney = 40
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Gym Leader
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -424,6 +490,7 @@ Name = Elite Four
 Gender = Female
 BaseMoney = 50
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Elite
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -432,6 +499,7 @@ Name = Elite Four
 Gender = Male
 BaseMoney = 50
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Elite
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -440,6 +508,7 @@ Name = Elite Four
 Gender = Female
 BaseMoney = 50
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Elite
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -448,6 +517,7 @@ Name = Elite Four
 Gender = Male
 BaseMoney = 50
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Elite
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -456,6 +526,7 @@ Name = Champion
 Gender = Male
 BaseMoney = 60
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = Battle Champion
 VictoryBGM = Battle victory leader
 #-------------------------------
@@ -464,18 +535,21 @@ Name = Janitor
 Gender = Male
 BaseMoney = 5
 SkillLevel = 50
+IntroBGM = XY Intro Janitor
 #-------------------------------
 [BIKERS]
 Name = Bikers
 Gender = Unknown
 BaseMoney = 20
 SkillLevel = 60
+IntroBGM = BW Intro Biker
 #-------------------------------
 [FIREBREATHER]
 Name = Firebreather
 Gender = Male
 BaseMoney = 15
 SkillLevel = 50
+IntroBGM = XY Intro Firebreather
 #-------------------------------
 [OFFICER]
 Name = Police Officer
@@ -509,37 +583,46 @@ Name = Team Scorch
 Gender = Male
 BaseMoney = 10
 SkillLevel = 55
+IntroBGM = B2W2 Intro Team Plasma
+BattleBGM = B2W2 Battle Team Plasma
 #-------------------------------
 [SCORCH_F]
 Name = Team Scorch
 Gender = Female
 BaseMoney = 10
 SkillLevel = 55
+IntroBGM = B2W2 Intro Team Plasma
 #-------------------------------
 [PYRE]
 Name = Team Scorch
 Gender = Male
 BaseMoney = 15
 SkillLevel = 100
+IntroBGM = B2W2 Intro Rival
 BattleBGM = BW Rival
 #-------------------------------
-[LEADER_Cliff]
+[LEADER_CLIFF]
 Name = Gym Leader
 Gender = Male
 BaseMoney = 40
 SkillLevel = 100
-BattleBGM = Battle Gym Leader
-VictoryBGM = Battle victory leader
+IntroBGM = BW Intro Gym Leader
+BattleBGM = BW Battle Gym Leader
+VictoryBGM = BW Victory Gym Leader
 #-------------------------------
 [SOLSTICEDEV]
 Name = Pokémon Solstice Dev
 Gender = Male
 BaseMoney = 40
 SkillLevel = 100
+IntroBGM = HGSS Intro Sage
+BattleBGM = B2W2 Battle PWT
+VictoryBGM = B2W2 Victory PWT
 #-------------------------------
 [GTLCHAMPION]
 Name = GTL Champion
 Gender = Male
 BaseMoney = 50
 SkillLevel = 100
+IntroBGM = BW Intro Gym Leader
 BattleBGM = PM Jazzed On Tea
