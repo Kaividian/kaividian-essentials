@@ -462,6 +462,11 @@ module Settings
 
   ALLOWED_SAVE_FILES = 3
 
+  def self.region_badge_count(region=0)
+    return 10 if region == 100
+    return 8
+  end
+
 end
 
 # DO NOT EDIT THESE!
@@ -469,4 +474,8 @@ module Essentials
   VERSION = "21.1"
   ERROR_TEXT = ""
   MKXPZ_VERSION = "2.4.2/c9378cf"
+end
+
+module Kssentials
+  VERSION = "0.1"
 end

@@ -137,7 +137,7 @@ module Compiler
   # Used for types.txt, abilities.txt, moves.txt, items.txt, berry_plants.txt,
   # pokemon.txt, pokemon_forms.txt, pokemon_metrics.txt, shadow_pokemon.txt,
   # ribbons.txt, trainer_types.txt, battle_facility_lists.txt, Battle Tower
-  # trainers PBS files and dungeon_parameters.txt
+  # trainers PBS files, dungeon_parameters.txt and badges.txt
   def pbEachFileSection(f, schema = nil)
     pbEachFileSectionEx(f, schema) do |section, name|
       yield section, name if block_given? && name[/^.+$/]
@@ -1005,6 +1005,7 @@ module Compiler
     compile_dungeon_tilesets(*text_files[:DungeonTileset][1])
     compile_dungeon_parameters(*text_files[:DungeonParameters][1])
     compile_phone(*text_files[:PhoneMessage][1])               # Depends on TrainerType
+    compile_badges(*text_files[:Badge][1])
   end
 
   def compile_all(mustCompile)

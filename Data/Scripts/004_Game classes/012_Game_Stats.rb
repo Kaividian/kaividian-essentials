@@ -133,7 +133,7 @@ class GameStats
     @soot_collected                = 0
     # Special stats
     @gym_leader_attempts           = [0] * 50   # Incremented in Gym Leader events (50 is arbitrary but suitably large)
-    @times_to_get_badges           = []   # Set with set_time_to_badge(number) in Gym Leader events
+    @times_to_get_badges           = {}   # Set with set_time_to_badge(badge) in Gym Leader events
     @elite_four_attempts           = 0   # Incremented in door event leading to the first E4 member
     @hall_of_fame_entry_count      = 0   # Incremented in Hall of Fame event
     @time_to_enter_hall_of_fame    = 0   # Set with set_time_to_hall_of_fame in Hall of Fame event
@@ -162,8 +162,8 @@ class GameStats
     return $game_system&.save_count || 0
   end
 
-  def set_time_to_badge(number)
-    @times_to_get_badges[number] = play_time
+  def set_time_to_badge(badge)
+    @times_to_get_badges[badge] = play_time
   end
 
   def set_time_to_hall_of_fame

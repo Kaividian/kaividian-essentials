@@ -125,3 +125,11 @@ SaveData.register(:stats) do
   new_game_value { GameStats.new }
   reset_on_new_game
 end
+
+SaveData.register(:kssentials_version) do
+  load_in_bootup
+  ensure_class :String
+  save_value { Kssentials::VERSION }
+  load_value { |value| $k_engine_version = value }
+  new_game_value { Kssentials::VERSION }
+end

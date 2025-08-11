@@ -789,6 +789,13 @@ module Compiler
   end
 
   #=============================================================================
+  # Save badge data to PBS file
+  #=============================================================================
+  def write_badges
+    write_PBS_file_generic(GameData::Badge)
+  end
+
+  #=============================================================================
   # Save all data to PBS files
   #=============================================================================
   def write_all
@@ -815,6 +822,7 @@ module Compiler
     write_dungeon_tilesets
     write_dungeon_parameters
     write_phone
+    write_badges
     echoln ""
     Console.echo_h2(_INTL("Successfully rewrote all PBS files"), text: :green)
   end

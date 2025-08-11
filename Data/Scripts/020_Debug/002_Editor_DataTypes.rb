@@ -1619,6 +1619,15 @@ module EncounterSlotProperty
 end
 
 #===============================================================================
+#
+#===============================================================================
+class StatProperty < GameDataPoolProperty
+  def initialize
+    super(:Stat, true, false)
+  end
+end
+
+#===============================================================================
 # Core property editor script
 #===============================================================================
 def pbPropertyList(title, data, properties, saveprompt = false)

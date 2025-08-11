@@ -886,21 +886,35 @@ MenuHandlers.add(:debug_menu, :set_badges, {
   "effect"      => proc {
     badgecmd = 0
     loop do
+      badgeorder = []
       badgecmds = []
       badgecmds.push(_INTL("Give all"))
       badgecmds.push(_INTL("Remove all"))
-      24.times do |i|
-        badgecmds.push(($player.badges[i] ? "[Y]" : "[  ]") + " " + _INTL("Badge {1}", i + 1))
+      GameData::Badge.each do |badge|
+        badgeorder.append(badge)
+        badgecmds.push("#{$player.badges.include?(badge) ? "[Y]" : "[  ]"} #{_INTL(badge.name)}")
       end
       badgecmd = pbShowCommands(nil, badgecmds, -1, badgecmd)
       break if badgecmd < 0
       case badgecmd
       when 0   # Give all
-        24.times { |i| $player.badges[i] = true }
+        $player.badges = []
+        GameData::Badge.each do |badge|
+          $player.badges.append(badge)
+          $stats.set_time_to_badge(badge)
+        end
       when 1   # Remove all
-        24.times { |i| $player.badges[i] = false }
+        $player.badges = []
+        $stats.times_to_get_badges = {}
       else
-        $player.badges[badgecmd - 2] = !$player.badges[badgecmd - 2]
+        badge = badgeorder[badgecmd - 2]
+        if $player.badges.include?(badge)
+          $player.badges.delete(badge)
+          $stats.times_to_get_badges.delete(badge) 
+        else
+          $player.badges.append(badge)
+          $stats.set_time_to_badge(badge)
+        end
       end
     end
   }
@@ -1353,6 +1367,7 @@ MenuHandlers.add(:debug_menu, :create_pbs_files, {
     cmds = [
       _INTL("[Create all]"),
       "abilities.txt",
+      "badges.txt",
       "battle_facility_lists.txt",
       "berry_plants.txt",
       "dungeon_parameters.txt",
@@ -1380,27 +1395,28 @@ MenuHandlers.add(:debug_menu, :create_pbs_files, {
       case cmd
       when 0  then Compiler.write_all
       when 1  then Compiler.write_abilities
-      when 2  then Compiler.write_trainer_lists
-      when 3  then Compiler.write_berry_plants
-      when 4  then Compiler.write_dungeon_parameters
-      when 5  then Compiler.write_dungeon_tilesets
-      when 6  then Compiler.write_encounters
-      when 7  then Compiler.write_items
-      when 8  then Compiler.write_connections
-      when 9  then Compiler.write_map_metadata
-      when 10 then Compiler.write_metadata
-      when 11 then Compiler.write_moves
-      when 12 then Compiler.write_phone
-      when 13 then Compiler.write_pokemon
-      when 14 then Compiler.write_pokemon_forms
-      when 15 then Compiler.write_pokemon_metrics
-      when 16 then Compiler.write_regional_dexes
-      when 17 then Compiler.write_ribbons
-      when 18 then Compiler.write_shadow_pokemon
-      when 19 then Compiler.write_town_map
-      when 20 then Compiler.write_trainer_types
-      when 21 then Compiler.write_trainers
-      when 22 then Compiler.write_types
+      when 2  then Compiler.write_badges
+      when 3  then Compiler.write_trainer_lists
+      when 4  then Compiler.write_berry_plants
+      when 5  then Compiler.write_dungeon_parameters
+      when 6  then Compiler.write_dungeon_tilesets
+      when 7  then Compiler.write_encounters
+      when 8  then Compiler.write_items
+      when 9  then Compiler.write_connections
+      when 10  then Compiler.write_map_metadata
+      when 11 then Compiler.write_metadata
+      when 12 then Compiler.write_moves
+      when 13 then Compiler.write_phone
+      when 14 then Compiler.write_pokemon
+      when 15 then Compiler.write_pokemon_forms
+      when 16 then Compiler.write_pokemon_metrics
+      when 17 then Compiler.write_regional_dexes
+      when 18 then Compiler.write_ribbons
+      when 19 then Compiler.write_shadow_pokemon
+      when 20 then Compiler.write_town_map
+      when 21 then Compiler.write_trainer_types
+      when 22 then Compiler.write_trainers
+      when 23 then Compiler.write_types
       else break
       end
       pbMessage(_INTL("File written."))

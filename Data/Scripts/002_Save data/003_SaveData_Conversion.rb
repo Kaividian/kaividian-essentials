@@ -15,7 +15,8 @@ module SaveData
   # Populated during runtime by SaveData.register_conversion calls.
   @conversions = {
     essentials: {},
-    game:       {}
+    game:       {},
+    kssentials:{}
   }
 
   #=============================================================================
@@ -109,6 +110,17 @@ module SaveData
       @version = version.to_s
     end
 
+        # Sets the conversion to trigger for save files created below
+    # the given game version.
+    # @param version [Numeric, String]
+    # @see SaveData.register_conversion
+    def kssentials_version(version)
+      validate version => [Numeric, String]
+      raise "Multiple conditions in conversion #{@id}" unless @version.nil?
+      @trigger_type = :kssentials
+      @version = version.to_s
+    end
+
     # Defines a conversion to the given save value.
     # @param value_id [Symbol] save value ID
     # @see SaveData.register_conversion
@@ -171,9 +183,10 @@ module SaveData
     conversions_to_run = []
     versions = {
       essentials: save_data[:essentials_version] || "18.1",
-      game:       save_data[:game_version] || "0.0.0"
+      game:       save_data[:game_version] || "0.0.0",
+      kssentials: save_data[:kssentials_version] || "0.0"
     }
-    [:essentials, :game].each do |trigger_type|
+    [:essentials, :game, :kssentials].each do |trigger_type|
       # Ensure the versions are sorted from lowest to highest
       sorted_versions = @conversions[trigger_type].keys.sort do |v1, v2|
         PluginManager.compare_versions(v1, v2)
@@ -196,7 +209,7 @@ module SaveData
     validate save_data => Hash
     conversions_to_run = self.get_conversions(save_data)
     return false if conversions_to_run.none?
-    File.open(SaveData::FILE_PATH + ".bak", "wb") { |f| Marshal.dump(save_data, f) }
+    File.open(SaveData::FILE_PATHS[SaveData.getSaveIndex] + ".bak", "wb") { |f| Marshal.dump(save_data, f) }
     Console.echo_h1(_INTL("Converting save file"))
     conversions_to_run.each do |conversion|
       Console.echo_li("#{conversion.title}...")
@@ -206,6 +219,7 @@ module SaveData
     Console.echoln_li_done(_INTL("Successfully applied {1} save file conversion(s)", conversions_to_run.length))
     save_data[:essentials_version] = Essentials::VERSION
     save_data[:game_version] = Settings::GAME_VERSION
+    save_data[:kssentials_version] = Kssentials::VERSION
     return true
   end
 

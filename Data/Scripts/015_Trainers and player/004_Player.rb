@@ -6,7 +6,7 @@ class Player < Trainer
   attr_reader   :character_ID
   # @return [Integer] the player's outfit
   attr_reader   :outfit
-  # @return [Array<Boolean>] the player's Gym Badges (true if owned)
+  # @return [Array<GameData::Badge>] the player's Gym Badges
   attr_accessor :badges
   # @return [Integer] the player's money
   attr_reader   :money
@@ -115,7 +115,7 @@ class Player < Trainer
 
   # @return [Integer] the number of Gym Badges owned by the player
   def badge_count
-    return @badges.count { |badge| badge == true }
+    return @badges.count
   end
 
   #=============================================================================
