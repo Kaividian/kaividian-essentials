@@ -475,3 +475,7 @@ module Essentials
   ERROR_TEXT = ""
   MKXPZ_VERSION = "2.4.2/c9378cf"
 end
+
+module Kssentials
+  VERSION = "0.1"
+end

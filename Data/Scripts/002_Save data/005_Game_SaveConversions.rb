@@ -418,3 +418,33 @@ SaveData.register_conversion(:v21_add_bump_stat) do
     end
   end
 end
+
+#===============================================================================
+
+SaveData.register_conversion(:k_better_badges) do
+  kssentials_version '0.1'
+  display_title "Updating Gym Badges"
+  to_value :player do |player|
+    player.badges = []
+    i = 0
+    GameData::Badge.each do |badge|
+      i += 1
+    end
+  end
+  to_all do |save_data|
+    unless save_data.has_key?(:stats)
+      save_data[:stats] = GameStats.new
+      old_badges = save_data[:player].badges.map(&:clone)
+      save_data[:player].badges = []
+      old_times = save_data[:stats].times_to_get_badges.map(&:clone)
+      save_data[:stats].times_to_get_badges = {}
+      i = 0
+      GameData::Badge.each do |badge|
+        save_data[:player].badges.append(badge) if old_badges[i]
+        save_data[:stats].times_to_get_badges[badge] = old_values[i]
+        i += 1
+      end
+      
+    end
+  end
+end

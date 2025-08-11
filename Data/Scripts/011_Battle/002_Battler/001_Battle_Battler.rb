@@ -266,9 +266,10 @@ class Battle::Battler
       speedMult /= (Settings::MECHANICS_GENERATION >= 7) ? 2 : 4
     end
     # Badge multiplier
-    if @battle.internalBattle && pbOwnedByPlayer? &&
-       @battle.pbPlayer.badge_count >= Settings::NUM_BADGES_BOOST_SPEED
-      speedMult *= 1.1
+    if @battle.internalBattle && pbOwnedByPlayer?
+      @battle.pbPlayer.badges.each do |badge|
+        speed *=1.1 if badge.badge_boost.include? :SPEED  
+      end
     end
     # Calculation
     return [(speed * speedMult).round, 1].max

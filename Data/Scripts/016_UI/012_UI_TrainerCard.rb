@@ -70,7 +70,7 @@ class PokemonTrainerCard_Scene
     x = card_width - (32 * region_badges) - (badge_spacing * (region_badges - 1))
     imagePositions = []
     region_badges.times do |i|
-      if $player.badges["#{region}_#{i}"]
+      if $player.badges[i + (region * region_badges)]
         imagePositions.push(["Graphics/UI/Trainer Card/badge_#{region}_#{i}", x, 310, 0, 0, 32, 32])
       end
       x += badge_spacing

@@ -1,0 +1,39 @@
+[BOULDERBADGE]
+Name = Boulder Badge
+BadgeBoost = ATTACK
+FIELDMOVES = FLASH
+
+[CASCADEBADGE]
+Name = Cascade Badge
+FIELDMOVES = CUT
+Obedience = 30
+
+[THUNDERBADGE]
+Name = Thunder Badge
+BadgeBoost = SPEED
+FIELDMOVES = FLY
+
+[RAINBOWBADGE]
+Name = Rainbow Badge
+FIELDMOVES = STRENGTH
+Obedience = 50
+
+[SOULBADGE]
+Name = Soul Badge
+FIELDMOVES = SURF
+BadgeBoost = DEFENSE
+
+[MARSHBADGE]
+Name = Marsh Badge
+FIELDMOVES = ROCKSMASH
+Obedience = 70
+
+[VOLCANOBADGE]
+Name = Volcano Badge
+FIELDMOVES = WATERFALL
+BadgeBoost = DEFENSE
+
+[EARTHBADGE]
+Name = Earth Badge
+FIELDMOVES = ROCKCLIMB
+Obedience = 100

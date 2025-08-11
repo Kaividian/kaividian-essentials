@@ -273,10 +273,14 @@ class Battle::AI::AIMove
     if @ai.trainer.high_skill? && @ai.battle.internalBattle && target_battler.pbOwnedByPlayer?
       # Don't need to check the Atk/Sp Atk-boosting badges because the AI
       # won't control the player's Pokémon.
-      if physicalMove?(calc_type) && @ai.battle.pbPlayer.badge_count >= Settings::NUM_BADGES_BOOST_DEFENSE
-        multipliers[:defense_multiplier] *= 1.1
-      elsif specialMove?(calc_type) && @ai.battle.pbPlayer.badge_count >= Settings::NUM_BADGES_BOOST_SPDEF
-        multipliers[:defense_multiplier] *= 1.1
+      if physicalMove?(calc_type)
+        @ai.battle.pbPlayer.badges.each do |badge|
+          multipliers[:defense_multiplier] *= 1.1 if badge.badge_boost.include? :DEFENSE
+        end
+      elsif specialMove?(calc_type)
+        @ai.battle.pbPlayer.badges.each do |badge|
+          multipliers[:defense_multiplier] *= 1.1 if badge.badge_boost.include? :SPECIAL_DEFENSE
+        end
       end
     end
     # Multi-targeting attacks

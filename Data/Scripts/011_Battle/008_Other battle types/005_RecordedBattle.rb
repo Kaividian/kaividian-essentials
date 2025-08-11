@@ -31,14 +31,14 @@ module RecordedBattleModule
       ret = []
       trainer.each do |tr|
         if tr.is_a?(Player)
-          ret.push([tr.trainer_type, tr.name.clone, tr.id, tr.badges.clone])
+          ret.push([tr.trainer_type, tr.name.clone, tr.id, tr.badges.map(&:clone)])
         else   # NPCTrainer
           ret.push([tr.trainer_type, tr.name.clone, tr.id, tr.lose_text || "...", tr.win_text || "..."])
         end
       end
       return ret
     elsif trainer[i].is_a?(Player)
-      return [[trainer.trainer_type, trainer.name.clone, trainer.id, trainer.badges.clone]]
+      return [[trainer.trainer_type, trainer.name.clone, trainer.id, trainer.badges.map(&:clone)]]
     else
       return [[trainer.trainer_type, trainer.name.clone, trainer.id, trainer.lose_text || "...", trainer.win_text || "..."]]
     end

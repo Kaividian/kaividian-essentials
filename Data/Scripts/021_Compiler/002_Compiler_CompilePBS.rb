@@ -1316,3 +1316,25 @@ module Compiler
     process_pbs_file_message_end
   end
 end
+
+  #=============================================================================
+  # Compile badge data
+  #=============================================================================
+  def compile_badges(*paths)
+    compile_PBS_file_generic(GameData::Badge, *paths) do |final_validate, hash|
+      (final_validate) ? validate_all_compiled_badges : validate_compiled_badge(hash)
+    end
+  end
+
+  def validate_compiled_badge(hash)
+  end
+
+  def validate_all_compiled_badges
+    # Get badge names/descriptions for translating
+    badge_names = []
+    badge_descriptions = []
+    GameData::Badge.each do |badge|
+      badge_names.push(badge.real_name)
+    end
+    MessageTypes.setMessagesAsHash(MessageTypes::BADGE_NAMES, badge_names)
+  end
